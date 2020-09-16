@@ -1,0 +1,70 @@
+SECTION DesignInfo
+LIST IndependentLibraries
+VALUE "DIR [W] . (B2_PREDRIVER)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Batteries (Batteries)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Borders (Borders)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Capacitors (Capacitors)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Connectors (Connectors)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Diodes (Diodes)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Fuses (Fuses)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Globals (Globals)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\ICs (ICs)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Inductors (Inductors)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\LEDs (LEDs)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Mechanical (Mechanical)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Oscillators (Oscillators)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Relays (Relays)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Resistors (Resistors)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Switches (Switches)"
+VALUE "DIR [R] $WORK\PADS libraries\dxdesigner\Transistors (Transistors)"
+VALUE "DIR [W] $WORK\PADS libraries\dxdesigner\New (New)"
+ENDLIST
+KEY CentralLibrary ""
+KEY PinComponents "./speccomp.ini"
+KEY BorderSymbols "./borders.ini"
+KEY Bus_Contents "./busconts.ini"
+KEY SheetsEditMode "1"
+KEY NumberingType "INDEPTH"
+KEY OrderFileName ".\"
+KEY FrontEndSnapshot "DxD"
+KEY DxD_Version "PADSVX.2.4"
+KEY LayoutID "PADS100"
+KEY CnsFileName ""
+KEY PcbCfgFileName "%SDD_HOME%/standard/templates/dxdesigner/netlist/pads100.cfg"
+KEY PropertyDefinitions "%SDD_HOME%/standard/templates/dxdesigner/netlist/netlist.prp"
+KEY DBCFile "$WORK\PADS libraries\TMC_LIB_DB.dbc"
+KEY PartListerCfg "TMC_PartLister_Compress"
+ENDSECTION
+SECTION iCDB
+LIST Designs
+VALUE "Board1"
+ENDLIST
+KEY DedicatedServerName ""
+KEY iCDBDir ".\database"
+ENDSECTION
+SECTION FlowSettings
+KEY FlowType "NETLIST"
+ENDSECTION
+SECTION ICXProInfo
+KEY ICXProDir "./Highspeed/ICXPro"
+ENDSECTION
+SECTION ProjectBackup
+KEY ConfigFile ".\ProjectBackup\ProjectBackup.cfg"
+ENDSECTION
+SECTION Template_Design
+KEY ConfigType "PCB"
+KEY SchematicConflict "FE"
+KEY CADBackAnno "0"
+KEY SchematicDesignBackAnno "0"
+KEY SchematicDesignStatus "0"
+KEY SearchPathScheme "(Default)"
+ENDSECTION
+SECTION Board1
+KEY ConfigType "PCB"
+KEY SchematicConflict "FE"
+KEY CADBackAnno "0"
+KEY SchematicDesignBackAnno "0"
+KEY SchematicDesignStatus "0"
+KEY SearchPathScheme "(Default)"
+KEY RootBlock "TMC4671+TMC6100-BOB"
+ENDSECTION

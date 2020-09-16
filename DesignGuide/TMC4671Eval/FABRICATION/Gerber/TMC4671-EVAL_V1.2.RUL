@@ -1,0 +1,12 @@
+DRC Rules Export File for PCB: C:\Users\UK\AppData\Local\TempReleases\Snapshot\10\TMC4671-EVAL_V1_2.PcbDoc
+RuleKind=Width|RuleName=+VM_width|Scope=Board|Minimum=12.00
+RuleKind=Clearance|RuleName=BoardOutlineClearance|Scope=Board|Minimum=11.81
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnualRing|Scope=Board|Minimum=12.00
+RuleKind=SolderMaskExpansion|RuleName=FiducialSolderMaskExpansion|Scope=Board|Minimum=26.00
+RuleKind=Clearance|RuleName=Fiducial Clearance|Scope=Board|Minimum=25.98
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Main_Routing_Width|Scope=Board|Minimum=6.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=6.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Width|RuleName=TMC461_Room_Width|Scope=Board|Minimum=8.00
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=8.50

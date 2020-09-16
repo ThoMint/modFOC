@@ -1,0 +1,87 @@
+PADS Designer Diagnostics Report
+Date: Tuesday, October 30, 2018
+
+
+Test: Read-only sheets
+Result: OK
+Time: 0 seconds
+
+Test: Symbol Types
+Result: OK
+Time: 0 seconds
+
+Test: Invalid Nets
+Result: OK
+Time: 0 seconds
+
+Test: Invalid Buses
+Result: OK
+Time: 0 seconds
+
+Test: Sheet Order Data
+Result: OK
+Time: 0 seconds
+
+Test: Sheet Internal Identifiers
+Result: OK
+Time: 0 seconds
+
+Test: Component Graphical Data
+Result: OK
+Time: 0 seconds
+
+Test: Net Connections
+Result: OK
+Time: 0 seconds
+
+Test: Rippers
+Result: OK
+Time: 0 seconds
+
+Test: Managed Blocks
+Result: OK
+Time: 0 seconds
+
+Test: Empty Blocks
+Result: OK
+Time: 0 seconds
+
+Test: Top Level Name Consistency
+Result: OK
+Time: 0 seconds
+
+Test: Duplicate Internal IDs
+Result: OK
+Time: 0 seconds
+
+Test: Bus Signal Connections
+Result: OK
+Time: 1 seconds
+
+Test: Component Names
+Result: OK
+Time: 0 seconds
+
+Test: Pass-through Pins
+Result: OK
+Time: 0 seconds
+
+Test: Empty Labels
+Result: OK
+Time: 0 seconds
+
+Test: Connectivity
+Result: OK
+Time: 1 seconds
+
+Test: Attributes
+Result: OK
+Time: 0 seconds
+
+Test: Sheet Name
+Result: OK
+Time: 0 seconds
+
+Report summary:
+Tests passed: 20
+Tests with error(s): 0

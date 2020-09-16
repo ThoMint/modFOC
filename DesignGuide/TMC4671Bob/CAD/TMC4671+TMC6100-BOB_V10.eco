@@ -1,0 +1,9 @@
+*PADS-ECO-V10.0-MILS*
+*REMARK*  old file: C:\PADS Projects\ecogtmp0.asc
+*REMARK*  new file: C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\TMC4671+TMC6100-BOB.asc
+*REMARK*  created by ECOGEN (Version 6.4v) on 26-Sep-19 15:37:39
+*CHGPART*
+IC301  ICF105DC@QFN76P_0.4  IC4B121A@QFN76P_0.4
+
+*REMARK*  Deleted pins: 0,  Added pins: 0
+*END*

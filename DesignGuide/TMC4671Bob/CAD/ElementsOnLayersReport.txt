@@ -1,0 +1,713 @@
+
+Components/elements on layers report
+	design name: C:\work\PADS designs\TMC4671+TMC6200-BOB_V10\CAD\TMC4671+TMC6200-BOB_V10.pcb
+	generate on: 10/25/2018 16:01:04
+
+	 Checking layer no. 1!
+ Component C410 keepout found
+ Component FID201 keepout found
+ Component FID202 keepout found
+ Via found, position: x=1.3, y=8.8
+ Via found, position: x=8.5, y=7.1
+ Via found, position: x=20.65, y=9.2
+ Via found, position: x=28.65, y=8.8
+ Via found, position: x=15.65, y=7.6
+ Via found, position: x=16.15, y=2.45
+ Via found, position: x=20.3, y=2.45
+ Via found, position: x=19.45, y=2.45
+ Via found, position: x=11.05, y=7.1
+ Via found, position: x=19.25, y=7.45
+ Via found, position: x=23.75, y=4.25
+ Via found, position: x=16.55, y=7.5
+ Via found, position: x=13.85, y=5.65
+ Via found, position: x=16.45, y=9.7
+ Via found, position: x=13.85, y=8.05
+ Via found, position: x=29.25, y=6.6
+ Via found, position: x=26.95, y=6.6
+ Via found, position: x=24.95, y=5.3
+ Via found, position: x=15.35, y=9.7
+ Via found, position: x=17.65, y=7.5
+ Via found, position: x=31.6, y=9.1
+ Via found, position: x=30.8, y=7.55
+ Via found, position: x=30.55, y=9.9
+ Via found, position: x=9.8, y=15
+ Via found, position: x=8.9, y=12
+ Via found, position: x=8.9, y=14
+ Via found, position: x=8, y=11
+ Via found, position: x=8, y=13
+ Via found, position: x=8, y=15
+ Via found, position: x=9.8, y=13
+ Via found, position: x=9.4, y=16.1
+ Via found, position: x=3.25, y=16.1
+ Via found, position: x=9.35, y=20.95
+ Via found, position: x=6.9, y=18.4
+ Via found, position: x=1.65, y=16.1
+ Via found, position: x=8.6, y=20.5
+ Via found, position: x=7.6, y=20.25
+ Via found, position: x=9.8, y=11
+ Via found, position: x=8.25, y=19.65
+ Via found, position: x=6.95, y=19.3
+ Via found, position: x=1.65, y=11.6
+ Via found, position: x=10.7, y=14
+ Via found, position: x=10.4, y=20.05
+ Via found, position: x=17.3, y=19.3
+ Via found, position: x=27.4, y=12.8
+ Via found, position: x=20.65, y=12.8
+ Via found, position: x=10.7, y=12
+ Via found, position: x=18.85, y=17.25
+ Via found, position: x=11.25, y=20.35
+ Via found, position: x=18.15, y=17.8
+ Via found, position: x=27.65, y=16.9
+ Via found, position: x=27.15, y=19.85
+ Via found, position: x=26.75, y=22.4
+ Via found, position: x=23.9, y=22.05
+ Via found, position: x=29.85, y=21.1
+ Via found, position: x=26.25, y=19.5
+ Via found, position: x=21.3, y=17.45
+ Via found, position: x=21.3, y=20.75
+ Via found, position: x=26.85, y=21.55
+ Via found, position: x=16.95, y=12.95
+ Via found, position: x=16.95, y=10.75
+ Via found, position: x=26.95, y=16.35
+ Via found, position: x=12.3, y=20.35
+ Via found, position: x=13.1, y=10.9
+ Via found, position: x=13.1, y=13.4
+ Via found, position: x=10.35, y=21
+ Via found, position: x=16.9, y=15.6
+ Via found, position: x=11.9, y=19.6
+ Via found, position: x=13, y=11.75
+ Via found, position: x=13.1, y=12.6
+ Via found, position: x=29.8, y=20.25
+ Via found, position: x=24.55, y=10.9
+ Via found, position: x=13.8, y=19.75
+ Via found, position: x=29.85, y=16.7
+ Via found, position: x=29, y=17.85
+ Via found, position: x=10.25, y=19.2
+ Via found, position: x=18.9, y=14.25
+ Via found, position: x=14.8, y=19.65
+ Via found, position: x=18.2, y=14.8
+ Via found, position: x=17.3, y=14.7
+ Via found, position: x=16.95, y=13.9
+ Via found, position: x=31.75, y=16.35
+ Via found, position: x=31.7, y=12.6
+ Via found, position: x=30.7, y=15.1
+ Via found, position: x=30.7, y=16.9
+ Via found, position: x=31.45, y=13.55
+ Via found, position: x=30.9, y=10.7
+ Via found, position: x=30.9, y=12.25
+ Via found, position: x=31.2, y=11.5
+ Copper Plane found, name = POR97336853, position: x=0, y=0
+ Keepout found, name = DRW49204991, position: x=6.5, y=16.5
+ Keepout found, name = DRW3346207, position: x=19.3, y=14.15
+ Keepout found, name = DRW12261739, position: x=24.2, y=3.15
+ Trace found, name = IC401.24-X301.2, position: x=6.9, y=18.4
+ Trace found, name = X301.2-IC401.8, position: x=13.1, y=13.4
+ Trace found, name = IC301.31-J216.4, position: x=20.68, y=21.86
+ Trace found, name = J216.2-IC301.29, position: x=21.95, y=21.86
+ Trace found, name = X301.2-C319.1, position: x=21.3, y=17.45
+ Trace found, name = C319.1-R312.1, position: x=21.3, y=19.1
+ Trace found, name = C319.2-R312.2, position: x=22, y=19.1
+ Trace found, name = C319.2-IC301.30, position: x=22, y=18.25
+ Trace found, name = R311.1-R312.2, position: x=22, y=19.1
+ Trace found, name = PTH209.2-C318.1, position: x=23.5, y=18.1
+ Trace found, name = C318.1-R310.1, position: x=23.5, y=19.55
+ Trace found, name = R309.1-R310.2, position: x=24.2, y=21.25
+ Trace found, name = C318.2-R310.2, position: x=24.2, y=20.4
+ Trace found, name = C318.2-IC301.28, position: x=24.2, y=19.55
+ Trace found, name = C318.2-IC301.28, position: x=23.95, y=14.05
+ Trace found, name = C315.2-IC301.17, position: x=28.35, y=14.05
+ Trace found, name = C315.1-R304.1, position: x=30.7, y=18.6
+ Trace found, name = R303.1-R304.2, position: x=30, y=19.45
+ Trace found, name = R304.2-C315.2, position: x=30, y=18.6
+ Trace found, name = X301.2-C315.1, position: x=30.7, y=16.9
+ Trace found, name = C316.2-IC301.19, position: x=27.55, y=14.05
+ Trace found, name = R306.2-R305.1, position: x=28.25, y=21.1
+ Trace found, name = R306.2-C316.2, position: x=28.25, y=20.25
+ Trace found, name = C302.1-IC301.24, position: x=25.55, y=14.05
+ Trace found, name = C301.1-C302.1, position: x=26.25, y=18.65
+ Trace found, name = C317.2-IC301.26, position: x=24.75, y=14.05
+ Trace found, name = C317.2-R308.2, position: x=25.3, y=20.7
+ Trace found, name = R308.2-R307.1, position: x=25.3, y=21.55
+ Trace found, name = R308.1-C317.1, position: x=26, y=20.7
+ Trace found, name = X301.2-R308.1, position: x=26, y=21.55
+ Trace found, name = X301.2-C301.1, position: x=26.25, y=18.65
+ Trace found, name = C302.2-IC301.23, position: x=25.95, y=14.05
+ Trace found, name = C302.2-C301.2, position: x=26.95, y=17.7
+ Trace found, name = J216.5-C301.2, position: x=27.15, y=18.65
+ Trace found, name = C311.1-C402.1, position: x=15.8, y=10.75
+ Trace found, name = C311.1-C402.1, position: x=16.95, y=10.75
+ Trace found, name = C311.1-C304.1, position: x=16.95, y=11.5
+ Trace found, name = IC301.44-C304.1, position: x=17.8, y=11.5
+ Trace found, name = C314.2-C311.2, position: x=16.95, y=12.2
+ Trace found, name = IC301.43-C311.2, position: x=16.95, y=12.2
+ Trace found, name = IC301.34-J216.8, position: x=18.14, y=21.86
+ Trace found, name = IC301.3-C309.1, position: x=29.7, y=9.1
+ Trace found, name = X301.2-C309.1, position: x=30.8, y=9.1
+ Trace found, name = C309.2-IC301.2, position: x=29.7, y=8.7
+ Trace found, name = IC301.59-C313.2, position: x=22.35, y=7.75
+ Trace found, name = IC301.61-C313.2, position: x=23.15, y=6.9
+ Trace found, name = PTH210.3-IC401.41, position: x=9.23, y=5.35
+ Trace found, name = C402.2-IC401.6, position: x=14.25, y=12.75
+ Trace found, name = C403.2-IC401.7, position: x=14.25, y=13.25
+ Trace found, name = X301.2-R306.1, position: x=28.95, y=20.25
+ Trace found, name = IC301.33-J216.6, position: x=19.41, y=21.86
+ Trace found, name = J216.10-IC301.35, position: x=16.86, y=21.86
+ Trace found, name = R306.1-C316.1, position: x=28.95, y=20.25
+ Trace found, name = C405.1-IC401.32, position: x=3.1, y=11.95
+ Trace found, name = C405.2-IC401.30, position: x=3.1, y=13.55
+ Trace found, name = IC401.29-C401.2, position: x=3.25, y=15
+ Trace found, name = X301.2-C401.1, position: x=1.65, y=15
+ Trace found, name = IC401.39-PTH212.2, position: x=7.75, y=7.7
+ Trace found, name = IC401.38-PTH212.2, position: x=7.75, y=8.75
+ Trace found, name = PTH212.2-C410.1, position: x=1.51, y=5.35
+ Trace found, name = C312.2-IC401.19, position: x=17.65, y=7.5
+ Trace found, name = IC301.52-C312.2, position: x=18.45, y=8.15
+ Trace found, name = IC301.53-C312.1, position: x=19.95, y=7.75
+ Trace found, name = IC301.54-C312.1, position: x=19.95, y=7.05
+ Trace found, name = IC301.53-C312.1, position: x=18.45, y=7.45
+ Trace found, name = IC301.53-C312.1, position: x=19.25, y=7.45
+ Trace found, name = PTH210.1-IC401.43, position: x=10.25, y=8.75
+ Trace found, name = PTH210.2-IC401.42, position: x=9.75, y=8.75
+ Trace found, name = IC301.72-C314.2, position: x=27.55, y=7.75
+ Trace found, name = IC301.14-C310.1, position: x=29.7, y=13.5
+ Trace found, name = C303.1-C310.1, position: x=30.7, y=14.25
+ Trace found, name = IC301.13-C310.2, position: x=29.7, y=13.1
+ Trace found, name = C314.2-C310.2, position: x=30.7, y=13.55
+ Trace found, name = X301.2-C407.1, position: x=1.65, y=10.5
+ Trace found, name = C406.2-IC401.34, position: x=4.15, y=8.8
+ Trace found, name = C401.2-C406.1, position: x=1.3, y=8.8
+ Trace found, name = C406.1-C407.2, position: x=2.35, y=8.8
+ Trace found, name = IC401.33-C407.2, position: x=3.25, y=10.5
+ Trace found, name = C401.2-PTH201.1, position: x=3.25, y=15
+ Trace found, name = R305.2-C301.2, position: x=28.95, y=21.1
+ Trace found, name = C301.2-R303.2, position: x=29.85, y=21.1
+ Trace found, name = C304.2-IC301.45, position: x=17.8, y=10.8
+ Trace found, name = IC301.15-C303.2, position: x=29.15, y=14.05
+ Trace found, name = C303.1-C310.1, position: x=30.7, y=15.9
+ Trace found, name = IC301.60-IC301.77, position: x=22.75, y=7.75
+ Trace found, name = C314.2-C310.2, position: x=26.95, y=6.6
+ Trace found, name = IC401.23-IC301.47, position: x=6.95, y=19.3
+ Trace found, name = IC401.23-IC301.47, position: x=15.35, y=9.7
+ Trace found, name = J216.15-IC401.26, position: x=4.6, y=18.45
+ Trace found, name = J216.15-IC401.26, position: x=4.6, y=18.45
+ Trace found, name = J216.13-IC401.27, position: x=4.2, y=18.65
+ Trace found, name = J216.13-IC401.27, position: x=4.2, y=18.65
+ Trace found, name = R307.2-C301.2, position: x=26, y=22.4
+ Trace found, name = IC301.25-J216.3, position: x=20.68, y=23.14
+ Trace found, name = IC301.25-J216.3, position: x=25.15, y=14.05
+ Trace found, name = J216.1-IC301.27, position: x=21.95, y=23.14
+ Trace found, name = J216.1-IC301.27, position: x=24.35, y=14.05
+ Trace found, name = R311.2-C301.2, position: x=21.3, y=19.95
+ Trace found, name = R309.2-C301.2, position: x=23.5, y=21.25
+ Trace found, name = IC401.22-IC301.46, position: x=7.6, y=20.25
+ Trace found, name = IC401.22-IC301.46, position: x=16.45, y=9.7
+ Trace found, name = IC301.67-J215.7, position: x=24.48, y=3.13
+ Trace found, name = IC301.68-J215.5, position: x=25.75, y=3.13
+ Trace found, name = IC301.69-J215.3, position: x=26.35, y=7.75
+ Trace found, name = IC301.57-J215.8, position: x=21.55, y=7.75
+ Trace found, name = IC301.56-J215.6, position: x=21.15, y=7.75
+ Trace found, name = IC301.55-J215.4, position: x=20.75, y=7.75
+ Trace found, name = C410.2-IC401.36, position: x=4, y=6.95
+ Trace found, name = C410.2-IC401.36, position: x=5.75, y=10.25
+ Trace found, name = IC401.38-PTH212.2, position: x=1.51, y=5.35
+ Trace found, name = PTH212.1-IC401.37, position: x=2.79, y=5.35
+ Trace found, name = C409.1-PTH210.2, position: x=7.5, y=4.95
+ Trace found, name = C409.2-IC401.44, position: x=10.75, y=8.75
+ Trace found, name = C409.2-IC401.44, position: x=7.5, y=6.55
+ Trace found, name = IC301.6-J217.2, position: x=29.7, y=10.3
+ Trace found, name = IC301.7-J217.1, position: x=29.7, y=10.7
+ Trace found, name = IC301.59-C313.2, position: x=23.15, y=6.3
+ Trace found, name = C308.2-C313.2, position: x=23.15, y=6.3
+ Trace found, name = C314.2-C308.2, position: x=23.15, y=5.3
+ Trace found, name = IC301.62-C313.1, position: x=23.55, y=7.75
+ Trace found, name = C308.1-C313.1, position: x=23.85, y=6.3
+ Trace found, name = C305.1-C308.1, position: x=24.05, y=5.3
+ Trace found, name = C305.1-C308.1, position: x=24.95, y=5.3
+ Trace found, name = C305.2-IC301.63, position: x=23.95, y=7.75
+ Trace found, name = X301.4-X301.1, position: x=17.15, y=1
+ Trace found, name = C321.2-X301.1, position: x=18.35, y=1
+ Trace found, name = C321.2-L301.1, position: x=19.45, y=1
+ Trace found, name = C314.2-L301.2, position: x=20.3, y=1.7
+ Trace found, name = X301.2-C321.1, position: x=19.45, y=1.7
+ Trace found, name = X301.2-C321.1, position: x=18.35, y=2.8
+ Trace found, name = IC401.21-IC301.42, position: x=8.25, y=19.65
+ Trace found, name = IC401.21-IC301.42, position: x=16.95, y=13.9
+ Trace found, name = IC401.20-IC301.41, position: x=17.3, y=14.7
+ Trace found, name = X301.2-C403.1, position: x=15.8, y=15.25
+ Trace found, name = C320.1-R314.1, position: x=18.85, y=19.4
+ Trace found, name = X301.2-C320.1, position: x=18.85, y=17.25
+ Trace found, name = R313.1-R314.2, position: x=18.15, y=20.25
+ Trace found, name = C320.2-R314.2, position: x=18.15, y=19.4
+ Trace found, name = R313.2-C401.2, position: x=17.3, y=19.3
+ Trace found, name = J216.12-IC301.36, position: x=15.6, y=21.86
+ Trace found, name = J216.14-IC301.37, position: x=14.32, y=21.86
+ Trace found, name = J216.16-IC301.38, position: x=13.06, y=21.86
+ Trace found, name = IC401.12-C411.2, position: x=14.25, y=15.75
+ Trace found, name = PTH211.2-C411.1, position: x=14.5, y=18.1
+ Trace found, name = IC401.25-C312.2, position: x=5.75, y=15.75
+ Trace found, name = C312.2-IC401.19, position: x=9.4, y=16.1
+ Trace found, name = IC401.19-C404.2, position: x=9.5, y=18.95
+ Trace found, name = IC401.20-IC301.41, position: x=8.6, y=20.5
+ Trace found, name = X301.2-C404.1, position: x=9.35, y=20.95
+ Trace found, name = IC401.17-IC301.39, position: x=18.9, y=14.25
+ Trace found, name = IC401.17-IC301.39, position: x=10.75, y=17.25
+ Trace found, name = IC401.17-IC301.39, position: x=10.4, y=20.05
+ Trace found, name = IC401.18-IC301.40, position: x=10.25, y=17.25
+ Trace found, name = IC401.18-IC301.40, position: x=18.2, y=14.8
+ Trace found, name = PTH211.1-IC401.4, position: x=13, y=11.75
+ Trace found, name = C309.2-C306.2, position: x=30.8, y=6.65
+ Trace found, name = C309.2-C306.2, position: x=30.8, y=7.55
+ Trace found, name = C314.1-IC301.73, position: x=27.95, y=7.75
+ Trace found, name = R302.1-C314.1, position: x=28.4, y=6.6
+ Trace found, name = R302.1-C314.1, position: x=29.25, y=6.6
+ Trace found, name = R302.1-C306.1, position: x=29.85, y=5.75
+ Trace found, name = PTH214.2-R302.2, position: x=28.48, y=5.35
+ Trace found, name = IC301.21-R302.2, position: x=29.85, y=5.05
+ Trace found, name = IC401.49-X301.2, position: x=9.8, y=13
+ Trace found, name = PTH213.1-IC401.3, position: x=13.1, y=10.9
+ Trace found, name = PTH209.1-IC401.5, position: x=13.1, y=12.6
+ Trace found, name = IC401.15-J217.3, position: x=11.75, y=17.25
+ Trace found, name = IC301.21-R302.2, position: x=26.75, y=14.05
+ Trace found, name = IC301.21-R302.2, position: x=31.75, y=16.35
+ Trace found, name = IC301.51-X301.3, position: x=16.15, y=2.45
+ Trace found, name = IC301.51-X301.3, position: x=16.55, y=7.5
+ Trace found, name = IC401.16-J217.5, position: x=11.25, y=17.25
+ Trace found, name = IC401.13-J217.7, position: x=10.35, y=21
+ Trace found, name = IC401.13-J217.7, position: x=12.75, y=17.25
+ Trace found, name = IC401.14-J217.1, position: x=12.3, y=20.35
+ Trace found, name = IC401.14-J217.1, position: x=12.25, y=17.25
+ Trace found, name = IC401.10-IC301.18, position: x=13.25, y=15.95
+ Trace found, name = IC401.10-IC301.18, position: x=13.25, y=15.95
+ Trace found, name = IC301.20-C320.2, position: x=18.15, y=17.8
+ Trace found, name = IC301.20-C320.2, position: x=27.15, y=14.05
+ Trace found, name = IC401.10-IC301.18, position: x=27.95, y=14.05
+ Trace found, name = IC301.16-IC401.9, position: x=12.85, y=16.15
+ Trace found, name = IC301.16-IC401.9, position: x=12.85, y=16.15
+ Trace found, name = IC301.16-IC401.9, position: x=28.75, y=14.05
+ Trace found, name = PTH208.3-IC401.46, position: x=11.75, y=8.75
+ Trace found, name = PTH208.2-IC401.47, position: x=12.25, y=8.75
+ Trace found, name = PTH208.1-IC401.48, position: x=12.75, y=8.75
+ Trace found, name = IC301.12-J217.8, position: x=29.7, y=12.7
+ Trace found, name = IC401.1-C408.2, position: x=13.3, y=8.6
+ Trace found, name = IC401.1-C408.2, position: x=13.3, y=8.6
+ Trace found, name = PTH208.2-C408.1, position: x=16.35, y=4.75
+ Trace found, name = IC401.1-C408.2, position: x=13.85, y=5.65
+ Trace found, name = IC301.50-J217.4, position: x=15.65, y=7.6
+ Trace found, name = IC301.9-J217.5, position: x=29.7, y=11.5
+ Trace found, name = IC301.8-J217.3, position: x=29.7, y=11.1
+
+	 Checking layer no. 2!
+ Via found, position: x=1.3, y=8.8
+ Via found, position: x=8.5, y=7.1
+ Via found, position: x=20.65, y=9.2
+ Via found, position: x=28.65, y=8.8
+ Via found, position: x=15.65, y=7.6
+ Via found, position: x=16.15, y=2.45
+ Via found, position: x=20.3, y=2.45
+ Via found, position: x=19.45, y=2.45
+ Via found, position: x=11.05, y=7.1
+ Via found, position: x=19.25, y=7.45
+ Via found, position: x=23.75, y=4.25
+ Via found, position: x=16.55, y=7.5
+ Via found, position: x=13.85, y=5.65
+ Via found, position: x=16.45, y=9.7
+ Via found, position: x=13.85, y=8.05
+ Via found, position: x=29.25, y=6.6
+ Via found, position: x=26.95, y=6.6
+ Via found, position: x=24.95, y=5.3
+ Via found, position: x=15.35, y=9.7
+ Via found, position: x=17.65, y=7.5
+ Via found, position: x=31.6, y=9.1
+ Via found, position: x=30.8, y=7.55
+ Via found, position: x=30.55, y=9.9
+ Via found, position: x=9.8, y=15
+ Via found, position: x=8.9, y=12
+ Via found, position: x=8.9, y=14
+ Via found, position: x=8, y=11
+ Via found, position: x=8, y=13
+ Via found, position: x=8, y=15
+ Via found, position: x=9.8, y=13
+ Via found, position: x=9.4, y=16.1
+ Via found, position: x=3.25, y=16.1
+ Via found, position: x=9.35, y=20.95
+ Via found, position: x=6.9, y=18.4
+ Via found, position: x=1.65, y=16.1
+ Via found, position: x=8.6, y=20.5
+ Via found, position: x=7.6, y=20.25
+ Via found, position: x=9.8, y=11
+ Via found, position: x=8.25, y=19.65
+ Via found, position: x=6.95, y=19.3
+ Via found, position: x=1.65, y=11.6
+ Via found, position: x=10.7, y=14
+ Via found, position: x=10.4, y=20.05
+ Via found, position: x=17.3, y=19.3
+ Via found, position: x=27.4, y=12.8
+ Via found, position: x=20.65, y=12.8
+ Via found, position: x=10.7, y=12
+ Via found, position: x=18.85, y=17.25
+ Via found, position: x=11.25, y=20.35
+ Via found, position: x=18.15, y=17.8
+ Via found, position: x=27.65, y=16.9
+ Via found, position: x=27.15, y=19.85
+ Via found, position: x=26.75, y=22.4
+ Via found, position: x=23.9, y=22.05
+ Via found, position: x=29.85, y=21.1
+ Via found, position: x=26.25, y=19.5
+ Via found, position: x=21.3, y=17.45
+ Via found, position: x=21.3, y=20.75
+ Via found, position: x=26.85, y=21.55
+ Via found, position: x=16.95, y=12.95
+ Via found, position: x=16.95, y=10.75
+ Via found, position: x=26.95, y=16.35
+ Via found, position: x=12.3, y=20.35
+ Via found, position: x=13.1, y=10.9
+ Via found, position: x=13.1, y=13.4
+ Via found, position: x=10.35, y=21
+ Via found, position: x=16.9, y=15.6
+ Via found, position: x=11.9, y=19.6
+ Via found, position: x=13, y=11.75
+ Via found, position: x=13.1, y=12.6
+ Via found, position: x=29.8, y=20.25
+ Via found, position: x=24.55, y=10.9
+ Via found, position: x=13.8, y=19.75
+ Via found, position: x=29.85, y=16.7
+ Via found, position: x=29, y=17.85
+ Via found, position: x=10.25, y=19.2
+ Via found, position: x=18.9, y=14.25
+ Via found, position: x=14.8, y=19.65
+ Via found, position: x=18.2, y=14.8
+ Via found, position: x=17.3, y=14.7
+ Via found, position: x=16.95, y=13.9
+ Via found, position: x=31.75, y=16.35
+ Via found, position: x=31.7, y=12.6
+ Via found, position: x=30.7, y=15.1
+ Via found, position: x=30.7, y=16.9
+ Via found, position: x=31.45, y=13.55
+ Via found, position: x=30.9, y=10.7
+ Via found, position: x=30.9, y=12.25
+ Via found, position: x=31.2, y=11.5
+ Copper Plane found, name = POR96578952, position: x=0, y=0
+
+	 Checking layer no. 3!
+ Via found, position: x=1.3, y=8.8
+ Via found, position: x=8.5, y=7.1
+ Via found, position: x=20.65, y=9.2
+ Via found, position: x=28.65, y=8.8
+ Via found, position: x=15.65, y=7.6
+ Via found, position: x=16.15, y=2.45
+ Via found, position: x=20.3, y=2.45
+ Via found, position: x=19.45, y=2.45
+ Via found, position: x=11.05, y=7.1
+ Via found, position: x=19.25, y=7.45
+ Via found, position: x=23.75, y=4.25
+ Via found, position: x=16.55, y=7.5
+ Via found, position: x=13.85, y=5.65
+ Via found, position: x=16.45, y=9.7
+ Via found, position: x=13.85, y=8.05
+ Via found, position: x=29.25, y=6.6
+ Via found, position: x=26.95, y=6.6
+ Via found, position: x=24.95, y=5.3
+ Via found, position: x=15.35, y=9.7
+ Via found, position: x=17.65, y=7.5
+ Via found, position: x=31.6, y=9.1
+ Via found, position: x=30.8, y=7.55
+ Via found, position: x=30.55, y=9.9
+ Via found, position: x=9.8, y=15
+ Via found, position: x=8.9, y=12
+ Via found, position: x=8.9, y=14
+ Via found, position: x=8, y=11
+ Via found, position: x=8, y=13
+ Via found, position: x=8, y=15
+ Via found, position: x=9.8, y=13
+ Via found, position: x=9.4, y=16.1
+ Via found, position: x=3.25, y=16.1
+ Via found, position: x=9.35, y=20.95
+ Via found, position: x=6.9, y=18.4
+ Via found, position: x=1.65, y=16.1
+ Via found, position: x=8.6, y=20.5
+ Via found, position: x=7.6, y=20.25
+ Via found, position: x=9.8, y=11
+ Via found, position: x=8.25, y=19.65
+ Via found, position: x=6.95, y=19.3
+ Via found, position: x=1.65, y=11.6
+ Via found, position: x=10.7, y=14
+ Via found, position: x=10.4, y=20.05
+ Via found, position: x=17.3, y=19.3
+ Via found, position: x=27.4, y=12.8
+ Via found, position: x=20.65, y=12.8
+ Via found, position: x=10.7, y=12
+ Via found, position: x=18.85, y=17.25
+ Via found, position: x=11.25, y=20.35
+ Via found, position: x=18.15, y=17.8
+ Via found, position: x=27.65, y=16.9
+ Via found, position: x=27.15, y=19.85
+ Via found, position: x=26.75, y=22.4
+ Via found, position: x=23.9, y=22.05
+ Via found, position: x=29.85, y=21.1
+ Via found, position: x=26.25, y=19.5
+ Via found, position: x=21.3, y=17.45
+ Via found, position: x=21.3, y=20.75
+ Via found, position: x=26.85, y=21.55
+ Via found, position: x=16.95, y=12.95
+ Via found, position: x=16.95, y=10.75
+ Via found, position: x=26.95, y=16.35
+ Via found, position: x=12.3, y=20.35
+ Via found, position: x=13.1, y=10.9
+ Via found, position: x=13.1, y=13.4
+ Via found, position: x=10.35, y=21
+ Via found, position: x=16.9, y=15.6
+ Via found, position: x=11.9, y=19.6
+ Via found, position: x=13, y=11.75
+ Via found, position: x=13.1, y=12.6
+ Via found, position: x=29.8, y=20.25
+ Via found, position: x=24.55, y=10.9
+ Via found, position: x=13.8, y=19.75
+ Via found, position: x=29.85, y=16.7
+ Via found, position: x=29, y=17.85
+ Via found, position: x=10.25, y=19.2
+ Via found, position: x=18.9, y=14.25
+ Via found, position: x=14.8, y=19.65
+ Via found, position: x=18.2, y=14.8
+ Via found, position: x=17.3, y=14.7
+ Via found, position: x=16.95, y=13.9
+ Via found, position: x=31.75, y=16.35
+ Via found, position: x=31.7, y=12.6
+ Via found, position: x=30.7, y=15.1
+ Via found, position: x=30.7, y=16.9
+ Via found, position: x=31.45, y=13.55
+ Via found, position: x=30.9, y=10.7
+ Via found, position: x=30.9, y=12.25
+ Via found, position: x=31.2, y=11.5
+ Copper Plane found, name = POR10448686, position: x=0, y=0
+ Copper Plane found, name = POR97229707, position: x=15.55, y=13.75
+ Trace found, name = R311.2-C301.2, position: x=21.3, y=20.75
+ Trace found, name = C409.2-IC401.44, position: x=8.5, y=7.1
+ Trace found, name = C306.2-J215.1, position: x=28.3, y=3.13
+ Trace found, name = PTH211.1-IC401.4, position: x=12.4, y=14.73
+ Trace found, name = PTH211.1-IC401.4, position: x=12.4, y=14.73
+ Trace found, name = C301.2-R303.2, position: x=23.9, y=22.05
+ Trace found, name = C301.2-R303.2, position: x=26.75, y=22.4
+ Trace found, name = PTH209.1-IC401.5, position: x=13.1, y=12.6
+ Trace found, name = IC401.15-J217.3, position: x=6.8, y=15.35
+ Trace found, name = IC401.15-J217.3, position: x=6.8, y=15.35
+ Trace found, name = IC301.51-X301.3, position: x=16.15, y=2.45
+ Trace found, name = IC401.16-J217.5, position: x=6.4, y=15.55
+ Trace found, name = IC401.16-J217.5, position: x=6.4, y=15.55
+ Trace found, name = IC401.13-J217.7, position: x=6, y=15.75
+ Trace found, name = IC401.13-J217.7, position: x=6, y=15.75
+ Trace found, name = IC401.14-J217.1, position: x=7.2, y=15.15
+ Trace found, name = IC401.14-J217.1, position: x=7.2, y=15.15
+ Trace found, name = IC401.14-J217.1, position: x=12.3, y=20.35
+ Trace found, name = IC401.1-C408.2, position: x=13.85, y=5.65
+ Trace found, name = IC301.50-J217.4, position: x=9.24, y=1.87
+
+	 Checking layer no. 4!
+ Via found, position: x=1.3, y=8.8
+ Via found, position: x=8.5, y=7.1
+ Via found, position: x=20.65, y=9.2
+ Via found, position: x=28.65, y=8.8
+ Via found, position: x=15.65, y=7.6
+ Via found, position: x=16.15, y=2.45
+ Via found, position: x=20.3, y=2.45
+ Via found, position: x=19.45, y=2.45
+ Via found, position: x=11.05, y=7.1
+ Via found, position: x=19.25, y=7.45
+ Via found, position: x=23.75, y=4.25
+ Via found, position: x=16.55, y=7.5
+ Via found, position: x=13.85, y=5.65
+ Via found, position: x=16.45, y=9.7
+ Via found, position: x=13.85, y=8.05
+ Via found, position: x=29.25, y=6.6
+ Via found, position: x=26.95, y=6.6
+ Via found, position: x=24.95, y=5.3
+ Via found, position: x=15.35, y=9.7
+ Via found, position: x=17.65, y=7.5
+ Via found, position: x=31.6, y=9.1
+ Via found, position: x=30.8, y=7.55
+ Via found, position: x=30.55, y=9.9
+ Via found, position: x=9.8, y=15
+ Via found, position: x=8.9, y=12
+ Via found, position: x=8.9, y=14
+ Via found, position: x=8, y=11
+ Via found, position: x=8, y=13
+ Via found, position: x=8, y=15
+ Via found, position: x=9.8, y=13
+ Via found, position: x=9.4, y=16.1
+ Via found, position: x=3.25, y=16.1
+ Via found, position: x=9.35, y=20.95
+ Via found, position: x=6.9, y=18.4
+ Via found, position: x=1.65, y=16.1
+ Via found, position: x=8.6, y=20.5
+ Via found, position: x=7.6, y=20.25
+ Via found, position: x=9.8, y=11
+ Via found, position: x=8.25, y=19.65
+ Via found, position: x=6.95, y=19.3
+ Via found, position: x=1.65, y=11.6
+ Via found, position: x=10.7, y=14
+ Via found, position: x=10.4, y=20.05
+ Via found, position: x=17.3, y=19.3
+ Via found, position: x=27.4, y=12.8
+ Via found, position: x=20.65, y=12.8
+ Via found, position: x=10.7, y=12
+ Via found, position: x=18.85, y=17.25
+ Via found, position: x=11.25, y=20.35
+ Via found, position: x=18.15, y=17.8
+ Via found, position: x=27.65, y=16.9
+ Via found, position: x=27.15, y=19.85
+ Via found, position: x=26.75, y=22.4
+ Via found, position: x=23.9, y=22.05
+ Via found, position: x=29.85, y=21.1
+ Via found, position: x=26.25, y=19.5
+ Via found, position: x=21.3, y=17.45
+ Via found, position: x=21.3, y=20.75
+ Via found, position: x=26.85, y=21.55
+ Via found, position: x=16.95, y=12.95
+ Via found, position: x=16.95, y=10.75
+ Via found, position: x=26.95, y=16.35
+ Via found, position: x=12.3, y=20.35
+ Via found, position: x=13.1, y=10.9
+ Via found, position: x=13.1, y=13.4
+ Via found, position: x=10.35, y=21
+ Via found, position: x=16.9, y=15.6
+ Via found, position: x=11.9, y=19.6
+ Via found, position: x=13, y=11.75
+ Via found, position: x=13.1, y=12.6
+ Via found, position: x=29.8, y=20.25
+ Via found, position: x=24.55, y=10.9
+ Via found, position: x=13.8, y=19.75
+ Via found, position: x=29.85, y=16.7
+ Via found, position: x=29, y=17.85
+ Via found, position: x=10.25, y=19.2
+ Via found, position: x=18.9, y=14.25
+ Via found, position: x=14.8, y=19.65
+ Via found, position: x=18.2, y=14.8
+ Via found, position: x=17.3, y=14.7
+ Via found, position: x=16.95, y=13.9
+ Via found, position: x=31.75, y=16.35
+ Via found, position: x=31.7, y=12.6
+ Via found, position: x=30.7, y=15.1
+ Via found, position: x=30.7, y=16.9
+ Via found, position: x=31.45, y=13.55
+ Via found, position: x=30.9, y=10.7
+ Via found, position: x=30.9, y=12.25
+ Via found, position: x=31.2, y=11.5
+
+	 Checking layer no. 5!
+ Layer number 5 has no data and can be deleted
+
+	 Checking layer no. 6!
+ Via found, position: x=1.3, y=8.8
+ Via found, position: x=8.5, y=7.1
+ Via found, position: x=20.65, y=9.2
+ Via found, position: x=28.65, y=8.8
+ Via found, position: x=15.65, y=7.6
+ Via found, position: x=16.15, y=2.45
+ Via found, position: x=20.3, y=2.45
+ Via found, position: x=19.45, y=2.45
+ Via found, position: x=11.05, y=7.1
+ Via found, position: x=19.25, y=7.45
+ Via found, position: x=23.75, y=4.25
+ Via found, position: x=16.55, y=7.5
+ Via found, position: x=13.85, y=5.65
+ Via found, position: x=16.45, y=9.7
+ Via found, position: x=13.85, y=8.05
+ Via found, position: x=29.25, y=6.6
+ Via found, position: x=26.95, y=6.6
+ Via found, position: x=24.95, y=5.3
+ Via found, position: x=15.35, y=9.7
+ Via found, position: x=17.65, y=7.5
+ Via found, position: x=31.6, y=9.1
+ Via found, position: x=30.8, y=7.55
+ Via found, position: x=30.55, y=9.9
+ Via found, position: x=9.8, y=15
+ Via found, position: x=8.9, y=12
+ Via found, position: x=8.9, y=14
+ Via found, position: x=8, y=11
+ Via found, position: x=8, y=13
+ Via found, position: x=8, y=15
+ Via found, position: x=9.8, y=13
+ Via found, position: x=9.4, y=16.1
+ Via found, position: x=3.25, y=16.1
+ Via found, position: x=9.35, y=20.95
+ Via found, position: x=6.9, y=18.4
+ Via found, position: x=1.65, y=16.1
+ Via found, position: x=8.6, y=20.5
+ Via found, position: x=7.6, y=20.25
+ Via found, position: x=9.8, y=11
+ Via found, position: x=8.25, y=19.65
+ Via found, position: x=6.95, y=19.3
+ Via found, position: x=1.65, y=11.6
+ Via found, position: x=10.7, y=14
+ Via found, position: x=10.4, y=20.05
+ Via found, position: x=17.3, y=19.3
+ Via found, position: x=27.4, y=12.8
+ Via found, position: x=20.65, y=12.8
+ Via found, position: x=10.7, y=12
+ Via found, position: x=18.85, y=17.25
+ Via found, position: x=11.25, y=20.35
+ Via found, position: x=18.15, y=17.8
+ Via found, position: x=27.65, y=16.9
+ Via found, position: x=27.15, y=19.85
+ Via found, position: x=26.75, y=22.4
+ Via found, position: x=23.9, y=22.05
+ Via found, position: x=29.85, y=21.1
+ Via found, position: x=26.25, y=19.5
+ Via found, position: x=21.3, y=17.45
+ Via found, position: x=21.3, y=20.75
+ Via found, position: x=26.85, y=21.55
+ Via found, position: x=16.95, y=12.95
+ Via found, position: x=16.95, y=10.75
+ Via found, position: x=26.95, y=16.35
+ Via found, position: x=12.3, y=20.35
+ Via found, position: x=13.1, y=10.9
+ Via found, position: x=13.1, y=13.4
+ Via found, position: x=10.35, y=21
+ Via found, position: x=16.9, y=15.6
+ Via found, position: x=11.9, y=19.6
+ Via found, position: x=13, y=11.75
+ Via found, position: x=13.1, y=12.6
+ Via found, position: x=29.8, y=20.25
+ Via found, position: x=24.55, y=10.9
+ Via found, position: x=13.8, y=19.75
+ Via found, position: x=29.85, y=16.7
+ Via found, position: x=29, y=17.85
+ Via found, position: x=10.25, y=19.2
+ Via found, position: x=18.9, y=14.25
+ Via found, position: x=14.8, y=19.65
+ Via found, position: x=18.2, y=14.8
+ Via found, position: x=17.3, y=14.7
+ Via found, position: x=16.95, y=13.9
+ Via found, position: x=31.75, y=16.35
+ Via found, position: x=31.7, y=12.6
+ Via found, position: x=30.7, y=15.1
+ Via found, position: x=30.7, y=16.9
+ Via found, position: x=31.45, y=13.55
+ Via found, position: x=30.9, y=10.7
+ Via found, position: x=30.9, y=12.25
+ Via found, position: x=31.2, y=11.5
+ Copper Plane found, name = POR93718742, position: x=0, y=0
+ Trace found, name = PTH213.1-IC401.3, position: x=5.5, y=16.83
+ Trace found, name = IC401.23-IC301.47, position: x=15.35, y=9.7
+ Trace found, name = IC401.23-IC301.47, position: x=6.95, y=19.3
+ Trace found, name = IC401.22-IC301.46, position: x=7.6, y=20.25
+ Trace found, name = IC301.7-J217.1, position: x=10.52, y=3.13
+ Trace found, name = IC301.8-J217.3, position: x=9.24, y=3.13
+ Trace found, name = IC301.9-J217.5, position: x=7.97, y=3.13
+ Trace found, name = IC301.12-J217.8, position: x=5.85, y=3.6
+ Trace found, name = IC401.21-IC301.42, position: x=8.25, y=19.65
+ Trace found, name = IC401.20-IC301.41, position: x=8.6, y=20.5
+ Trace found, name = IC301.20-C320.2, position: x=18.15, y=17.8
+ Trace found, name = IC301.16-IC401.9, position: x=13.8, y=19.75
+ Trace found, name = IC401.17-IC301.39, position: x=10.4, y=20.05
+ Trace found, name = IC401.18-IC301.40, position: x=10.25, y=19.2
+ Trace found, name = C301.2-R303.2, position: x=23.9, y=22.05
+ Trace found, name = J216.5-C301.2, position: x=24.43, y=22.57
+ Trace found, name = C301.2-PTH214.1, position: x=27.22, y=5.35
+ Trace found, name = IC301.21-R302.2, position: x=26.95, y=16.35
+ Trace found, name = IC301.6-J217.2, position: x=10.52, y=1.87
+ Trace found, name = J216.7-J216.5, position: x=18.14, y=23.14
+ Trace found, name = J216.5-C301.2, position: x=19.41, y=23.14
+ Trace found, name = C301.2-PTH214.1, position: x=27.15, y=19.85
+ Trace found, name = IC401.10-IC301.18, position: x=14.8, y=19.65
+ Trace found, name = IC301.12-J217.8, position: x=5.85, y=3.6
+ Trace found, name = C312.2-IC401.19, position: x=9.4, y=16.1

@@ -1,0 +1,309 @@
+[2019.09.26 15:16:14] [0000m.00s.580ms] [0] WELCOME
+[2019.09.26 15:16:14] [0000m.00s.590ms] [1] iCDB Server ver.2.204, w6NMT3m1DsvvLxNhuorv0Q, build:11695155 created 2018-10-03 12:34:59, sources stamp:w6NMT3m1DsvvLxNhuorv0Q
+[2019.09.26 15:16:14] [0000m.00s.590ms] [1] Copyright 2018 Mentor Graphics Corporation.  All Rights Reserved.
+[2019.09.26 15:16:14] [0000m.00s.590ms] [1] Base flow version [VX.2.4]
+[2019.09.26 15:16:14] [0000m.00s.590ms] [1] Install Id [1845722], Flow Id [PADS VX.2.4], Full Flow Name [PADS VX.2.4], Exact Access Date [2018/08/01]
+[2019.09.26 15:16:14] [0000m.00s.590ms] [1] UPDATE Install Info, Install Id [1939034], UPDATE Name [PADS VX.2.4 - Update 3]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [1] Machine [TMC-EST-03]  IP [127.0.0.1,192.168.0.106,192.168.10.238,192.168.137.1]  User [Trinamic]  PID [10832]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [1] Operating system [Microsoft Business Edition, 64-bit (build 9200)]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [1] Current working dir [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [1] PATH [C:\MentorGraphics\PADSVX.2.4\SDD_HOME\common\win32\bin;C:\MentorGraphics\PADSVX.2.4\SDD_HOME\common\win32\lib;C:\MentorGraphics\PADSVX.2.4\MGC_HOME.ixn\bin;C:\MentorGraphics\PADSVX.2.4\MGC_HOME.ixn\lib;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Altium Designer S09 Viewer\System;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\IDEMIA\AWP\Dlls;C:\Program Files\IDEMIA\AWP\Dlls;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Trinamic\AppData\Local\Microsoft\WindowsApps;C:\MentorGraphics\PADSVX.2.2\SDD_HOME\CAMCAD;C:\Users\Trinamic\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [1] SDD_HOME [C:\MentorGraphics\PADSVX.2.4\SDD_HOME] on file system [NTFS]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [1] SDD_PLATFORM [win32]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [1] WDIR [C:\PADS Projects;C:\MentorGraphics\PADSVX.2.4\SDD_HOME\standard;]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [1] Local iCDB working dir [C:\PADS Projects\iCDB] on file system [NTFS]
+[2019.09.26 15:16:14] [0000m.00s.598ms] [2] S: Loading config files
+[2019.09.26 15:16:14] [0000m.00s.601ms] [1] Config file [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database\cdbsvr\Server.cfg] not found
+[2019.09.26 15:16:14] [0000m.00s.602ms] [3] S: Config loaded
+[2019.09.26 15:16:14] [0000m.00s.615ms] [0] S: Project path [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database] on file system [NTFS]
+[2019.09.26 15:16:14] [0000m.00s.615ms] [0] S: Project file (.prj) path [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\TMC4671+TMC6100-BOB_V10.prj] on file system [NTFS]
+[2019.09.26 15:16:14] [0000m.00s.616ms] [1] S: WARNING: Database auto-repair support DISABLED
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] S: Single-user mode (auto)
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] S: Event polling mode autodetection
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] S: Started up automatically by iCDB Client: TMC-EST-03:Trinamic:13552
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] S: Auto close mode
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] S: Database ID [6c63-44fa-65ea-b1f2-5253-b7da-253b-7d50-3a31-8a67-3ac5-d26e]
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] PathTranslator: BEGIN dumping
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] PathTranslator: Local -> global path prefix list
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] PathTranslator: Global -> local path prefix list
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] PathTranslator: END dumping
+[2019.09.26 15:16:14] [0000m.00s.616ms] [0] S: START
+[2019.09.26 15:16:14] [0000m.00s.617ms] [0] S: Server startup lock file created
+[2019.09.26 15:16:14] [0000m.00s.617ms] [0] S: Listening for client connections on port [10000]
+[2019.09.26 15:16:14] [0000m.00s.620ms] [0] S: Server network ID [TMC-EST-03:192.168.0.106,192.168.10.238,192.168.137.1,TMC-EST-03:10000]
+[2019.09.26 15:16:14] [0000m.00s.620ms] [0] S: Server GUID [f140-6168-237e-5e65-e0ca-c8d3-1cac-8d50-35c1-8a67-3ac5-d26e]
+[2019.09.26 15:16:14] [0000m.00s.620ms] [0] S: Project GUID [6c63-44fa-65ea-b1f2-5253-b7da-253b-7d50-3a31-8a67-3ac5-d26e]
+[2019.09.26 15:16:14] [0000m.00s.621ms] [0] S: Wrote data to server address file
+[2019.09.26 15:16:14] [0000m.00s.621ms] [0] S: Server startup lock file removed
+[2019.09.26 15:16:14] [0000m.00s.621ms] [1] ProjectBackupManager: Setting project file (.prj) path: [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\TMC4671+TMC6100-BOB_V10.prj]
+[2019.09.26 15:16:14] [0000m.00s.788ms] [0] S: Plugins loaded: [PIM] [ENetGen70] 
+[2019.09.26 15:16:14] [0000m.00s.788ms] [1] ServerToolkit: INFO: Plugin not found in SDD_ICDB_BIN [C:\MentorGraphics\PADSVX.2.4\SDD_HOME\iCDB\win32\bin]
+[2019.09.26 15:16:14] [0000m.00s.788ms] [1] ServerToolkit: INFO: Plugin not found in SDD_COMMON_BIN [C:\MentorGraphics\PADSVX.2.4\SDD_HOME\common\win32\bin]
+[2019.09.26 15:16:14] [0000m.00s.790ms] [1] ServerToolkit: INFO: Plugin not found in PATH
+[2019.09.26 15:16:14] [0000m.00s.790ms] [1] ServerToolkit: INFO: Plugin not found in CWD
+[2019.09.26 15:16:14] [0000m.00s.790ms] [1] ServerToolkit: INFO: returning just plugin exe name!
+[2019.09.26 15:16:14] [0000m.00s.790ms] [0] S: Local disc access time: 40 us
+[2019.09.26 15:16:14] [0000m.00s.790ms] [0] S: File server access time: 40 us
+[2019.09.26 15:16:14] [0000m.00s.812ms] [0] Single file [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database\icdb.dat] size [1265232 (1.2 MB)]
+[2019.09.26 15:16:14] [0000m.00s.812ms] [1] Single file [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database\icdb.dat] opened in read-write mode
+[2019.09.26 15:16:14] [0000m.00s.812ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2019.09.26 15:16:14] [0000m.00s.812ms] [0] Database GUARD OK: [1265232]
+[2019.09.26 15:16:14] [0000m.00s.813ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2019.09.26 15:16:14] [0000m.00s.813ms] [0] Database GUARD OK: [1265232]
+[2019.09.26 15:16:14] [0000m.00s.823ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2019.09.26 15:16:14] [0000m.00s.823ms] [0] Database GUARD OK: [1265232]
+[2019.09.26 15:16:14] [0000m.00s.823ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2019.09.26 15:16:14] [0000m.00s.824ms] [0] Database GUARD OK: [1265232]
+[2019.09.26 15:16:14] [0000m.00s.824ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2019.09.26 15:16:14] [0000m.00s.824ms] [0] Database GUARD OK: [1265232]
+[2019.09.26 15:16:14] [0000m.00s.824ms] [0] SingleFile: [e8f7-763d-c4eb-02b1] SFI version check [1009] [1009]
+[2019.09.26 15:16:14] [0000m.00s.839ms] [0] SingleFile: [e8f7-763d-c4eb-02b1] Database SFI header has been read in [14ms 932us]
+[2019.09.26 15:16:14] [0000m.00s.843ms] [0] iCDB Server PI: Server & plugin session [479]
+[2019.09.26 15:16:14] [0000m.00s.843ms] [0] iCDB Server PI: Opening database [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database]
+[2019.09.26 15:16:14] [0000m.00s.843ms] [0] iCDB Server PI: Database [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database] opened
+[2019.09.26 15:16:14] [0000m.00s.899ms] [0] iCDB Database: Checking existence of constraint definitions
+[2019.09.26 15:16:14] [0000m.00s.899ms] [0] iCDB Database: Checking constraint definitions version
+[2019.09.26 15:16:14] [0000m.00s.931ms] [1] iCDB Database: Constraint definitions version [ce_ee.cns=7.10.63] up to date
+[2019.09.26 15:16:14] [0000m.00s.935ms] [0] iCDB Server PI: Initializing plugins
+[2019.09.26 15:16:14] [0000m.00s.935ms] [0] iCDB Server PI: Plugins initialized
+[2019.09.26 15:16:14] [0000m.00s.935ms] [0] S: iCDB database loaded
+[2019.09.26 15:16:14] [0000m.00s.944ms] [0] S: Starting threads
+[2019.09.26 15:16:14] [0000m.00s.949ms] [0] BT: Listening for broadcast messages on port [10000]
+[2019.09.26 15:16:14] [0000m.00s.974ms] [1] CMT: There are no clients - waiting [10 seconds]
+[2019.09.26 15:16:14] [0000m.00s.998ms] [0] MWT: WindowProc: WM_NCCREATE
+[2019.09.26 15:16:14] [0000m.01s.037ms] [0] IT: Session [480] for host [TMC-EST-03] user [Trinamic] client type[0] clsvrPluginID[0] with process ID [13552] created
+[2019.09.26 15:16:14] [0000m.01s.037ms] [1] SC[480]: Registered sub-client [DxD] with ID [1] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:14] [0000m.01s.074ms] [1] CMT: There are [1] clients now: 480
+[2019.09.26 15:16:14] [0000m.01s.095ms] [1] SC[480]: Registered sub-client [TransactionRollbackSubClient] with ID [2] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:14] [0000m.01s.108ms] [1] SC[480]: Registered sub-client [SymbolEditor] with ID [3] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:14] [0000m.01s.114ms] [1] SC[480]: Registered sub-client [SelectionHolder] with ID [4] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:14] [0000m.01s.146ms] [1] SC[480]: Registered sub-client [SystemDesignDll] with ID [5] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:14] [0000m.01s.151ms] [1] SC[480]: UnRegistered sub-client [SystemDesignDll] with ID [5] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:14] [0000m.01s.155ms] [1] SC[480]: Registered sub-client [SystemDesignDll] with ID [6] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.698ms] [1] SC[480]: Registered sub-client [DesignSearcher2] with ID [7] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.710ms] [1] SC[480]: Registered sub-client [Core::DesignListener-10695] with ID [8] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.713ms] [1] SC[480]: Registered sub-client [BlockCacheDxD:257480368] with ID [9] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.719ms] [1] SC[480]: Registered sub-client [Core::NetFlatData-21410] with ID [10] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.723ms] [1] SC[480]: Registered sub-client [HdlProject] with ID [11] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.739ms] [1] SC[480]: Registered sub-client [Navigator] with ID [12] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.753ms] [1] SC[480]: Registered sub-client [OutputWindow] with ID [13] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.757ms] [1] SC[480]: Registered sub-client [PlaceDevice] with ID [14] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.929ms] [1] SC[480]: Registered sub-client [FFSearch_RBHost] with ID [15] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:17] [0000m.03s.932ms] [1] SC[480]: Registered sub-client [LocalSymbolsDataProvider] with ID [16] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:21] [0000m.08s.495ms] [1] SC[480]: Registered sub-client [FFSSelListener] with ID [17] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:21] [0000m.08s.501ms] [1] SC[480]: Registered sub-client [SAE] with ID [18] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:21] [0000m.08s.520ms] [1] SC[480]: Registered sub-client [DxConstraints] with ID [19] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.523ms] [1] SC[480]: Registered sub-client [CCZAddin] with ID [20] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.527ms] [1] SC[480]: Registered sub-client [DxThumbnails] with ID [21] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.531ms] [1] SC[480]: Registered sub-client [MyParts] with ID [22] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.558ms] [1] SC[480]: Registered sub-client [PinsList] with ID [23] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.642ms] [1] SC[480]: Registered sub-client [toolboxes] with ID [24] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.670ms] [1] SC[480]: Registered sub-client [ProjectIntegrationIcdbCacheDxD:311465776] with ID [25] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.759ms] [1] SC[480]: Registered sub-client [SheetConnectorsCacheDxD:1569500182] with ID [26] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.789ms] [1] SC[480]: Registered sub-client [NetsNamesCollectorDxD:1569500182] with ID [27] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.810ms] [1] SC[480]: Registered sub-client [PartReplaceUtils] with ID [28] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.815ms] [1] SC[480]: Registered sub-client [PartReplaceUtilsSelectionListener] with ID [29] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.832ms] [1] SC[480]: Registered sub-client [xprob] with ID [30] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.886ms] [1] SC[480]: Registered sub-client [StartServerClient3414] with ID [31] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:22] [0000m.08s.887ms] [1] SC[480]: UnRegistered sub-client [StartServerClient3414] with ID [31] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.110ms] [1] SC[480]: Registered sub-client [ObjectHolder_260224288] with ID [32] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.114ms] [1] SC[480]: Registered sub-client [BlockCacheDxD:317615264] with ID [33] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.117ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_260225016] with ID [34] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.121ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClientDxD:318243752] with ID [35] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.174ms] [1] SC[480]: Registered sub-client [ObjectHolder_319334984] with ID [36] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.176ms] [1] SC[480]: Registered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971973992911994882][5:50:18_9-26-19][1569500185]:317616944] with ID [37] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.180ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_319335504] with ID [38] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.183ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971973992911994882][5:50:18_9-26-19][1569500185]:321021904] with ID [39] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.184ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_319335504] with ID [38] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.185ms] [1] SC[480]: UnRegistered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971973992911994882][5:50:18_9-26-19][1569500185]:317616944] with ID [37] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.185ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_319334984] with ID [36] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.185ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971973992911994882][5:50:18_9-26-19][1569500185]:321021904] with ID [39] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.190ms] [1] SC[480]: Registered sub-client [ObjectHolder_319334152] with ID [40] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.193ms] [1] SC[480]: Registered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971973992911994882][5:50:18_9-26-19][1569500185]:317601536] with ID [41] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.196ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_319334360] with ID [42] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.199ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971973992911994882][5:50:18_9-26-19][1569500185]:321022128] with ID [43] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.213ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_319334360] with ID [42] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.214ms] [1] SC[480]: UnRegistered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971973992911994882][5:50:18_9-26-19][1569500185]:317601536] with ID [41] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.214ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_319334152] with ID [40] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:25] [0000m.12s.215ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971973992911994882][5:50:18_9-26-19][1569500185]:321022128] with ID [43] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:16:35] [0000m.21s.688ms] [0] DFAMT: File server access time: 58 us
+[2019.09.26 15:18:01] [0001m.48s.199ms] [1] SC[480]: Registered sub-client [ObjectHolder_321642840] with ID [44] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.202ms] [1] SC[480]: Registered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971973997206962180][5:50:18_9-26-19][1569500281]:318562176] with ID [45] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.206ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_257104632] with ID [46] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.209ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971973997206962180][5:50:18_9-26-19][1569500281]:323600128] with ID [47] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.211ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_257104632] with ID [46] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.211ms] [1] SC[480]: UnRegistered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971973997206962180][5:50:18_9-26-19][1569500281]:318562176] with ID [45] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.211ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_321642840] with ID [44] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.212ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971973997206962180][5:50:18_9-26-19][1569500281]:323600128] with ID [47] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.217ms] [1] SC[480]: Registered sub-client [ObjectHolder_321642112] with ID [48] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.220ms] [1] SC[480]: Registered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971973997206962180][5:50:18_9-26-19][1569500281]:318562656] with ID [49] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.223ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_321642840] with ID [50] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:01] [0001m.48s.226ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971973997206962180][5:50:18_9-26-19][1569500281]:323601584] with ID [51] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:02] [0001m.48s.538ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_321642840] with ID [50] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:02] [0001m.48s.539ms] [1] SC[480]: UnRegistered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971973997206962180][5:50:18_9-26-19][1569500281]:318562656] with ID [49] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:02] [0001m.48s.539ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_321642112] with ID [48] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:02] [0001m.48s.540ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971973997206962180][5:50:18_9-26-19][1569500281]:323601584] with ID [51] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.668ms] [1] SC[480]: Registered sub-client [ObjectHolder_321655256] with ID [52] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.671ms] [1] SC[480]: Registered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971974005796896772][5:50:18_9-26-19][1569500285]:758071144] with ID [53] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.674ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_321655880] with ID [54] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.677ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971974005796896772][5:50:18_9-26-19][1569500285]:321299256] with ID [55] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.678ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_321655880] with ID [54] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.679ms] [1] SC[480]: UnRegistered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971974005796896772][5:50:18_9-26-19][1569500285]:758071144] with ID [53] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.679ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_321655256] with ID [52] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.679ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971974005796896772][5:50:18_9-26-19][1569500285]:321299256] with ID [55] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.684ms] [1] SC[480]: Registered sub-client [ObjectHolder_321655464] with ID [56] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.687ms] [1] SC[480]: Registered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971974005796896772][5:50:18_9-26-19][1569500285]:758071576] with ID [57] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.690ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_321656400] with ID [58] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.51s.693ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971974005796896772][5:50:18_9-26-19][1569500285]:321299368] with ID [59] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.52s.098ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_321656400] with ID [58] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.52s.099ms] [1] SC[480]: UnRegistered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971974005796896772][5:50:18_9-26-19][1569500285]:758071576] with ID [57] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.52s.100ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_321655464] with ID [56] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:05] [0001m.52s.100ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971974005796896772][5:50:18_9-26-19][1569500285]:321299368] with ID [59] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.182ms] [1] SC[480]: Registered sub-client [ObjectHolder_324527288] with ID [60] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.185ms] [1] SC[480]: Registered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971974014386831364][5:50:18_9-26-19][1569500288]:756505336] with ID [61] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.188ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_324527392] with ID [62] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.192ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971974014386831364][5:50:18_9-26-19][1569500288]:759578752] with ID [63] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.193ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_324527392] with ID [62] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.194ms] [1] SC[480]: UnRegistered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971974014386831364][5:50:18_9-26-19][1569500288]:756505336] with ID [61] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.194ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_324527288] with ID [60] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.194ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971974014386831364][5:50:18_9-26-19][1569500288]:759578752] with ID [63] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.198ms] [1] SC[480]: Registered sub-client [ObjectHolder_324526144] with ID [64] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.202ms] [1] SC[480]: Registered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971974014386831364][5:50:18_9-26-19][1569500288]:756505240] with ID [65] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.205ms] [1] SC[480]: Registered sub-client [GlobalNetAliasUpdater_324526352] with ID [66] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:08] [0001m.55s.209ms] [1] SC[480]: Registered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971974014386831364][5:50:18_9-26-19][1569500288]:759573096] with ID [67] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:09] [0001m.55s.559ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_324526352] with ID [66] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:09] [0001m.55s.559ms] [1] SC[480]: UnRegistered sub-client [BlockCache_savepoint[SCH][288230380446679042][4971974014386831364][5:50:18_9-26-19][1569500288]:756505240] with ID [65] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:09] [0001m.55s.560ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_324526144] with ID [64] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:09] [0001m.55s.560ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClient_savepoint[SCH][288230380446679042][4971974014386831364][5:50:18_9-26-19][1569500288]:759573096] with ID [67] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:18:41] [0002m.27s.628ms] [1] SC[480]: Registered sub-client [DxDbSearch] with ID [68] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:20:08] [0003m.54s.665ms] [1] SC[480]: UnRegistered sub-client [DesignSearcher2] with ID [7] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:20:08] [0003m.54s.769ms] [1] SC[480]: Registered sub-client [DesignSearcher2] with ID [69] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:22:17] [0006m.03s.955ms] [1] SC[480]: UnRegistered sub-client [DesignSearcher2] with ID [69] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:22:17] [0006m.04s.026ms] [1] SC[480]: Registered sub-client [DesignSearcher2] with ID [70] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:22:25] [0006m.11s.694ms] [1] SC[480]: UnRegistered sub-client [DesignSearcher2] with ID [70] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:22:33] [0006m.19s.969ms] [0] IT: Session [481] for host [TMC-EST-03] user [Trinamic] client type[0] clsvrPluginID[0] with process ID [3032] created
+[2019.09.26 15:22:33] [0006m.19s.993ms] [1] SC[481]: Registered sub-client [pcbui] with ID [1] for session ID [481] host [TMC-EST-03] user [Trinamic] process ID [3032]
+[2019.09.26 15:22:33] [0006m.20s.000ms] [1] CMT: There are [2] clients now: 480, 481
+[2019.09.26 15:22:35] [0006m.22s.120ms] [0] IT: Session [482] for host [TMC-EST-03] user [Trinamic] client type[0] clsvrPluginID[0] with process ID [13292] created
+[2019.09.26 15:22:35] [0006m.22s.143ms] [1] SC[482]: Registered sub-client [icdb2wir] with ID [1] for session ID [482] host [TMC-EST-03] user [Trinamic] process ID [13292]
+[2019.09.26 15:22:35] [0006m.22s.205ms] [1] SC[482]: UnRegistered sub-client [icdb2wir] with ID [1] for session ID [482] host [TMC-EST-03] user [Trinamic] process ID [13292]
+[2019.09.26 15:22:35] [0006m.22s.215ms] [1] CMT: There are [3] clients now: 480, 481, 482
+[2019.09.26 15:22:35] [0006m.22s.215ms] [1] CMT: Removed client [482]
+[2019.09.26 15:22:35] [0006m.22s.215ms] [1] CMT: There are [2] clients now: 480, 481
+[2019.09.26 15:22:40] [0006m.26s.713ms] [0] IT: Session [483] for host [TMC-EST-03] user [Trinamic] client type[0] clsvrPluginID[0] with process ID [13168] created
+[2019.09.26 15:22:40] [0006m.26s.737ms] [1] SC[483]: Registered sub-client [PCBfwd/PCBbck] with ID [1] for session ID [483] host [TMC-EST-03] user [Trinamic] process ID [13168]
+[2019.09.26 15:22:40] [0006m.26s.746ms] [1] CMT: There are [3] clients now: 480, 481, 483
+[2019.09.26 15:22:41] [0006m.27s.847ms] [1] SC[483]: Registered sub-client [LSUDX_PCB] with ID [2] for session ID [483] host [TMC-EST-03] user [Trinamic] process ID [13168]
+[2019.09.26 15:22:41] [0006m.27s.909ms] [1] SC[483]: Registered sub-client [ObjectHolder_134496416] with ID [3] for session ID [483] host [TMC-EST-03] user [Trinamic] process ID [13168]
+[2019.09.26 15:22:41] [0006m.27s.913ms] [1] SC[483]: Registered sub-client [BlockCacheDxD:121007496] with ID [4] for session ID [483] host [TMC-EST-03] user [Trinamic] process ID [13168]
+[2019.09.26 15:22:41] [0006m.27s.916ms] [1] SC[483]: Registered sub-client [GlobalNetAliasUpdater_134497664] with ID [5] for session ID [483] host [TMC-EST-03] user [Trinamic] process ID [13168]
+[2019.09.26 15:22:41] [0006m.27s.920ms] [1] SC[483]: Registered sub-client [IcdbNetProcessorSubClientDxD:128648512] with ID [6] for session ID [483] host [TMC-EST-03] user [Trinamic] process ID [13168]
+[2019.09.26 15:22:41] [0006m.28s.025ms] [1] SC[483]: UnRegistered sub-client [PCBfwd/PCBbck] with ID [1] for session ID [483] host [TMC-EST-03] user [Trinamic] process ID [13168]
+[2019.09.26 15:22:41] [0006m.28s.025ms] [1] SCL: WARNING: Sub-client [1] of client [483] has locked objects while trying to unregister - auto unlocking
+[2019.09.26 15:22:41] [0006m.28s.025ms] [1] SC[483]: WARNING: Trying to get data for non existing sub-client [1]
+[2019.09.26 15:22:41] [0006m.28s.026ms] [1] SC[483]: UnRegistered sub-client [LSUDX_PCB] with ID [2] for session ID [483] host [TMC-EST-03] user [Trinamic] process ID [13168]
+[2019.09.26 15:22:42] [0006m.28s.987ms] [0] SC[483]: ERROR: Receiving command: Socket Exception: Category[Socket] Error[ReceiveFailed] Description[Could not receive data from peer; ECONNRESET - Connection reset by peer.] Message[Receiving network command with timeout]
+[2019.09.26 15:22:42] [0006m.28s.987ms] [0] SC[483]: Setting status to OFFLINE
+[2019.09.26 15:22:42] [0006m.29s.062ms] [1] SC[481]: UnRegistered sub-client [pcbui] with ID [1] for session ID [481] host [TMC-EST-03] user [Trinamic] process ID [3032]
+[2019.09.26 15:22:42] [0006m.29s.063ms] [1] CMT: Trying to remove local offline client [483] because of single-user mode
+[2019.09.26 15:22:42] [0006m.29s.063ms] [0] CRT[483]: EXIT: Because of client death
+[2019.09.26 15:22:42] [0006m.29s.063ms] [1] CMT: Removed local offline client [483] because of single-user mode
+[2019.09.26 15:22:42] [0006m.29s.063ms] [1] CMT: There are [2] clients now: 480, 481
+[2019.09.26 15:22:42] [0006m.29s.063ms] [1] CMT: Removed client [481]
+[2019.09.26 15:22:42] [0006m.29s.063ms] [1] CMT: There are [1] clients now: 480
+[2019.09.26 15:22:44] [0006m.31s.227ms] [1] SC[480]: Registered sub-client [DesignSearcher2] with ID [71] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:30:56] [0014m.42s.869ms] [1] SC[480]: Registered sub-client [hdlUtilsDialog] with ID [72] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:30:56] [0014m.42s.870ms] [1] SC[480]: UnRegistered sub-client [hdlUtilsDialog] with ID [72] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 15:31:06] [0014m.52s.994ms] [0] IT: Session [484] for host [TMC-EST-03] user [Trinamic] client type[0] clsvrPluginID[0] with process ID [8280] created
+[2019.09.26 15:31:06] [0014m.53s.009ms] [1] CMT: There are [2] clients now: 480, 484
+[2019.09.26 15:31:06] [0014m.53s.020ms] [1] SC[484]: Registered sub-client [icdbPartslister] with ID [1] for session ID [484] host [TMC-EST-03] user [Trinamic] process ID [8280]
+[2019.09.26 15:31:06] [0014m.53s.071ms] [1] SC[484]: UnRegistered sub-client [icdbPartslister] with ID [1] for session ID [484] host [TMC-EST-03] user [Trinamic] process ID [8280]
+[2019.09.26 15:31:06] [0014m.53s.110ms] [1] CMT: Removed client [484]
+[2019.09.26 15:31:06] [0014m.53s.110ms] [1] CMT: There are [1] clients now: 480
+[2019.09.26 15:31:25] [0015m.12s.389ms] [0] IT: Session [485] for host [TMC-EST-03] user [Trinamic] client type[0] clsvrPluginID[0] with process ID [17324] created
+[2019.09.26 15:31:25] [0015m.12s.411ms] [1] SC[485]: Registered sub-client [DxPDFDialogClient] with ID [1] for session ID [485] host [TMC-EST-03] user [Trinamic] process ID [17324]
+[2019.09.26 15:31:25] [0015m.12s.429ms] [1] SC[485]: UnRegistered sub-client [DxPDFDialogClient] with ID [1] for session ID [485] host [TMC-EST-03] user [Trinamic] process ID [17324]
+[2019.09.26 15:31:25] [0015m.12s.433ms] [1] CMT: There are [2] clients now: 480, 485
+[2019.09.26 15:31:25] [0015m.12s.433ms] [1] CMT: Removed client [485]
+[2019.09.26 15:31:25] [0015m.12s.433ms] [1] CMT: There are [1] clients now: 480
+[2019.09.26 15:31:32] [0015m.19s.487ms] [0] IT: Session [486] for host [TMC-EST-03] user [Trinamic] client type[0] clsvrPluginID[0] with process ID [13184] created
+[2019.09.26 15:31:32] [0015m.19s.514ms] [1] SC[486]: Registered sub-client [Sch2PdfClient] with ID [1] for session ID [486] host [TMC-EST-03] user [Trinamic] process ID [13184]
+[2019.09.26 15:31:33] [0015m.19s.562ms] [1] SC[486]: Registered sub-client [SheetConnectorsCacheDxD:1569501093] with ID [2] for session ID [486] host [TMC-EST-03] user [Trinamic] process ID [13184]
+[2019.09.26 15:31:33] [0015m.19s.580ms] [1] CMT: There are [2] clients now: 480, 486
+[2019.09.26 15:31:33] [0015m.19s.610ms] [1] SC[486]: Registered sub-client [ICE_ICTIND] with ID [3] for session ID [486] host [TMC-EST-03] user [Trinamic] process ID [13184]
+[2019.09.26 15:31:34] [0015m.21s.205ms] [1] SC[486]: UnRegistered sub-client [SheetConnectorsCacheDxD:1569501093] with ID [2] for session ID [486] host [TMC-EST-03] user [Trinamic] process ID [13184]
+[2019.09.26 15:31:34] [0015m.21s.206ms] [1] SC[486]: UnRegistered sub-client [Sch2PdfClient] with ID [1] for session ID [486] host [TMC-EST-03] user [Trinamic] process ID [13184]
+[2019.09.26 15:31:34] [0015m.21s.234ms] [1] SC[486]: UnRegistered sub-client [ICE_ICTIND] with ID [3] for session ID [486] host [TMC-EST-03] user [Trinamic] process ID [13184]
+[2019.09.26 15:31:34] [0015m.21s.290ms] [1] CMT: Removed client [486]
+[2019.09.26 15:31:34] [0015m.21s.290ms] [1] CMT: There are [1] clients now: 480
+[2019.09.26 15:57:05] [0040m.51s.644ms] [1] PrjBackupMgr: Successfully created Project Backup [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\ProjectBackup\backups\2019-09-26 15.57.05 - auto.zip] with GUID [6553-4eb5-5e90-caee-1a5b-c8d6-a5bc-8d50-fa81-8a67-3ac5-d26e]
+[2019.09.26 15:57:05] [0040m.51s.644ms] [0] PrjBackupMgr: Removing excessive backup:  BackupGUID[017c-220e-aa47-3683-a2da-b8df-2dab-8d50-cba3-edcb-fd7b-cb98] CreationTime[Wednesday, September 25, 2019 18:08:42] Type[Autosave] Creator[iCDB Server (2019-09-25 21.08.40-8596)] ApplicationName[iCDB Server (2019-09-25 21.08.40-8596)] UserName[Trinamic] MachineName[TMC-EST-03] Description[Autosave] FullFlowName[PADS VX.2.4; PADS VX.2.4 - Update 3] FlowId[PADSVX.2.4] GBSInstallId[1845722; 1939034] GBSBuildId[11695155] IcdbVersion[3500] ReferenceLogFilePath[] BackupFilePath[C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\ProjectBackup\backups\2019-09-25 21.08.42 - auto.zip] BackupFileSize[884797] Persistent[FALSE]
+[2019.09.26 15:57:05] [0040m.51s.644ms] [0] PrjBackupMgr: Project Backup file [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\ProjectBackup\backups\2019-09-25 21.08.42 - auto.zip] with GUID [017c-220e-aa47-3683-a2da-b8df-2dab-8d50-cba3-edcb-fd7b-cb98] removed
+[2019.09.26 15:57:05] [0040m.51s.644ms] [0] PrjBackupEngine: Successfully created backup:  BackupGUID[6553-4eb5-5e90-caee-1a5b-c8d6-a5bc-8d50-fa81-8a67-3ac5-d26e] CreationTime[Thursday, September 26, 2019 12:57:05] Type[Autosave] Creator[iCDB Server (2019-09-26 15.16.14-10832)] ApplicationName[iCDB Server (2019-09-26 15.16.14-10832)] UserName[Trinamic] MachineName[TMC-EST-03] Description[Autosave] FullFlowName[PADS VX.2.4; PADS VX.2.4 - Update 3] FlowId[PADSVX.2.4] GBSInstallId[1845722; 1939034] GBSBuildId[11695155] IcdbVersion[3500] ReferenceLogFilePath[] BackupFilePath[C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\ProjectBackup\backups\2019-09-26 15.57.05 - auto.zip] BackupFileSize[918702] Persistent[FALSE]
+[2019.09.26 16:22:26] [0066m.13s.083ms] [1] SC[480]: UnRegistered sub-client [SystemDesignDll] with ID [6] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:26] [0066m.13s.279ms] [1] SC[480]: UnRegistered sub-client [DesignSearcher2] with ID [71] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.528ms] [1] SC[480]: UnRegistered sub-client [GlobalNetAliasUpdater_260225016] with ID [34] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.528ms] [1] SC[480]: UnRegistered sub-client [BlockCacheDxD:317615264] with ID [33] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.528ms] [1] SC[480]: UnRegistered sub-client [ObjectHolder_260224288] with ID [32] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.528ms] [1] SC[480]: UnRegistered sub-client [IcdbNetProcessorSubClientDxD:318243752] with ID [35] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.544ms] [1] SC[480]: UnRegistered sub-client [Navigator] with ID [12] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.559ms] [1] SC[480]: UnRegistered sub-client [FFSSelListener] with ID [17] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.681ms] [1] SC[480]: UnRegistered sub-client [LocalSymbolsDataProvider] with ID [16] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.813ms] [1] SC[480]: UnRegistered sub-client [FFSearch_RBHost] with ID [15] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.845ms] [1] SC[480]: UnRegistered sub-client [MyParts] with ID [22] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.845ms] [1] SC[480]: UnRegistered sub-client [toolboxes] with ID [24] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.892ms] [1] SC[480]: UnRegistered sub-client [SelectionHolder] with ID [4] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.892ms] [1] SC[480]: UnRegistered sub-client [PartReplaceUtils] with ID [28] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.892ms] [1] SC[480]: UnRegistered sub-client [PartReplaceUtilsSelectionListener] with ID [29] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.892ms] [1] SC[480]: UnRegistered sub-client [Core::NetFlatData-21410] with ID [10] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.892ms] [1] SC[480]: UnRegistered sub-client [BlockCacheDxD:257480368] with ID [9] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:27] [0066m.13s.892ms] [1] SC[480]: UnRegistered sub-client [Core::DesignListener-10695] with ID [8] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.562ms] [1] SC[480]: UnRegistered sub-client [ProjectIntegrationIcdbCacheDxD:311465776] with ID [25] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.562ms] [1] SC[480]: UnRegistered sub-client [SheetConnectorsCacheDxD:1569500182] with ID [26] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.562ms] [1] SC[480]: UnRegistered sub-client [NetsNamesCollectorDxD:1569500182] with ID [27] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.562ms] [1] SC[480]: UnRegistered sub-client [TransactionRollbackSubClient] with ID [2] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.562ms] [1] SC[480]: UnRegistered sub-client [DxD] with ID [1] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.577ms] [1] SC[480]: UnRegistered sub-client [xprob] with ID [30] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.577ms] [1] SC[480]: UnRegistered sub-client [SymbolEditor] with ID [3] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.577ms] [1] SC[480]: UnRegistered sub-client [OutputWindow] with ID [13] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.577ms] [1] SC[480]: UnRegistered sub-client [DxDbSearch] with ID [68] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.593ms] [1] SC[480]: UnRegistered sub-client [SAE] with ID [18] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.593ms] [1] SC[480]: UnRegistered sub-client [CCZAddin] with ID [20] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.593ms] [1] SC[480]: UnRegistered sub-client [DxThumbnails] with ID [21] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.963ms] [1] SC[480]: UnRegistered sub-client [DxConstraints] with ID [19] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.14s.978ms] [1] SC[480]: UnRegistered sub-client [PinsList] with ID [23] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:28] [0066m.15s.032ms] [1] SC[480]: UnRegistered sub-client [PlaceDevice] with ID [14] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:29] [0066m.16s.261ms] [1] SC[480]: UnRegistered sub-client [HdlProject] with ID [11] for session ID [480] host [TMC-EST-03] user [Trinamic] process ID [13552]
+[2019.09.26 16:22:29] [0066m.16s.383ms] [1] CMT: Removed client [480]
+[2019.09.26 16:22:29] [0066m.16s.383ms] [1] CMT: There are no clients left - waiting [1 seconds]
+[2019.09.26 16:22:31] [0066m.17s.571ms] [0] CMT: Starting server auto-close
+[2019.09.26 16:22:31] [0066m.17s.671ms] [0] S: Closing server
+[2019.09.26 16:22:31] [0066m.17s.855ms] [0] iCDB Server PI: Closing plugins
+[2019.09.26 16:22:31] [0066m.17s.855ms] [0] iCDB Server PI: Plugins closed
+[2019.09.26 16:22:31] [0066m.17s.855ms] [0] iCDB Server PI: Unloading database
+[2019.09.26 16:22:31] [0066m.17s.855ms] [0] iCDB Server PI: Saving storage
+[2019.09.26 16:22:31] [0066m.17s.855ms] [0] iCDB Server PI: Closing database
+[2019.09.26 16:22:31] [0066m.17s.855ms] [1] iCDB Server PI: Stats: Database defragmentation: max[2] avg[1] holes[22%] data[71%]
+[2019.09.26 16:22:31] [0066m.17s.855ms] [1] iCDB Server PI: Stats: Database file size [1436688 (1.4 MB)]
+[2019.09.26 16:22:31] [0066m.17s.855ms] [1] iCDB Server PI: WARNING: Database needs defragmentation!
+[2019.09.26 16:22:31] [0066m.17s.871ms] [0] iCDB Server PI: Database closed
+[2019.09.26 16:22:31] [0066m.17s.871ms] [0] iCDB Server PI: Defragmenting database
+[2019.09.26 16:22:31] [0066m.17s.871ms] [0] iCDB Server PI: Creating database [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database] backup to file [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database\cdbback\2019-09-26 16.22.31-10832-d.zip]
+[2019.09.26 16:22:31] [0066m.17s.956ms] [0] iCDB Server PI: Database backup: DONE
+[2019.09.26 16:22:31] [0066m.17s.971ms] [0] SingleFile: [0000-0000-0000-0000] SFI header version check [1009] [1009]
+[2019.09.26 16:22:31] [0066m.17s.971ms] [0] Database GUARD OK: [1436688]
+[2019.09.26 16:22:31] [0066m.17s.971ms] [0] SingleFile: [e8f7-763d-c4eb-02b1] SFI version check [1009] [1009]
+[2019.09.26 16:22:31] [0066m.18s.003ms] [0] SingleFile: [e8f7-763d-c4eb-02b1] Database SFI header has been read in [25ms 211us]
+[2019.09.26 16:22:31] [0066m.18s.141ms] [1] iCDB Server PI: Stats: Database file sizes: before[1436688 (1.4 MB)], after[917456 (896.0 kB)], gain[519232 (507.1 kB)]
+[2019.09.26 16:22:31] [0066m.18s.141ms] [0] Single file [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database\icdb.dat] closed with size [917456 (896.0 kB)]
+[2019.09.26 16:22:31] [0066m.18s.141ms] [0] iCDB Server PI: Database defragmentation completed successfully
+[2019.09.26 16:22:31] [0066m.18s.141ms] [1] BackupTransaction: Removing database backup [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database\cdbback\2019-09-26 16.22.31-10832-d.zip]
+[2019.09.26 16:22:31] [0066m.18s.141ms] [1] iCDB Server PI: Stats: Total iCDB execution time: [4879278] ticks
+[2019.09.26 16:22:31] [0066m.18s.141ms] [1] iCDB Server PI: Stats: Total iCDB execution time: [487927] microseconds
+[2019.09.26 16:22:31] [0066m.18s.141ms] [1] iCDB Server PI: Stats: Total iCDB commands count: [1535]
+[2019.09.26 16:22:31] [0066m.18s.141ms] [1] iCDB Server PI: Stats: Average iCDB speed:        [3145] commands per second
+[2019.09.26 16:22:31] [0066m.18s.141ms] [1] iCDB Server PI: Stats: Mem[35667968]
+[2019.09.26 16:22:31] [0066m.18s.141ms] [1] iCDB Server PI: Stats: MemPeak[48291840]
+[2019.09.26 16:22:31] [0066m.18s.287ms] [0] MWT: Destroy the shutdown block reason.
+[2019.09.26 16:22:31] [0066m.18s.303ms] [0] MWT: STOP
+[2019.09.26 16:22:31] [0066m.18s.303ms] [0] S: STOP

@@ -1,0 +1,84 @@
+*
+*
+G04 PADS VX.2.4 Build Number: 12858991 generated Gerber (RS-274-X) file*
+G04 PC Version=2.1*
+*
+%IN "TMC4671+TMC6200-BOB_V10"*%
+*
+%MOIN*%
+*
+%FSLAX35Y35*%
+*
+*
+*
+*
+G04 PC Standard Apertures*
+*
+*
+G04 Thermal Relief Aperture macro.*
+%AMTER*
+1,1,$1,0,0*
+1,0,$1-$2,0,0*
+21,0,$3,$4,0,0,45*
+21,0,$3,$4,0,0,135*
+%
+*
+*
+G04 Annular Aperture macro.*
+%AMANN*
+1,1,$1,0,0*
+1,0,$2,0,0*
+%
+*
+*
+G04 Odd Aperture macro.*
+%AMODD*
+1,1,$1,0,0*
+1,0,$1-0.005,0,0*
+%
+*
+*
+G04 PC Custom Aperture Macros*
+*
+*
+*
+*
+*
+*
+G04 PC Aperture Table*
+*
+%ADD011C,0.00787*%
+%ADD042C,0.001*%
+*
+*
+*
+*
+G04 PC Circuitry*
+G04 Layer Name TMC4671+TMC6200-BOB_V10 - circuitry*
+%LPD*%
+*
+*
+G04 PC Custom Flashes*
+G04 Layer Name TMC4671+TMC6200-BOB_V10 - flashes*
+%LPD*%
+*
+*
+G04 PC Circuitry*
+G04 Layer Name TMC4671+TMC6200-BOB_V10 - circuitry*
+%LPD*%
+*
+G54D11*
+G01X393701Y398701D02*
+G75*
+G03X398701Y393701I5000J-0D01*
+G01X588701*
+G03X593701Y398701I-0J5000*
+G01Y538701*
+G03X588701Y543701I-5000J-0*
+G01X398701*
+G03X393701Y538701I-0J-5000*
+G01Y398701*
+G54D42*
+G74*
+X0Y0D02*
+M02*

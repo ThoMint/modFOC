@@ -1,0 +1,15 @@
+Date:				2019-09-27
+Name:				TMC4671+TMC6100-BOB_V10
+Layers:				4
+PCB Width:			50.8mm
+PCB Height:			38.1mm
+PCB Thickness:			1.55mm
+
+Outer Layer Copper:		35µm (end)
+Inner Layer Copper:		35µm
+
+Silk Screen Top:		required (black)
+Silk Screen Bottom:		required (black)
+Solder Mask Top:		white
+Solder Mask Bottom:		white
+UL logo:			required (not for protos / pool services)

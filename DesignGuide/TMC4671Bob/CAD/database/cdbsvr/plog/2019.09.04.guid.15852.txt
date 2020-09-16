@@ -1,0 +1,30 @@
+[2019.09.04 14:41:59] [0000m.14s.923ms] [0] WELCOME
+[2019.09.04 14:41:59] [0000m.14s.923ms] [1] iCDB Database ver.2.204, w6NMT3m1DsvvLxNhuorv0Q, build:11695155 created 2018-10-03 12:34:59, sources stamp:w6NMT3m1DsvvLxNhuorv0Q
+[2019.09.04 14:41:59] [0000m.14s.923ms] [1] Copyright 2018 Mentor Graphics Corporation.  All Rights Reserved.
+[2019.09.04 14:41:59] [0000m.14s.923ms] [1] Base flow version [VX.2.4]
+[2019.09.04 14:41:59] [0000m.14s.923ms] [1] Install Id [1845722], Flow Id [PADS VX.2.4], Full Flow Name [PADS VX.2.4], Exact Access Date [2018/08/01]
+[2019.09.04 14:41:59] [0000m.14s.923ms] [1] UPDATE Install Info, Install Id [1939034], UPDATE Name [PADS VX.2.4 - Update 3]
+[2019.09.04 14:41:59] [0000m.14s.925ms] [1] Machine [TMC-EST-03]  IP [127.0.0.1,192.168.0.106,192.168.10.238,192.168.137.1]  User [Trinamic]  PID [15852]
+[2019.09.04 14:41:59] [0000m.14s.925ms] [1] Operating system [Microsoft Business Edition, 64-bit (build 9200)]
+[2019.09.04 14:41:59] [0000m.14s.925ms] [1] Current working dir [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD]
+[2019.09.04 14:41:59] [0000m.14s.925ms] [1] PATH [C:\MentorGraphics\PADSVX.2.4\SDD_HOME\common\win32\bin;C:\MentorGraphics\PADSVX.2.4\SDD_HOME\common\win32\lib;C:\MentorGraphics\PADSVX.2.4\MGC_HOME.ixn\bin;C:\MentorGraphics\PADSVX.2.4\MGC_HOME.ixn\lib;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Altium Designer S09 Viewer\System;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\IDEMIA\AWP\Dlls;C:\Program Files\IDEMIA\AWP\Dlls;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\Trinamic\AppData\Local\Microsoft\WindowsApps;C:\MentorGraphics\PADSVX.2.2\SDD_HOME\CAMCAD;C:\Users\Trinamic\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;]
+[2019.09.04 14:41:59] [0000m.14s.925ms] [1] SDD_HOME [C:\MentorGraphics\PADSVX.2.4\SDD_HOME] on file system [NTFS]
+[2019.09.04 14:41:59] [0000m.14s.925ms] [1] SDD_PLATFORM [win32]
+[2019.09.04 14:41:59] [0000m.14s.925ms] [1] WDIR [C:\PADS Projects;C:\MentorGraphics\PADSVX.2.4\SDD_HOME\standard;]
+[2019.09.04 14:41:59] [0000m.14s.925ms] [1] Local iCDB working dir [C:\PADS Projects\iCDB] on file system [NTFS]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] WARNING: Database [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6100-BOB_V10\CAD\database\icdb.dat] was manually copied
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] File change time:        [2019-09-04 14.37.08]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] File modification time:  [2019-04-16 13.46.24]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] Last change time:        [2019-04-16 13.46.24]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] Last database open information:
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] Time:             [2019-04-16 13.33.01]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] Location:         [C:\work\PADS designs\TMC4671+TMC6200\TMC4671+TMC6200-BOB_V10\CAD\database\icdb.dat]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] Machine:          [TMC-EST-03]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] User:             [Trinamic]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] PID:              [15156]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] Application:      [iCDB Server]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] Operating system: [Microsoft Business Edition, 64-bit (build 9200)]
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] WARNING: Regenerating database GUID
+[2019.09.04 14:41:59] [0000m.14s.926ms] [3] Previous database GUID [2769-3973-b6ae-aebb-0c0b-dcb5-c0bd-cb50-51b8-e3a1-1462-5f7b]
+[2019.09.04 14:41:59] [0000m.14s.927ms] [3] Current database GUID  [0613-5d26-c4aa-478b-703a-f6dc-03af-6d50-31f3-8a67-3ac5-d26e]
+[2019.09.04 14:41:59] [0000m.14s.927ms] [0] .

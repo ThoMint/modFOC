@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PartListerConfiguration version="3">
+  <Entry name="description" value=""/>
+  <Entry name="outputFormat" value="PLAIN" readonly="YES"/>
+  <Entry name="outputFileExt" value="lst" readonly="YES"/>
+  <Entry name="pagination" value="NO" readonly="YES"/>
+  <Entry name="pagelength" value="65535" readonly="YES"/>
+  <Entry name="delimiter" value=" " readonly="YES"/>
+  <Entry name="delimiterbefore" value="NO" readonly="YES"/>
+  <Entry name="delimiterafter" value="NO" readonly="YES"/>
+  <Entry name="addTitleRow" value="YES" readonly="YES"/>
+  <Entry name="ignoreColumnWidths" value="NO" readonly="YES"/>
+  <Header>
+    <Line text="---"/>
+    <Line text="PARTS LIST"/>
+    <Line text="$(NAME)"/>
+    <Line text="$(DATE)"/>
+    <Line text="---"/>
+  </Header>
+  <Columns>
+    <Column type="NUMBER" label="#" width="3"/>
+    <Column type="QUANTITY" label="QTY" width="4" justification="RIGHT"/>
+    <Column type="PROPERTY" property="REFDES" label="REFDES" width="100" justification="LEFT" key="SECONDARY" display="Compress" delimiter=", "/>
+    <Column type="PROPERTY" property="VALUE" label="VALUE" width="20" justification="LEFT" sort="ASCENDING" display="Unique"/>
+    <Column type="PROPERTY" property="PACKAGE" label="PACKAGE" width="20" justification="LEFT" display="Unique"/>
+    <Column type="PROPERTY" property="Height" label="H" width="5" justification="LEFT" display="Unique"/>
+    <Column type="PROPERTY" property="ASSY" label="ASSY" width="5" justification="LEFT" display="Unique"/>
+    <Column type="PROPERTY" property="DEVICE" label="PN" width="10" justification="LEFT" key="PRIMARY" display="Unique"/>
+    <Column type="PROPERTY" property="Manufacturer" label="MANUFACTURER" width="30" justification="LEFT" display="Compress"/>
+    <Column type="PROPERTY" property="ManufacturerPN" label="MANUFACTURER_PN" width="30" justification="LEFT" display="Compress"/>
+    <Column type="PROPERTY" property="Supplier" label="SUPPLIER" width="30" justification="LEFT" display="Compress"/>
+    <Column type="PROPERTY" property="SupplierPN" label="SUPPLIER_PN" width="30" justification="LEFT" display="Compress"/>
+  </Columns>
+</PartListerConfiguration>
