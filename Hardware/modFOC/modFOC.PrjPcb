@@ -40,23 +40,6 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=modFOC.PcbDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=MLKAEAKX
-
-[Document2]
 DocumentPath=modFOC-Motion_Controller.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=100
@@ -73,7 +56,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QEHTTRMZ
 
-[Document3]
+[Document2]
 DocumentPath=..\..\AltLibs\AltiumLib\PcbLib1.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -90,7 +73,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KNRURUBY
 
-[Document4]
+[Document3]
 DocumentPath=..\..\AltLibs\AltiumLib\Schlib1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -107,9 +90,9 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VQEVOHPJ
 
-[Document5]
+[Document4]
 DocumentPath=modFOC-Sensing.SchDoc
-AnnotationEnabled=0
+AnnotationEnabled=1
 AnnotateStartValue=200
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
@@ -124,9 +107,9 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NTUMNOOP
 
-[Document6]
+[Document5]
 DocumentPath=modFOC-Powerstage.SchDoc
-AnnotationEnabled=0
+AnnotationEnabled=1
 AnnotateStartValue=300
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
@@ -140,6 +123,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UOWBETEO
+
+[Document6]
+DocumentPath=modFOC_ESC.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=PNNYQHGT
 
 [Configuration1]
 Name=Sources
