@@ -95,6 +95,49 @@ int main(void)
 	/* USER CODE BEGIN 2 */
 	tmc4671_writeInt(0, 0x01, 0x00000000);
 	int32_t buff = tmc4671_readInt(0, 0x00);
+	// Motor type &  PWM configuration
+	tmc4671_writeInt(0, TMC4671_MOTOR_TYPE_N_POLE_PAIRS, 0x00000004);
+	tmc4671_writeInt(0, TMC4671_PWM_POLARITIES, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_PWM_MAXCNT, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_PWM_BBM_H_BBM_L, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_PWM_SV_CHOP, 0x00000000);
+
+	// ADC configuration
+	tmc4671_writeInt(0, TMC4671_ADC_I_SELECT, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_dsADC_MCFG_B_MCFG_A, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_dsADC_MCLK_A, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_dsADC_MCLK_B, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_dsADC_MDEC_B_MDEC_A, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_ADC_I0_SCALE_OFFSET, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_ADC_I1_SCALE_OFFSET, 0x00000000);
+
+	// Open loop settings
+	tmc4671_writeInt(0, TMC4671_OPENLOOP_MODE, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_OPENLOOP_ACCELERATION, 0x00000000);
+	tmc4671_writeInt(0, TMC4671_OPENLOOP_VELOCITY_TARGET, 0x00000000);
+
+	// Feedback selection
+	tmc4671_writeInt(0, TMC4671_PHI_E_SELECTION, 0x00000002);
+	tmc4671_writeInt(0, TMC4671_UQ_UD_EXT, 0x00000001);
+
+	// ===== Open loop test drive =====
+
+	// Switch to open loop velocity mode
+	tmc4671_writeInt(0, TMC4671_MODE_RAMP_MODE_MOTION, 0x00000008);
+
+	// Rotate right
+	tmc4671_writeInt(0, TMC4671_OPENLOOP_VELOCITY_TARGET, 0x0000003C);
+	wait(2000);
+
+	// Rotate left
+	tmc4671_writeInt(0, TMC4671_OPENLOOP_VELOCITY_TARGET, 0xFFFFFFC4);
+	wait(4000);
+
+	// Stop
+	tmc4671_writeInt(0, TMC4671_OPENLOOP_VELOCITY_TARGET, 0x00000000);
+	wait(2000);
+	tmc4671_writeInt(0, TMC4671_UQ_UD_EXT, 0x00000000);
+	//0x34363731
 
 	/* USER CODE END 2 */
 
@@ -102,6 +145,9 @@ int main(void)
 	/* USER CODE BEGIN WHILE */
 	while (1)
 	{
+		tmc4671_writeInt(0, 0x01, 0x00000000);
+		int32_t buff = tmc4671_readInt(0, 0x00);
+		int32_t buff1 = buff;
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
@@ -170,7 +216,7 @@ static void MX_SPI1_Init(void)
 	hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
 	hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
 	hspi1.Init.NSS = SPI_NSS_SOFT;
-	hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
+	hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
 	hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
 	hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
 	hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;

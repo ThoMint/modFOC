@@ -19,7 +19,7 @@
 
 // Helper macros
 #define TMC4671_FIELD_READ(tdef, address, mask, shift) \ FIELD_GET(tmc4671_readInt(tdef, address), mask, shift)
-#define TMC4671_FIELD_UPDATE(tdef, address, mask, shift, value) \ (tmc4671_writeInt(tdef, address, FIELD_SET(tmc4671_readInt(tdef, address), mask, shift, value)))
+//#define TMC4671_FIELD_UPDATE(tdef, address, mask, shift, value) \ (tmc4671_writeInt(tdef, address, FIELD_SET(tmc4671_readInt(tdef, address), mask, shift, value)))
 
 int32_t tmc4671_readInt(uint8_t motor, uint8_t address);
 void tmc4671_writeInt(uint8_t motor, uint8_t address, int32_t value);
