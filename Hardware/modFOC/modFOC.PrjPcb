@@ -123,8 +123,13 @@ GenerateClassCluster=0
 DocumentUniqueId=UOWBETEO
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [Document6]
 DocumentPath=modFOC_ESC.PcbDoc
+=======
+[Document7]
+DocumentPath=modFOC-MCU.SchDoc
+>>>>>>> Stashed changes
 =======
 [Document7]
 DocumentPath=modFOC-MCU.SchDoc
@@ -143,8 +148,11 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 DocumentUniqueId=PNNYQHGT
 =======
+=======
+>>>>>>> Stashed changes
 DocumentUniqueId=WBIZSQMV
 
 [Document8]
@@ -163,6 +171,9 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YQZGFOWD
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [Configuration1]
