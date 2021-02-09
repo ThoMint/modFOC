@@ -1,1 +1,3 @@
-Record=TopLevelDocument|FileName=modFOC-5VSupply.SchDoc
+Record=TopLevelDocument|FileName=modFOC-IO.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=modFOC-IO.SchDoc|FileName=modFOC-MCU.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=modFOC-IO.SchDoc|FileName=modFOC-Power_Module.SchDoc|SheetNumber=1
