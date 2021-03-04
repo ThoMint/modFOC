@@ -1,3 +1,0 @@
-LinearRamp.c:14:6:tmc_linearRamp_init	16	static
-LinearRamp.c:27:6:tmc_linearRamp_computeRampVelocity	24	static
-LinearRamp.c:65:6:tmc_linearRamp_computeRampPosition	96	static

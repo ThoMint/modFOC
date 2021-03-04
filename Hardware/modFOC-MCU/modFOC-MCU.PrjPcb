@@ -156,7 +156,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=WQOWDARH
 
 [Document8]
 DocumentPath=..\AltLibs\RcMPPTLib.SchLib
@@ -174,6 +174,14 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for modFOC-MCU\Design Rule Check - modFOC-MCU.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for modFOC-MCU\Move Component(s) Origin To Grid - modFOC-MCU.html
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources
@@ -294,7 +302,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=Xerox7835
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]

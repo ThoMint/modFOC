@@ -1,0 +1,840 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD21\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">15.02.2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">14:34:32</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc" class="file"><acronym title="C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc">C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">164</td></tr>
+</table>
+</td>
+</table><a name="IDZLUAXLB1G0LVMCVW2H5UMHQKIBP1CLAK5HLBANPF2DPSP4NBDMVP"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNNLC4D4WYCWSN213GHTN5S23GDWGRETZTK2SRKGIQGGL4P2VDQN">Clearance Constraint (Gap=0.102mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUSJYF4R4V2MXJ2CAEIUTOKTVNHAWUZTGQZBEHCQO0P4WOERWAVM">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID13JHYJ0IGOMUHR2LVUTVRLLOHLEBX2OWP1DZ2FK51KDSDSBC5UWE">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">123</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJI2PMZQMXQWCG3N41TCUVGXK1IAGN15ZEEFAX2HCM1DJTTHVYPXK">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSGPYTIJVMPQ5LBUDRKEI1YXDVD0L3ZW2ZZ1EB4LUXM30EW5A3KLI">Width Constraint (Min=0.102mm) (Max=50mm) (Preferred=0.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4Z11GCNAS0GIJPXCNCYMLHYETELUVVNWOGRYO4BSIXK4YJGOA3U">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (InPadClass('PowerPads'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPMGOOGFASPMXNK0O533AY5U0M3SQQ2WQVBTVKM5YCW3QSSCN51M">Power Plane Connect Rule(Relief Connect )(Expansion=0.3mm) (Conductor Width=0.102mm) (Air Gap=0.102mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHLRAKH22TG11LUZ4GGWQQSHSHDZAHIOQMZZPQYJA4G5TJF3OTWN">Minimum Annular Ring (Minimum=0.13mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIBI3CVMNJSBXDJLW5HEUXBQ4IPDCL1X0C4ULGIJIXWINCPLKZ0IK">Acute Angle Constraint (Minimum=60.000) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAD0JJVLEA44FW5Q1BYJ5AM3NW0X4B0M31D0ZO0VD1L4VT2XPFO">Hole Size Constraint (Min=0.45mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5NAIK3W0CQHMCXAH4IJQHGNX4CTEYQCZCZXP4WDYFH2H4SHNUNSM">Hole To Hole Clearance (Gap=0.5mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTE3ERL1JEKKJFXYIY2WEPSMA1JYYLTQOY1QYBTI2E4UGMKXC1XG">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1WWKXUDPJC4NOAFNZERRC02YXBIF0QWLDNSPJ2IZSFH1BIZNTKBL">Silk To Solder Mask (Clearance=0.15mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRCIQIVLP4BULVXLJBFE3NNQICH3WUH10R5KOIMQF3FJDZPYWHK">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRNXZ2LX3ORQ1K52T4FWG0NYJXHGIU2DTL3VMCKDOIOPXISYVSMN">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNFQQY44PVAGOHVS2GWPHK43U4BQ5LIJZZU5TFDITVDUO3QYRPWYK">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">41</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID51INMALO4VJ0BPI0ZCABNX5AYKUWFQKKQBJVZCKFTW0ZAS3ION3P">Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">164</td>
+</tr>
+</table><br><a name="ID13JHYJ0IGOMUHR2LVUTVRLLOHLEBX2OWP1DZ2FK51KDSDSBC5UWE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2576.015mil|Location2.X=2639.952mil|Location1.Y=453.111mil|Location2.Y=577.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2576.015mil|Location2.X=2639.952mil|Location1.Y=453.111mil|Location2.Y=577.5mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-16(23.337mm,12.881mm) on Top Layer [Unplated] And Pad C10-1(24.322mm,11.049mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2605.307mil|Location2.X=3064.283mil|Location1.Y=453.111mil|Location2.Y=516.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2605.307mil|Location2.X=3064.283mil|Location1.Y=453.111mil|Location2.Y=516.024mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C10-1(24.322mm,11.049mm) on Top Layer [Unplated] And Pad R13-1(35.09mm,11.557mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2479.598mil|Location2.X=2584.834mil|Location1.Y=395.276mil|Location2.Y=495.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2479.598mil|Location2.X=2584.834mil|Location1.Y=395.276mil|Location2.Y=495.63mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad CL2-1(21.209mm,9.36mm) on Top Layer [Unplated] And Pad C10-2(22.922mm,11.049mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2550.189mil|Location2.X=2584.834mil|Location1.Y=453.111mil|Location2.Y=577.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2550.189mil|Location2.X=2584.834mil|Location1.Y=453.111mil|Location2.Y=577.5mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-15(22.837mm,12.881mm) on Top Layer [Unplated] And Pad C10-2(22.922mm,11.049mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2118.811mil|Location2.X=2241.311mil|Location1.Y=569.489mil|Location2.Y=632.599mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2118.811mil|Location2.X=2241.311mil|Location1.Y=569.489mil|Location2.Y=632.599mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C11-1(12.065mm,13.905mm) on Top Layer [Unplated] And Pad MCU1-64(13.849mm,14.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1857.314mil|Location2.X=2161.33mil|Location1.Y=468.741mil|Location2.Y=604.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1857.314mil|Location2.X=2161.33mil|Location1.Y=468.741mil|Location2.Y=604.134mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad S1-1(5.433mm,11.756mm) on Top Layer [Unplated] And Pad C11-1(12.065mm,13.905mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2118.811mil|Location2.X=2241.311mil|Location1.Y=624.607mil|Location2.Y=659.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2118.811mil|Location2.X=2241.311mil|Location1.Y=624.607mil|Location2.Y=659.253mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad C11-2(12.065mm,15.305mm) on Top Layer [Unplated] And Pad MCU1-63(13.849mm,15.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1748.259mil|Location2.X=2161.33mil|Location1.Y=624.607mil|Location2.Y=659.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1748.259mil|Location2.X=2161.33mil|Location1.Y=624.607mil|Location2.Y=659.253mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad SB1-1(2.313mm,15.367mm) on Top Layer And Pad C11-2(12.065mm,15.305mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2965.858mil|Location2.X=3004.834mil|Location1.Y=418.111mil|Location2.Y=516.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2965.858mil|Location2.X=3004.834mil|Location1.Y=418.111mil|Location2.Y=516.024mil|Absolute=True">Un-Routed Net Constraint: Net STM32-NRST Between Pad R13-2(33.49mm,11.557mm) on Top Layer [Unplated] And Pad C12-1(33.59mm,10.16mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2930.425mil|Location2.X=3004.834mil|Location1.Y=315.237mil|Location2.Y=460.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2930.425mil|Location2.X=3004.834mil|Location1.Y=315.237mil|Location2.Y=460.63mil|Absolute=True">Un-Routed Net Constraint: Net STM32-NRST Between Pad SW2-2(32.69mm,7.832mm) on Top Layer [Unplated] And Pad C12-1(33.59mm,10.16mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3025.307mil|Location2.X=3099.716mil|Location1.Y=315.237mil|Location2.Y=460.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3025.307mil|Location2.X=3099.716mil|Location1.Y=315.237mil|Location2.Y=460.63mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad C12-2(34.99mm,10.16mm) on Top Layer [Unplated] And Pad SW2-4(35.89mm,7.832mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1850.307mil|Location2.X=1946.33mil|Location1.Y=984.154mil|Location2.Y=1048.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1850.307mil|Location2.X=1946.33mil|Location1.Y=984.154mil|Location2.Y=1048.13mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad IC11-1(5.08mm,24.81mm) on Top Layer [Unplated] And Pad C33-1(6.604mm,24.83mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=1947.393mil|Location1.Y=666.654mil|Location2.Y=1034.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=1947.393mil|Location1.Y=666.654mil|Location2.Y=1034.253mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad J7-1(6.221mm,16.333mm) on Bottom Layer [Unplated] And Pad C33-1(6.604mm,24.83mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.811mil|Location2.X=2296.409mil|Location1.Y=967.304mil|Location2.Y=1034.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1903.811mil|Location2.X=2296.409mil|Location1.Y=967.304mil|Location2.Y=1034.253mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C33-1(6.604mm,24.83mm) on Top Layer [Unplated] And Pad MCU1-48(15.837mm,24.357mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.094mil|Location2.X=1946.33mil|Location1.Y=939.804mil|Location2.Y=979.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.094mil|Location2.X=1946.33mil|Location1.Y=939.804mil|Location2.Y=979.134mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J8-1(5.421mm,23.271mm) on Bottom Layer [Unplated] And Pad C33-2(6.604mm,23.43mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1800.188mil|Location2.X=1834.834mil|Location1.Y=713.111mil|Location2.Y=834.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1800.188mil|Location2.X=1834.834mil|Location1.Y=713.111mil|Location2.Y=834.587mil|Absolute=True">Un-Routed Net Constraint: Net NetC34_1 Between Pad IC11-7(3.81mm,19.386mm) on Top Layer [Unplated] And Pad C34-1(3.872mm,17.653mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1800.188mil|Location2.X=1834.834mil|Location1.Y=636.497mil|Location2.Y=755.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1800.188mil|Location2.X=1834.834mil|Location1.Y=636.497mil|Location2.Y=755.63mil|Absolute=True">Un-Routed Net Constraint: Net NetC34_1 Between Pad SB1-2(3.837mm,15.367mm) on Top Layer And Pad C34-1(3.872mm,17.653mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1850.307mil|Location2.X=1889.952mil|Location1.Y=713.111mil|Location2.Y=834.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1850.307mil|Location2.X=1889.952mil|Location1.Y=713.111mil|Location2.Y=834.587mil|Absolute=True">Un-Routed Net Constraint: Net NetC34_2 Between Pad IC11-8(5.08mm,19.386mm) on Top Layer [Unplated] And Pad C34-2(5.272mm,17.653mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1808.259mil|Location2.X=1889.952mil|Location1.Y=581.497mil|Location2.Y=755.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1808.259mil|Location2.X=1889.952mil|Location1.Y=581.497mil|Location2.Y=755.63mil|Absolute=True">Un-Routed Net Constraint: Net NetC34_2 Between Pad SB2-2(3.837mm,13.97mm) on Top Layer And Pad C34-2(5.272mm,17.653mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2713.811mil|Location2.X=2866.33mil|Location1.Y=904.489mil|Location2.Y=1171.733mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2713.811mil|Location2.X=2866.33mil|Location1.Y=904.489mil|Location2.Y=1171.733mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad C9-2(27.178mm,22.414mm) on Top Layer [Unplated] And Pad C4-2(29.337mm,27.837mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2714.165mil|Location2.X=2831.724mil|Location1.Y=848.819mil|Location2.Y=892.914mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2714.165mil|Location2.X=2831.724mil|Location1.Y=848.819mil|Location2.Y=892.914mil|Absolute=True">Un-Routed Net Constraint: Net STM32-VDDA Between Pad C7-1(27.432mm,21.12mm) on Top Layer [Unplated] And Pad FB1-2(29.083mm,21.12mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2775.976mil|Location1.Y=848.819mil|Location2.Y=892.914mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2775.976mil|Location1.Y=848.819mil|Location2.Y=892.914mil|Absolute=True">Un-Routed Net Constraint: Net STM32-VDDA Between Pad MCU1-29(25.325mm,20.869mm) on Top Layer [Unplated] And Pad C7-1(27.432mm,21.12mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2775.976mil|Location1.Y=785.827mil|Location2.Y=829.922mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2775.976mil|Location1.Y=785.827mil|Location2.Y=829.922mil|Absolute=True">Un-Routed Net Constraint: Net AGND Between Pad MCU1-27(25.325mm,19.869mm) on Top Layer [Unplated] And Pad C7-2(27.432mm,19.52mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2714.165mil|Location2.X=2971.803mil|Location1.Y=785.827mil|Location2.Y=1016.103mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2714.165mil|Location2.X=2971.803mil|Location1.Y=785.827mil|Location2.Y=1016.103mil|Absolute=True">Un-Routed Net Constraint: Net AGND Between Pad C7-2(27.432mm,19.52mm) on Top Layer [Unplated] And Via (32.766mm,24.384mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2788.417mil|Location2.X=2886.33mil|Location1.Y=788.189mil|Location2.Y=829.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2788.417mil|Location2.X=2886.33mil|Location1.Y=788.189mil|Location2.Y=829.134mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad FB1-1(29.083mm,19.52mm) on Top Layer [Unplated] And Pad C8-1(30.48mm,19.62mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2713.811mil|Location2.X=2886.33mil|Location1.Y=849.607mil|Location2.Y=939.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2713.811mil|Location2.X=2886.33mil|Location1.Y=849.607mil|Location2.Y=939.134mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad C9-2(27.178mm,22.414mm) on Top Layer [Unplated] And Pad C8-2(30.48mm,21.02mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2756.33mil|Location1.Y=912.205mil|Location2.Y=994.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2756.33mil|Location1.Y=912.205mil|Location2.Y=994.253mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-32(25.325mm,22.369mm) on Top Layer [Unplated] And Pad C9-1(27.178mm,23.814mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2756.33mil|Location1.Y=892.52mil|Location2.Y=939.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2756.33mil|Location1.Y=892.52mil|Location2.Y=939.134mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-31(25.325mm,21.869mm) on Top Layer [Unplated] And Pad C9-2(27.178mm,22.414mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2179.303mil|Location2.X=2270.543mil|Location1.Y=458.268mil|Location2.Y=652.284mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2179.303mil|Location2.X=2270.543mil|Location1.Y=458.268mil|Location2.Y=652.284mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-63(13.849mm,15.369mm) on Top Layer [Unplated] And Pad CL1-1(14.859mm,10.96mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2229.598mil|Location2.X=2361.291mil|Location1.Y=446.26mil|Location2.Y=495.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2229.598mil|Location2.X=2361.291mil|Location1.Y=446.26mil|Location2.Y=495.473mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad CL1-1(14.859mm,10.96mm) on Top Layer [Unplated] And Pad Y1-4(16.934mm,10.96mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2229.598mil|Location2.X=2361.291mil|Location1.Y=383.268mil|Location2.Y=432.481mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2229.598mil|Location2.X=2361.291mil|Location1.Y=383.268mil|Location2.Y=432.481mil|Absolute=True">Un-Routed Net Constraint: Net STM32-XC_IN Between Pad CL1-2(14.859mm,9.36mm) on Top Layer [Unplated] And Pad Y1-1(16.934mm,9.36mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2388.85mil|Location2.X=2520.543mil|Location1.Y=383.268mil|Location2.Y=432.481mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2388.85mil|Location2.X=2520.543mil|Location1.Y=383.268mil|Location2.Y=432.481mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad Y1-2(19.134mm,9.36mm) on Top Layer [Unplated] And Pad CL2-1(21.209mm,9.36mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2388.85mil|Location2.X=2520.543mil|Location1.Y=446.26mil|Location2.Y=495.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2388.85mil|Location2.X=2520.543mil|Location1.Y=446.26mil|Location2.Y=495.473mil|Absolute=True">Un-Routed Net Constraint: Net STM32-XC_OUT Between Pad Y1-3(19.134mm,10.96mm) on Top Layer [Unplated] And Pad CL2-2(21.209mm,10.96mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1748.259mil|Location2.X=1951.881mil|Location1.Y=581.497mil|Location2.Y=1586.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1748.259mil|Location2.X=1951.881mil|Location1.Y=581.497mil|Location2.Y=1586.812mil|Absolute=True">Un-Routed Net Constraint: Net +5 Between Pad SB2-1(2.313mm,13.97mm) on Top Layer And Pad D11-1(6.985mm,38.73mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1928.259mil|Location2.X=2718.456mil|Location1.Y=1229.292mil|Location2.Y=1586.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1928.259mil|Location2.X=2718.456mil|Location1.Y=1229.292mil|Location2.Y=1586.812mil|Absolute=True">Un-Routed Net Constraint: Net +5 Between Pad D11-1(6.985mm,38.73mm) on Top Layer [Unplated] And Via (26.331mm,30.649mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1801.527mil|Location2.X=1951.881mil|Location1.Y=1365.709mil|Location2.Y=1497.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1801.527mil|Location2.X=1951.881mil|Location1.Y=1365.709mil|Location2.Y=1497.205mil|Absolute=True">Un-Routed Net Constraint: Net NetD11_2 Between Pad J2-1(4.191mm,33.939mm) on Top Layer [Unplated] And Pad D11-2(6.985mm,36.454mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2831.724mil|Location1.Y=788.189mil|Location2.Y=849.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2831.724mil|Location1.Y=788.189mil|Location2.Y=849.134mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-28(25.325mm,20.369mm) on Top Layer [Unplated] And Pad FB1-1(29.083mm,19.52mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3056.409mil|Location2.X=3419.007mil|Location1.Y=57.087mil|Location2.Y=297.245mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3056.409mil|Location2.X=3419.007mil|Location1.Y=57.087mil|Location2.Y=297.245mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad SW2-3(35.89mm,2.582mm) on Top Layer [Unplated] And Pad Free-6(41.5mm,3.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1682.787mil|Location2.X=2054.834mil|Location1.Y=57.087mil|Location2.Y=297.245mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1682.787mil|Location2.X=2054.834mil|Location1.Y=57.087mil|Location2.Y=297.245mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad Free-7(3.5mm,3.5mm) on Multi-Layer And Pad J1-3(9.525mm,2.135mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1682.787mil|Location2.X=1922.944mil|Location1.Y=57.087mil|Location2.Y=381.221mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1682.787mil|Location2.X=1922.944mil|Location1.Y=57.087mil|Location2.Y=381.221mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J7-MP2(2.921mm,7.833mm) on Bottom Layer [Unplated] And Pad Free-7(3.5mm,3.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1682.787mil|Location2.X=2147.787mil|Location1.Y=1553.15mil|Location2.Y=1793.308mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1682.787mil|Location2.X=2147.787mil|Location1.Y=1553.15mil|Location2.Y=1793.308mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad Free-8(3.5mm,41.5mm) on Multi-Layer And Pad LED4-1(11.811mm,43.676mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.094mil|Location2.X=1915.897mil|Location1.Y=984.154mil|Location2.Y=1118.938mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.094mil|Location2.X=1915.897mil|Location1.Y=984.154mil|Location2.Y=1118.938mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad IC11-1(5.08mm,24.81mm) on Top Layer [Unplated] And Pad J8-4(5.421mm,27.021mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1218.417mil|Location2.X=1879.834mil|Location1.Y=970.158mil|Location2.Y=1048.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1218.417mil|Location2.X=1879.834mil|Location1.Y=970.158mil|Location2.Y=1048.13mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad R22-1(-10.795mm,24.092mm) on Top Layer [Unplated] And Pad IC11-1(5.08mm,24.81mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1800.307mil|Location2.X=2552.314mil|Location1.Y=967.304mil|Location2.Y=1048.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1800.307mil|Location2.X=2552.314mil|Location1.Y=967.304mil|Location2.Y=1048.13mil|Absolute=True">Un-Routed Net Constraint: Net STM32-CAN-TRCV-TX Between Pad IC11-2(3.81mm,24.81mm) on Top Layer [Unplated] And Pad MCU1-35(22.337mm,24.357mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1750.307mil|Location2.X=2571.999mil|Location1.Y=967.304mil|Location2.Y=1048.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1750.307mil|Location2.X=2571.999mil|Location1.Y=967.304mil|Location2.Y=1048.13mil|Absolute=True">Un-Routed Net Constraint: Net STM32-CAN-TRCV-RX Between Pad IC11-3(2.54mm,24.81mm) on Top Layer [Unplated] And Pad MCU1-34(22.837mm,24.357mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1700.307mil|Location2.X=1793.85mil|Location1.Y=984.154mil|Location2.Y=1225.237mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1700.307mil|Location2.X=1793.85mil|Location1.Y=984.154mil|Location2.Y=1225.237mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad IC11-4(1.27mm,24.81mm) on Top Layer [Unplated] And Pad J8-MP1(2.121mm,29.271mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1700.307mil|Location2.X=1793.85mil|Location1.Y=833.505mil|Location2.Y=1048.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1700.307mil|Location2.X=1793.85mil|Location1.Y=833.505mil|Location2.Y=1048.13mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad IC11-4(1.27mm,24.81mm) on Top Layer [Unplated] And Pad J8-MP2(2.121mm,21.021mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29.244mil|Location2.X=1729.834mil|Location1.Y=770.611mil|Location2.Y=1518.938mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29.244mil|Location2.X=1729.834mil|Location1.Y=770.611mil|Location2.Y=1518.938mil|Absolute=True">Un-Routed Net Constraint: Net NetIC11_5 Between Pad J9-4(-40.6mm,37.181mm) on Top Layer [Unplated] And Pad IC11-5(1.27mm,19.386mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1690.858mil|Location2.X=1729.834mil|Location1.Y=712.717mil|Location2.Y=834.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1690.858mil|Location2.X=1729.834mil|Location1.Y=712.717mil|Location2.Y=834.587mil|Absolute=True">Un-Routed Net Constraint: Net NetIC11_5 Between Pad R17-1(1.105mm,17.653mm) on Top Layer [Unplated] And Pad IC11-5(1.27mm,19.386mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29.244mil|Location2.X=1779.834mil|Location1.Y=770.611mil|Location2.Y=1469.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29.244mil|Location2.X=1779.834mil|Location1.Y=770.611mil|Location2.Y=1469.725mil|Absolute=True">Un-Routed Net Constraint: Net NetIC11_6 Between Pad J9-3(-40.6mm,35.931mm) on Top Layer [Unplated] And Pad IC11-6(2.54mm,19.386mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1750.307mil|Location2.X=1789.283mil|Location1.Y=712.717mil|Location2.Y=834.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1750.307mil|Location2.X=1789.283mil|Location1.Y=712.717mil|Location2.Y=834.587mil|Absolute=True">Un-Routed Net Constraint: Net NetIC11_6 Between Pad IC11-6(2.54mm,19.386mm) on Top Layer [Unplated] And Pad R17-2(2.705mm,17.653mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29.244mil|Location2.X=1829.834mil|Location1.Y=770.611mil|Location2.Y=1420.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29.244mil|Location2.X=1829.834mil|Location1.Y=770.611mil|Location2.Y=1420.512mil|Absolute=True">Un-Routed Net Constraint: Net NetC34_1 Between Pad J9-2(-40.6mm,34.681mm) on Top Layer [Unplated] And Pad IC11-7(3.81mm,19.386mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29.244mil|Location2.X=1879.834mil|Location1.Y=770.611mil|Location2.Y=1371.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=29.244mil|Location2.X=1879.834mil|Location1.Y=770.611mil|Location2.Y=1371.3mil|Absolute=True">Un-Routed Net Constraint: Net NetC34_2 Between Pad J9-1(-40.6mm,33.431mm) on Top Layer [Unplated] And Pad IC11-8(5.08mm,19.386mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1801.527mil|Location2.X=1998.496mil|Location1.Y=1340.119mil|Location2.Y=1390.552mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1801.527mil|Location2.X=1998.496mil|Location1.Y=1340.119mil|Location2.Y=1390.552mil|Absolute=True">Un-Routed Net Constraint: Net USB-Con-D_N Between Pad J2-2(4.191mm,33.289mm) on Top Layer [Unplated] And Pad IC2-1(7.844mm,33.97mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1801.527mil|Location2.X=1998.496mil|Location1.Y=1263.347mil|Location2.Y=1353.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1801.527mil|Location2.X=1998.496mil|Location1.Y=1263.347mil|Location2.Y=1353.15mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J2-5(4.191mm,31.339mm) on Top Layer [Unplated] And Pad IC2-2(7.844mm,33.02mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1801.527mil|Location2.X=1998.496mil|Location1.Y=1288.189mil|Location2.Y=1334.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1801.527mil|Location2.X=1998.496mil|Location1.Y=1288.189mil|Location2.Y=1334.213mil|Absolute=True">Un-Routed Net Constraint: Net USB-Con-D_P Between Pad J2-3(4.191mm,32.639mm) on Top Layer [Unplated] And Pad IC2-3(7.844mm,32.07mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2051.645mil|Location2.X=2335.779mil|Location1.Y=967.304mil|Location2.Y=1315.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2051.645mil|Location2.X=2335.779mil|Location1.Y=967.304mil|Location2.Y=1315.748mil|Absolute=True">Un-Routed Net Constraint: Net USB-D_P Between Pad IC2-4(10.444mm,32.07mm) on Top Layer [Unplated] And Pad MCU1-46(16.837mm,24.357mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2051.645mil|Location2.X=2388.456mil|Location1.Y=1325.591mil|Location2.Y=1527.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2051.645mil|Location2.X=2388.456mil|Location1.Y=1325.591mil|Location2.Y=1527.756mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad IC2-5(10.444mm,33.02mm) on Top Layer [Unplated] And Via (17.949mm,37.38mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2051.645mil|Location2.X=2355.464mil|Location1.Y=967.304mil|Location2.Y=1390.552mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2051.645mil|Location2.X=2355.464mil|Location1.Y=967.304mil|Location2.Y=1390.552mil|Absolute=True">Un-Routed Net Constraint: Net USB-D_N Between Pad IC2-6(10.444mm,33.97mm) on Top Layer [Unplated] And Pad MCU1-45(17.337mm,24.357mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2595.385mil|Location2.X=2693.122mil|Location1.Y=912.205mil|Location2.Y=1348.662mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2595.385mil|Location2.X=2693.122mil|Location1.Y=912.205mil|Location2.Y=1348.662mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad IC3-2(24.13mm,32.256mm) on Top Layer [Unplated] And Pad MCU1-32(25.325mm,22.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=520.504mil|Location2.X=1077.472mil|Location1.Y=851.26mil|Location2.Y=1658.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=520.504mil|Location2.X=1077.472mil|Location1.Y=851.26mil|Location2.Y=1658.347mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad J12-4(-28.672mm,40.172mm) on Top Layer [Unplated] And Pad J10-1(-15.875mm,21.022mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1002.669mil|Location2.X=1261.724mil|Location1.Y=851.26mil|Location2.Y=953.583mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1002.669mil|Location2.X=1261.724mil|Location1.Y=851.26mil|Location2.Y=953.583mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad J10-1(-15.875mm,21.022mm) on Top Layer [Unplated] And Pad R21-1(-10.795mm,22.771mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1002.669mil|Location2.X=2241.311mil|Location1.Y=794.095mil|Location2.Y=833.544mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1002.669mil|Location2.X=2241.311mil|Location1.Y=794.095mil|Location2.Y=833.544mil|Absolute=True">Un-Routed Net Constraint: Net STM32-UART-CON-RX Between Pad J10-2(-15.875mm,19.772mm) on Top Layer [Unplated] And Pad MCU1-55(13.849mm,19.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1002.669mil|Location2.X=2241.311mil|Location1.Y=752.835mil|Location2.Y=829.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1002.669mil|Location2.X=2241.311mil|Location1.Y=752.835mil|Location2.Y=829.449mil|Absolute=True">Un-Routed Net Constraint: Net STM32-UART-CON-TX Between Pad J10-3(-15.875mm,18.522mm) on Top Layer [Unplated] And Pad MCU1-54(13.849mm,19.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=864.874mil|Location2.X=1077.472mil|Location1.Y=597.323mil|Location2.Y=735.119mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=864.874mil|Location2.X=1077.472mil|Location1.Y=597.323mil|Location2.Y=735.119mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J10-MP1(-19.175mm,15.022mm) on Top Layer [Unplated] And Pad J10-4(-15.875mm,17.272mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1002.669mil|Location2.X=1764.007mil|Location1.Y=636.497mil|Location2.Y=735.119mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1002.669mil|Location2.X=1764.007mil|Location1.Y=636.497mil|Location2.Y=735.119mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J10-4(-15.875mm,17.272mm) on Top Layer [Unplated] And Pad SB1-1(2.313mm,15.367mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=864.874mil|Location2.X=955.425mil|Location1.Y=597.323mil|Location2.Y=989.056mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=864.874mil|Location2.X=955.425mil|Location1.Y=597.323mil|Location2.Y=989.056mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J10-MP1(-19.175mm,15.022mm) on Top Layer [Unplated] And Pad J10-MP2(-19.175mm,23.272mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=668.141mil|Location2.X=955.425mil|Location1.Y=922.127mil|Location2.Y=1658.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=668.141mil|Location2.X=955.425mil|Location1.Y=922.127mil|Location2.Y=1658.347mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J12-1(-24.922mm,40.172mm) on Top Layer [Unplated] And Pad J10-MP2(-19.175mm,23.272mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1857.314mil|Location2.X=2004.834mil|Location1.Y=65.355mil|Location2.Y=390mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1857.314mil|Location2.X=2004.834mil|Location1.Y=65.355mil|Location2.Y=390mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad S1-4(5.433mm,8.056mm) on Top Layer [Unplated] And Pad J1-1(8.255mm,2.135mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2175.307mil|Location2.X=2414.519mil|Location1.Y=197.245mil|Location2.Y=577.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2175.307mil|Location2.X=2414.519mil|Location1.Y=197.245mil|Location2.Y=577.5mil|Absolute=True">Un-Routed Net Constraint: Net STM32-NRST Between Pad J1-10(13.335mm,5.485mm) on Top Layer [Unplated] And Pad MCU1-7(18.837mm,12.881mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1975.307mil|Location2.X=2241.311mil|Location1.Y=197.245mil|Location2.Y=927.875mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1975.307mil|Location2.X=2241.311mil|Location1.Y=197.245mil|Location2.Y=927.875mil|Absolute=True">Un-Routed Net Constraint: Net STM32-SWDIO Between Pad J1-2(8.255mm,5.485mm) on Top Layer [Unplated] And Pad MCU1-49(13.849mm,22.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=151.291mil|Location2.X=699.637mil|Location1.Y=1558.308mil|Location2.Y=1658.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=151.291mil|Location2.X=699.637mil|Location1.Y=1558.308mil|Location2.Y=1658.347mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J9-MP1(-37.3mm,39.431mm) on Top Layer [Unplated] And Pad J12-1(-24.922mm,40.172mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=618.929mil|Location2.X=2693.122mil|Location1.Y=774.41mil|Location2.Y=1658.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=618.929mil|Location2.X=2693.122mil|Location1.Y=774.41mil|Location2.Y=1658.347mil|Absolute=True">Un-Routed Net Constraint: Net STM32-RC-CON-2 Between Pad J12-2(-26.172mm,40.172mm) on Top Layer [Unplated] And Pad MCU1-25(25.325mm,18.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=569.716mil|Location2.X=2375.149mil|Location1.Y=967.304mil|Location2.Y=1658.347mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=569.716mil|Location2.X=2375.149mil|Location1.Y=967.304mil|Location2.Y=1658.347mil|Absolute=True">Un-Routed Net Constraint: Net STM32-RC-CON-1 Between Pad J12-3(-27.422mm,40.172mm) on Top Layer [Unplated] And Pad MCU1-44(17.837mm,24.357mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2025.307mil|Location2.X=2104.834mil|Location1.Y=65.355mil|Location2.Y=181.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2025.307mil|Location2.X=2104.834mil|Location1.Y=65.355mil|Location2.Y=181.496mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J1-3(9.525mm,2.135mm) on Top Layer [Unplated] And Pad J1-5(10.795mm,2.135mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2025.307mil|Location2.X=2241.311mil|Location1.Y=197.245mil|Location2.Y=908.189mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2025.307mil|Location2.X=2241.311mil|Location1.Y=197.245mil|Location2.Y=908.189mil|Absolute=True">Un-Routed Net Constraint: Net STM32-SWCLK Between Pad J1-4(9.525mm,5.485mm) on Top Layer [Unplated] And Pad MCU1-50(13.849mm,21.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2075.307mil|Location2.X=2204.834mil|Location1.Y=65.355mil|Location2.Y=181.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2075.307mil|Location2.X=2204.834mil|Location1.Y=65.355mil|Location2.Y=181.496mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J1-5(10.795mm,2.135mm) on Top Layer [Unplated] And Pad J1-9(13.335mm,2.135mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2075.307mil|Location2.X=2241.311mil|Location1.Y=197.245mil|Location2.Y=790.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2075.307mil|Location2.X=2241.311mil|Location1.Y=197.245mil|Location2.Y=790.079mil|Absolute=True">Un-Routed Net Constraint: Net STM32-SWO Between Pad J1-6(10.795mm,5.485mm) on Top Layer [Unplated] And Pad MCU1-56(13.849mm,18.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1703.299mil|Location2.X=1858.614mil|Location1.Y=1158.308mil|Location2.Y=1283.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1703.299mil|Location2.X=1858.614mil|Location1.Y=1158.308mil|Location2.Y=1283.032mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J8-MP1(2.121mm,29.271mm) on Bottom Layer [Unplated] And Pad J2-5(4.191mm,31.339mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1857.314mil|Location2.X=1947.393mil|Location1.Y=468.741mil|Location2.Y=698.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1857.314mil|Location2.X=1947.393mil|Location1.Y=468.741mil|Location2.Y=698.15mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad S1-1(5.433mm,11.756mm) on Top Layer [Unplated] And Pad J7-1(6.221mm,16.333mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=2241.311mil|Location1.Y=617.442mil|Location2.Y=671.969mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=2241.311mil|Location1.Y=617.442mil|Location2.Y=671.969mil|Absolute=True">Un-Routed Net Constraint: Net STM32-SPI-CON-CS Between Pad J7-2(6.221mm,15.083mm) on Bottom Layer [Unplated] And Pad MCU1-62(13.849mm,15.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=2241.311mil|Location1.Y=568.229mil|Location2.Y=849.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=2241.311mil|Location1.Y=568.229mil|Location2.Y=849.134mil|Absolute=True">Un-Routed Net Constraint: Net STM32-SPI-CON-MISO Between Pad J7-3(6.221mm,13.833mm) on Bottom Layer [Unplated] And Pad MCU1-53(13.849mm,20.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=2241.311mil|Location1.Y=519.016mil|Location2.Y=750.709mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=2241.311mil|Location1.Y=519.016mil|Location2.Y=750.709mil|Absolute=True">Un-Routed Net Constraint: Net STM32-SPI-CON-MOSI Between Pad J7-4(6.221mm,12.583mm) on Bottom Layer [Unplated] And Pad MCU1-58(13.849mm,17.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=2241.311mil|Location1.Y=469.804mil|Location2.Y=868.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872.59mil|Location2.X=2241.311mil|Location1.Y=469.804mil|Location2.Y=868.819mil|Absolute=True">Un-Routed Net Constraint: Net STM32-SPI-CON-SCK Between Pad J7-5(6.221mm,11.333mm) on Bottom Layer [Unplated] And Pad MCU1-52(13.849mm,20.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1734.795mil|Location2.X=1947.393mil|Location1.Y=314.292mil|Location2.Y=452.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1734.795mil|Location2.X=1947.393mil|Location1.Y=314.292mil|Location2.Y=452.087mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J7-MP2(2.921mm,7.833mm) on Bottom Layer [Unplated] And Pad J7-6(6.221mm,10.083mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1703.299mil|Location2.X=1825.346mil|Location1.Y=737.52mil|Location2.Y=900.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1703.299mil|Location2.X=1825.346mil|Location1.Y=737.52mil|Location2.Y=900.433mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J8-MP2(2.121mm,21.021mm) on Bottom Layer [Unplated] And Pad J7-MP1(2.921mm,18.583mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1734.795mil|Location2.X=1825.346mil|Location1.Y=636.497mil|Location2.Y=804.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1734.795mil|Location2.X=1825.346mil|Location1.Y=636.497mil|Location2.Y=804.449mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad SB1-1(2.313mm,15.367mm) on Top Layer And Pad J7-MP1(2.921mm,18.583mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1719.519mil|Location2.X=1825.346mil|Location1.Y=314.292mil|Location2.Y=390mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1719.519mil|Location2.X=1825.346mil|Location1.Y=314.292mil|Location2.Y=390mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad S1-6(1.933mm,8.056mm) on Top Layer [Unplated] And Pad J7-MP2(2.921mm,7.833mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1703.299mil|Location2.X=1915.897mil|Location1.Y=833.505mil|Location2.Y=971.3mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1703.299mil|Location2.X=1915.897mil|Location1.Y=833.505mil|Location2.Y=971.3mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J8-MP2(2.121mm,21.021mm) on Bottom Layer [Unplated] And Pad J8-1(5.421mm,23.271mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.094mil|Location2.X=2241.311mil|Location1.Y=872.835mil|Location2.Y=1020.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.094mil|Location2.X=2241.311mil|Location1.Y=872.835mil|Location2.Y=1020.512mil|Absolute=True">Un-Routed Net Constraint: Net STM32-I2C-CON-SCL Between Pad J8-2(5.421mm,24.521mm) on Bottom Layer [Unplated] And Pad MCU1-51(13.849mm,21.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1218.417mil|Location2.X=1915.897mil|Location1.Y=855.158mil|Location2.Y=1020.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1218.417mil|Location2.X=1915.897mil|Location1.Y=855.158mil|Location2.Y=1020.512mil|Absolute=True">Un-Routed Net Constraint: Net STM32-I2C-CON-SCL Between Pad R21-2(-10.795mm,21.171mm) on Top Layer [Unplated] And Pad J8-2(5.421mm,24.521mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.094mil|Location2.X=2241.311mil|Location1.Y=695.67mil|Location2.Y=1069.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1841.094mil|Location2.X=2241.311mil|Location1.Y=695.67mil|Location2.Y=1069.725mil|Absolute=True">Un-Routed Net Constraint: Net STM32-I2C-CON-SDA Between Pad J8-3(5.421mm,25.771mm) on Bottom Layer [Unplated] And Pad MCU1-60(13.849mm,16.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1218.417mil|Location2.X=1915.897mil|Location1.Y=1033.15mil|Location2.Y=1069.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1218.417mil|Location2.X=1915.897mil|Location1.Y=1033.15mil|Location2.Y=1069.725mil|Absolute=True">Un-Routed Net Constraint: Net STM32-I2C-CON-SDA Between Pad R22-2(-10.795mm,25.692mm) on Top Layer [Unplated] And Pad J8-3(5.421mm,25.771mm) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=151.291mil|Location2.X=241.842mil|Location1.Y=1233.505mil|Location2.Y=1625.237mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=151.291mil|Location2.X=241.842mil|Location1.Y=1233.505mil|Location2.Y=1625.237mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J9-MP2(-37.3mm,31.181mm) on Top Layer [Unplated] And Pad J9-MP1(-37.3mm,39.431mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2232.354mil|Location2.X=2327.787mil|Location1.Y=1741.182mil|Location2.Y=1776.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2232.354mil|Location2.X=2327.787mil|Location1.Y=1741.182mil|Location2.Y=1776.615mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad LED2-1(14.859mm,43.676mm) on Top Layer [Unplated] And Pad LED1-1(16.383mm,43.676mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2288.417mil|Location2.X=2331.724mil|Location1.Y=1613.15mil|Location2.Y=1717.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2288.417mil|Location2.X=2331.724mil|Location1.Y=1613.15mil|Location2.Y=1717.56mil|Absolute=True">Un-Routed Net Constraint: Net NetLED1_2 Between Pad R3-2(16.383mm,40.424mm) on Top Layer [Unplated] And Pad LED1-2(16.383mm,42.176mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.354mil|Location2.X=2267.787mil|Location1.Y=1741.182mil|Location2.Y=1776.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2172.354mil|Location2.X=2267.787mil|Location1.Y=1741.182mil|Location2.Y=1776.615mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad LED3-1(13.335mm,43.676mm) on Top Layer [Unplated] And Pad LED2-1(14.859mm,43.676mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2228.417mil|Location2.X=2271.724mil|Location1.Y=1613.15mil|Location2.Y=1717.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2228.417mil|Location2.X=2271.724mil|Location1.Y=1613.15mil|Location2.Y=1717.56mil|Absolute=True">Un-Routed Net Constraint: Net NetLED2_2 Between Pad R4-2(14.859mm,40.424mm) on Top Layer [Unplated] And Pad LED2-2(14.859mm,42.176mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2112.354mil|Location2.X=2207.787mil|Location1.Y=1741.182mil|Location2.Y=1776.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2112.354mil|Location2.X=2207.787mil|Location1.Y=1741.182mil|Location2.Y=1776.615mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad LED4-1(11.811mm,43.676mm) on Top Layer [Unplated] And Pad LED3-1(13.335mm,43.676mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.417mil|Location2.X=2211.724mil|Location1.Y=1613.15mil|Location2.Y=1717.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.417mil|Location2.X=2211.724mil|Location1.Y=1613.15mil|Location2.Y=1717.56mil|Absolute=True">Un-Routed Net Constraint: Net NetLED3_2 Between Pad R5-2(13.335mm,40.424mm) on Top Layer [Unplated] And Pad LED3-2(13.335mm,42.176mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2108.417mil|Location2.X=2151.724mil|Location1.Y=1613.15mil|Location2.Y=1717.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2108.417mil|Location2.X=2151.724mil|Location1.Y=1613.15mil|Location2.Y=1717.56mil|Absolute=True">Un-Routed Net Constraint: Net NetLED4_2 Between Pad R6-2(11.811mm,40.424mm) on Top Layer [Unplated] And Pad LED4-2(11.811mm,42.176mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2576.015mil|Location2.X=2693.122mil|Location1.Y=515.493mil|Location2.Y=849.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2576.015mil|Location2.X=2693.122mil|Location1.Y=515.493mil|Location2.Y=849.134mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-16(23.337mm,12.881mm) on Top Layer [Unplated] And Pad MCU1-28(25.325mm,20.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2228.417mil|Location2.X=2693.122mil|Location1.Y=794.095mil|Location2.Y=1585.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2228.417mil|Location2.X=2693.122mil|Location1.Y=794.095mil|Location2.Y=1585.591mil|Absolute=True">Un-Routed Net Constraint: Net STM32-LED2 Between Pad R4-1(14.859mm,38.824mm) on Top Layer [Unplated] And Pad MCU1-26(25.325mm,19.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2693.122mil|Location1.Y=833.465mil|Location2.Y=927.875mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2631.114mil|Location2.X=2693.122mil|Location1.Y=833.465mil|Location2.Y=927.875mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-28(25.325mm,20.369mm) on Top Layer [Unplated] And Pad MCU1-32(25.325mm,22.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2288.417mil|Location2.X=2693.122mil|Location1.Y=872.835mil|Location2.Y=1585.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2288.417mil|Location2.X=2693.122mil|Location1.Y=872.835mil|Location2.Y=1585.591mil|Absolute=True">Un-Routed Net Constraint: Net STM32-LED1 Between Pad R3-1(16.383mm,38.824mm) on Top Layer [Unplated] And Pad MCU1-30(25.325mm,21.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2300.425mil|Location2.X=2693.122mil|Location1.Y=892.52mil|Location2.Y=1029.312mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2300.425mil|Location2.X=2693.122mil|Location1.Y=892.52mil|Location2.Y=1029.312mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-47(16.337mm,24.357mm) on Top Layer [Unplated] And Pad MCU1-31(25.325mm,21.869mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2280.74mil|Location2.X=2693.122mil|Location1.Y=912.205mil|Location2.Y=1029.312mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2280.74mil|Location2.X=2693.122mil|Location1.Y=912.205mil|Location2.Y=1029.312mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-48(15.837mm,24.357mm) on Top Layer [Unplated] And Pad MCU1-32(25.325mm,22.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.417mil|Location2.X=2591.684mil|Location1.Y=967.304mil|Location2.Y=1585.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2168.417mil|Location2.X=2591.684mil|Location1.Y=967.304mil|Location2.Y=1585.591mil|Absolute=True">Un-Routed Net Constraint: Net STM32-LED3 Between Pad R5-1(13.335mm,38.824mm) on Top Layer [Unplated] And Pad MCU1-33(23.337mm,24.357mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2108.417mil|Location2.X=2532.629mil|Location1.Y=967.304mil|Location2.Y=1585.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2108.417mil|Location2.X=2532.629mil|Location1.Y=967.304mil|Location2.Y=1585.591mil|Absolute=True">Un-Routed Net Constraint: Net STM32-LED4 Between Pad R6-1(11.811mm,38.824mm) on Top Layer [Unplated] And Pad MCU1-36(21.837mm,24.357mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2300.425mil|Location2.X=2388.456mil|Location1.Y=967.304mil|Location2.Y=1317.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2300.425mil|Location2.X=2388.456mil|Location1.Y=967.304mil|Location2.Y=1317.756mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-47(16.337mm,24.357mm) on Top Layer [Unplated] And Via (17.949mm,32.046mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2302.236mil|Location2.X=2375.149mil|Location1.Y=383.268mil|Location2.Y=577.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2302.236mil|Location2.X=2375.149mil|Location1.Y=383.268mil|Location2.Y=577.5mil|Absolute=True">Un-Routed Net Constraint: Net STM32-XC_IN Between Pad Y1-1(16.934mm,9.36mm) on Top Layer [Unplated] And Pad MCU1-5(17.837mm,12.881mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.85mil|Location2.X=2241.311mil|Location1.Y=437.717mil|Location2.Y=770.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.85mil|Location2.X=2241.311mil|Location1.Y=437.717mil|Location2.Y=770.394mil|Absolute=True">Un-Routed Net Constraint: Net STM32-SW1-2 Between Pad R1-2(9.309mm,10.668mm) on Top Layer [Unplated] And Pad MCU1-57(13.849mm,18.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2379.165mil|Location2.X=2447.905mil|Location1.Y=446.26mil|Location2.Y=577.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2379.165mil|Location2.X=2447.905mil|Location1.Y=446.26mil|Location2.Y=577.5mil|Absolute=True">Un-Routed Net Constraint: Net STM32-XC_OUT Between Pad MCU1-6(18.337mm,12.881mm) on Top Layer [Unplated] And Pad Y1-3(19.134mm,10.96mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.85mil|Location2.X=2241.311mil|Location1.Y=377.717mil|Location2.Y=691.654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.85mil|Location2.X=2241.311mil|Location1.Y=377.717mil|Location2.Y=691.654mil|Absolute=True">Un-Routed Net Constraint: Net STM32-BOOT Between Pad R2-2(9.309mm,9.144mm) on Top Layer [Unplated] And Pad MCU1-61(13.849mm,16.369mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2398.85mil|Location2.X=3001.291mil|Location1.Y=472.717mil|Location2.Y=577.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2398.85mil|Location2.X=3001.291mil|Location1.Y=472.717mil|Location2.Y=577.5mil|Absolute=True">Un-Routed Net Constraint: Net STM32-NRST Between Pad MCU1-7(18.837mm,12.881mm) on Top Layer [Unplated] And Pad R13-2(33.49mm,11.557mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1788.417mil|Location2.X=1986.291mil|Location1.Y=437.717mil|Location2.Y=535.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1788.417mil|Location2.X=1986.291mil|Location1.Y=437.717mil|Location2.Y=535.67mil|Absolute=True">Un-Routed Net Constraint: Net NetR1_1 Between Pad S1-2(3.683mm,11.756mm) on Top Layer [Unplated] And Pad R1-1(7.709mm,10.668mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1788.417mil|Location2.X=1986.291mil|Location1.Y=323.072mil|Location2.Y=421.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1788.417mil|Location2.X=1986.291mil|Location1.Y=323.072mil|Location2.Y=421.024mil|Absolute=True">Un-Routed Net Constraint: Net NetR2_1 Between Pad S1-5(3.683mm,8.056mm) on Top Layer [Unplated] And Pad R2-1(7.709mm,9.144mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1218.417mil|Location2.X=1261.724mil|Location1.Y=918.15mil|Location2.Y=1005.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1218.417mil|Location2.X=1261.724mil|Location1.Y=918.15mil|Location2.Y=1005.591mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad R21-1(-10.795mm,22.771mm) on Top Layer [Unplated] And Pad R22-1(-10.795mm,24.092mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1857.314mil|Location2.X=1900.621mil|Location1.Y=323.072mil|Location2.Y=535.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1857.314mil|Location2.X=1900.621mil|Location1.Y=323.072mil|Location2.Y=535.67mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad S1-4(5.433mm,8.056mm) on Top Layer [Unplated] And Pad S1-1(5.433mm,11.756mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1719.519mil|Location2.X=1762.826mil|Location1.Y=323.072mil|Location2.Y=535.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1719.519mil|Location2.X=1762.826mil|Location1.Y=323.072mil|Location2.Y=535.67mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad S1-6(1.933mm,8.056mm) on Top Layer [Unplated] And Pad S1-3(1.933mm,11.756mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1719.519mil|Location2.X=1764.007mil|Location1.Y=468.741mil|Location2.Y=652.245mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1719.519mil|Location2.X=1764.007mil|Location1.Y=468.741mil|Location2.Y=652.245mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad S1-3(1.933mm,11.756mm) on Top Layer [Unplated] And Pad SB1-1(2.313mm,15.367mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3056.409mil|Location2.X=3099.716mil|Location1.Y=108.544mil|Location2.Y=380.197mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3056.409mil|Location2.X=3099.716mil|Location1.Y=108.544mil|Location2.Y=380.197mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad SW2-3(35.89mm,2.582mm) on Top Layer [Unplated] And Pad SW2-4(35.89mm,7.832mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2302.236mil|Location2.X=2447.905mil|Location1.Y=383.268mil|Location2.Y=495.473mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2302.236mil|Location2.X=2447.905mil|Location1.Y=383.268mil|Location2.Y=495.473mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad Y1-4(16.934mm,10.96mm) on Top Layer [Unplated] And Pad Y1-2(19.134mm,9.36mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDNFQQY44PVAGOHVS2GWPHK43U4BQ5LIJZZU5TFDITVDUO3QYRPWYK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1089.439mil|Location2.X=1100.938mil|Location1.Y=860.36mil|Location2.Y=871.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1089.439mil|Location2.X=1100.938mil|Location1.Y=860.36mil|Location2.Y=871.858mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Arc (-14.475mm,21.047mm) on Top Overlay And Board Edge </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1089.439mil|Location2.X=1100.938mil|Location1.Y=864.127mil|Location2.Y=875.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1089.439mil|Location2.X=1100.938mil|Location1.Y=864.127mil|Location2.Y=875.625mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Arc (-14.475mm,21.047mm) on Top Overlay And Board Edge </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=677.241mil|Location2.X=688.739mil|Location1.Y=1560.078mil|Location2.Y=1571.577mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=677.241mil|Location2.X=688.739mil|Location1.Y=1560.078mil|Location2.Y=1571.577mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Arc (-24.897mm,38.772mm) on Top Overlay And Board Edge </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=681.008mil|Location2.X=692.506mil|Location1.Y=1560.078mil|Location2.Y=1571.577mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=681.008mil|Location2.X=692.506mil|Location1.Y=1560.078mil|Location2.Y=1571.577mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Arc (-24.897mm,38.772mm) on Top Overlay And Board Edge </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5.778mil|Location2.X=17.276mil|Location1.Y=1346.935mil|Location2.Y=1358.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5.778mil|Location2.X=17.276mil|Location1.Y=1346.935mil|Location2.Y=1358.433mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Arc (-42mm,33.406mm) on Top Overlay And Board Edge </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5.778mil|Location2.X=17.276mil|Location1.Y=1350.702mil|Location2.Y=1362.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5.778mil|Location2.X=17.276mil|Location1.Y=1350.702mil|Location2.Y=1362.2mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Arc (-42mm,33.406mm) on Top Overlay And Board Edge </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1034.321mil|Location2.X=1045.82mil|Location1.Y=861.259mil|Location2.Y=872.758mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1034.321mil|Location2.X=1045.82mil|Location1.Y=861.259mil|Location2.Y=872.758mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J10-1(-15.875mm,21.022mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1034.321mil|Location2.X=1045.82mil|Location1.Y=812.047mil|Location2.Y=823.545mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1034.321mil|Location2.X=1045.82mil|Location1.Y=812.047mil|Location2.Y=823.545mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J10-2(-15.875mm,19.772mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1034.321mil|Location2.X=1045.82mil|Location1.Y=762.834mil|Location2.Y=774.332mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1034.321mil|Location2.X=1045.82mil|Location1.Y=762.834mil|Location2.Y=774.332mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J10-3(-15.875mm,18.522mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1034.321mil|Location2.X=1045.82mil|Location1.Y=713.621mil|Location2.Y=725.12mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1034.321mil|Location2.X=1045.82mil|Location1.Y=713.621mil|Location2.Y=725.12mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J10-4(-15.875mm,17.272mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=904.4mil|Location2.X=915.898mil|Location1.Y=625.039mil|Location2.Y=636.537mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=904.4mil|Location2.X=915.898mil|Location1.Y=625.039mil|Location2.Y=636.537mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J10-MP1(-19.175mm,15.022mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=904.4mil|Location2.X=915.898mil|Location1.Y=949.842mil|Location2.Y=961.34mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=904.4mil|Location2.X=915.898mil|Location1.Y=949.842mil|Location2.Y=961.34mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J10-MP2(-19.175mm,23.272mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=678.14mil|Location2.X=689.639mil|Location1.Y=1615.196mil|Location2.Y=1626.695mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=678.14mil|Location2.X=689.639mil|Location1.Y=1615.196mil|Location2.Y=1626.695mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J12-1(-24.922mm,40.172mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=628.927mil|Location2.X=640.426mil|Location1.Y=1615.196mil|Location2.Y=1626.695mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=628.927mil|Location2.X=640.426mil|Location1.Y=1615.196mil|Location2.Y=1626.695mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J12-2(-26.172mm,40.172mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=579.715mil|Location2.X=591.213mil|Location1.Y=1615.196mil|Location2.Y=1626.695mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=579.715mil|Location2.X=591.213mil|Location1.Y=1615.196mil|Location2.Y=1626.695mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J12-3(-27.422mm,40.172mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=530.502mil|Location2.X=542.001mil|Location1.Y=1615.196mil|Location2.Y=1626.695mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=530.502mil|Location2.X=542.001mil|Location1.Y=1615.196mil|Location2.Y=1626.695mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J12-4(-28.672mm,40.172mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=441.92mil|Location2.X=453.418mil|Location1.Y=1745.117mil|Location2.Y=1756.616mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=441.92mil|Location2.X=453.418mil|Location1.Y=1745.117mil|Location2.Y=1756.616mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J12-MP1(-30.922mm,43.472mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=766.723mil|Location2.X=778.221mil|Location1.Y=1745.117mil|Location2.Y=1756.616mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=766.723mil|Location2.X=778.221mil|Location1.Y=1745.117mil|Location2.Y=1756.616mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J12-MP2(-22.672mm,43.472mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=60.896mil|Location2.X=72.394mil|Location1.Y=1349.802mil|Location2.Y=1361.301mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=60.896mil|Location2.X=72.394mil|Location1.Y=1349.802mil|Location2.Y=1361.301mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J9-1(-40.6mm,33.431mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=60.896mil|Location2.X=72.394mil|Location1.Y=1399.015mil|Location2.Y=1410.514mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=60.896mil|Location2.X=72.394mil|Location1.Y=1399.015mil|Location2.Y=1410.514mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J9-2(-40.6mm,34.681mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=60.896mil|Location2.X=72.394mil|Location1.Y=1448.228mil|Location2.Y=1459.726mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=60.896mil|Location2.X=72.394mil|Location1.Y=1448.228mil|Location2.Y=1459.726mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J9-3(-40.6mm,35.931mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=60.896mil|Location2.X=72.394mil|Location1.Y=1497.44mil|Location2.Y=1508.939mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=60.896mil|Location2.X=72.394mil|Location1.Y=1497.44mil|Location2.Y=1508.939mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J9-4(-40.6mm,37.181mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=190.817mil|Location2.X=202.316mil|Location1.Y=1586.023mil|Location2.Y=1597.522mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=190.817mil|Location2.X=202.316mil|Location1.Y=1586.023mil|Location2.Y=1597.522mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J9-MP1(-37.3mm,39.431mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=190.817mil|Location2.X=202.316mil|Location1.Y=1261.22mil|Location2.Y=1272.718mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=190.817mil|Location2.X=202.316mil|Location1.Y=1261.22mil|Location2.Y=1272.718mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad J9-MP2(-37.3mm,31.181mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=930.117mil|Location2.Y=941.616mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=930.117mil|Location2.Y=941.616mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad R21-1(-10.795mm,22.771mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=867.125mil|Location2.Y=878.624mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=867.125mil|Location2.Y=878.624mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad R21-2(-10.795mm,21.171mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=982.125mil|Location2.Y=993.624mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=982.125mil|Location2.Y=993.624mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad R22-1(-10.795mm,24.092mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=1045.117mil|Location2.Y=1056.616mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=1045.117mil|Location2.Y=1056.616mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Pad R22-2(-10.795mm,25.692mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=904.226mil|Location2.X=915.725mil|Location1.Y=1059.241mil|Location2.Y=1070.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=904.226mil|Location2.X=915.725mil|Location1.Y=1059.241mil|Location2.Y=1070.74mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Text "J10" (-21.084mm,25.289mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=477.226mil|Location2.X=488.725mil|Location1.Y=1890.241mil|Location2.Y=1901.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=477.226mil|Location2.X=488.725mil|Location1.Y=1890.241mil|Location2.Y=1901.74mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Text "J12" (-31.93mm,46.396mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1658.302mil|Location2.X=1669.8mil|Location1.Y=1295.241mil|Location2.Y=1306.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1658.302mil|Location2.X=1669.8mil|Location1.Y=1295.241mil|Location2.Y=1306.74mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Text "J8" (2.741mm,31.283mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=57.857mil|Location2.X=69.355mil|Location1.Y=1695.564mil|Location2.Y=1707.062mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=57.857mil|Location2.X=69.355mil|Location1.Y=1695.564mil|Location2.Y=1707.062mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Text "J9" (-41.947mm,41.452mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1663.874mil|Location2.X=1680.872mil|Location1.Y=760.517mil|Location2.Y=777.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1663.874mil|Location2.X=1680.872mil|Location1.Y=760.517mil|Location2.Y=777.515mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.371mm &lt; 0.4mm) Between Board Edge And Track (0.421mm,18.533mm)(0.921mm,18.533mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1663.874mil|Location2.X=1680.872mil|Location1.Y=860.438mil|Location2.Y=877.437mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1663.874mil|Location2.X=1680.872mil|Location1.Y=860.438mil|Location2.Y=877.437mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.371mm &lt; 0.4mm) Between Board Edge And Track (0.421mm,21.071mm)(0.421mm,29.221mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1663.874mil|Location2.X=1680.872mil|Location1.Y=341.226mil|Location2.Y=358.224mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1663.874mil|Location2.X=1680.872mil|Location1.Y=341.226mil|Location2.Y=358.224mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.371mm &lt; 0.4mm) Between Board Edge And Track (0.421mm,7.883mm)(0.421mm,18.533mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1663.874mil|Location2.X=1680.872mil|Location1.Y=341.226mil|Location2.Y=358.224mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1663.874mil|Location2.X=1680.872mil|Location1.Y=341.226mil|Location2.Y=358.224mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.371mm &lt; 0.4mm) Between Board Edge And Track (0.421mm,7.883mm)(0.921mm,7.883mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=898.621mil|Location2.Y=910.12mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=898.621mil|Location2.Y=910.12mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Track (-11.12mm,21.971mm)(-10.47mm,21.971mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=1013.621mil|Location2.Y=1025.12mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1234.321mil|Location2.X=1245.82mil|Location1.Y=1013.621mil|Location2.Y=1025.12mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Track (-11.12mm,24.892mm)(-10.47mm,24.892mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=837.471mil|Location2.X=848.969mil|Location1.Y=787.44mil|Location2.Y=798.939mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=837.471mil|Location2.X=848.969mil|Location1.Y=787.44mil|Location2.Y=798.939mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Track (-20.875mm,15.072mm)(-20.875mm,23.222mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=604.321mil|Location2.X=615.82mil|Location1.Y=1812.046mil|Location2.Y=1823.545mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=604.321mil|Location2.X=615.82mil|Location1.Y=1812.046mil|Location2.Y=1823.545mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Track (-30.872mm,45.172mm)(-22.722mm,45.172mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=257.746mil|Location2.X=269.245mil|Location1.Y=1423.621mil|Location2.Y=1435.12mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=257.746mil|Location2.X=269.245mil|Location1.Y=1423.621mil|Location2.Y=1435.12mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.4mm) Between Board Edge And Track (-35.6mm,31.231mm)(-35.6mm,39.381mm) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
