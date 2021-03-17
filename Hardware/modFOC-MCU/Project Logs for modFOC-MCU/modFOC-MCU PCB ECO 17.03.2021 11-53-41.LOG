@@ -1,0 +1,2 @@
+Added Pin To Net: NetName=STM32-I2C-CON-SDA Pin=MCU1-41
+Added Pin To Net: NetName=STM32-I2C-CON-SCL Pin=MCU1-42
