@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-MCU\modFOC-MCU.PcbDoc
-Date     : 05.04.2021
-Time     : 17:33:52
+Date     : 06.04.2021
+Time     : 10:37:52
 
 Processing Rule : Clearance Constraint (Gap=0.102mm) (All),(All)
 Rule Violations :0
@@ -57,4 +57,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:03

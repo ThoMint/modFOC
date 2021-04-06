@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\Mathias Giller\Desktop\modFOC\Hardware\modFOC-ESC\modFOC_ESC.PcbDoc
-Date     : 05.04.2021
-Time     : 20:29:51
+PCB File : C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\modFOC-ESC\modFOC_ESC.PcbDoc
+Date     : 06.04.2021
+Time     : 08:44:44
 
 Processing Rule : Clearance Constraint (Gap=0.102mm) (All),(All)
 Rule Violations :0
@@ -40,43 +40,21 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.098mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Silk To Solder Mask (Clearance=0.102mm) (IsPad),(All)
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.102mm) Between Arc (26.825mm,36.767mm) on Top Overlay And Pad R101-1(26.505mm,36.322mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.102mm) Between Arc (26.825mm,36.767mm) on Top Overlay And Pad R101-1(26.505mm,36.322mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.102mm) Between Arc (33.048mm,36.767mm) on Top Overlay And Pad R303-1(32.728mm,36.322mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.102mm) Between Arc (33.048mm,36.767mm) on Top Overlay And Pad R303-1(32.728mm,36.322mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.102mm) Between Arc (37.339mm,36.322mm) on Top Overlay And Pad C322-1(37.122mm,36.322mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.102mm) Between Arc (37.339mm,36.322mm) on Top Overlay And Pad C322-1(37.122mm,36.322mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]
-Rule Violations :6
+Rule Violations :0
 
 Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Net Antennae (Tolerance=0mm) (All)
-   Violation between Net Antennae: Via (27.686mm,9.779mm) from Top Layer to Bottom Layer 
-Rule Violations :1
+Rule Violations :0
 
 Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Text "DRVrs" (36.83mm,43.053mm) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,20.742mm)(0.04mm,35.317mm) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,20.742mm)(0.04mm,35.317mm) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,20.742mm)(1.04mm,20.742mm) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,20.742mm)(1.04mm,20.742mm) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,20.742mm)(1.04mm,20.742mm) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,20.742mm)(1.04mm,20.742mm) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,20.817mm)(0.04mm,35.392mm) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,20.817mm)(0.04mm,35.392mm) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,35.392mm)(1.04mm,35.392mm) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,35.392mm)(1.04mm,35.392mm) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,35.392mm)(1.04mm,35.392mm) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (0.04mm,35.392mm)(1.04mm,35.392mm) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (-0.087mm,10.149mm)(-0.087mm,18.299mm) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (26.369mm,-0.006mm)(36.369mm,-0.006mm) on Top Overlay 
-Rule Violations :15
+Rule Violations :0
 
 Processing Rule : Height Constraint (Min=0mm) (Max=1816.048mm) (Prefered=12.7mm) (All)
 Rule Violations :0
 
 
-Violations Detected : 22
+Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:03
+Time Elapsed        : 00:00:02
