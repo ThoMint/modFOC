@@ -1,4 +1,4 @@
-# <img  align="center"  width="100"  height="100"  src="https://github.com/ThoMint/modFOC/blob/master/PR/modFOC-Logo.png?raw=true"><br>modFOC
+# <img  align="center"  width="50"  height="50"  src="https://github.com/ThoMint/modFOC/blob/master/PR/modFOC-Logo.png?raw=true">modFOC
 A modular ESC with in Hardware implemented FOC for maximum efficiency.<br>
 The ESC is designed as a PCB-Stackup with various Powerstages and a central Control-Board:
 
