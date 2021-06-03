@@ -1,0 +1,4 @@
+CRC.c:86:9:tmc_fillCRC8Table	28	static
+CRC.c:148:9:tmc_CRC8	16	static
+CRC.c:164:9:tmc_tableGetPolynomial	0	static
+CRC.c:172:6:tmc_tableIsReflected	0	static

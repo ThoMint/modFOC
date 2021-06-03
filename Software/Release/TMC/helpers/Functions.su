@@ -1,0 +1,4 @@
+Functions.c:9:9:tmc_limitInt	0	static
+Functions.c:19:9:tmc_limitS64	24	static
+Functions.c:50:9:tmc_sqrti	0	static
+Functions.c:166:9:tmc_filterPT1	16	static
