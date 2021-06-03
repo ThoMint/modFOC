@@ -1,0 +1,4 @@
+TMCL.c:8:6:tmcl_getVersion	8	static
+TMCL.c:28:6:tmcl_getInput	16	static
+TMCL.c:43:6:tmcl_executeActualCommand	24	static
+TMCL.c:71:6:tmcl_processCommand	56	static

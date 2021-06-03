@@ -1,0 +1,8 @@
+stm32g4xx_hal_pcd_ex.c:81:20:HAL_PCDEx_PMAConfig	8	static
+stm32g4xx_hal_pcd_ex.c:121:19:HAL_PCDEx_ActivateBCD	0	static
+stm32g4xx_hal_pcd_ex.c:142:19:HAL_PCDEx_DeActivateBCD	0	static
+stm32g4xx_hal_pcd_ex.c:252:19:HAL_PCDEx_ActivateLPM	4	static
+stm32g4xx_hal_pcd_ex.c:270:19:HAL_PCDEx_DeActivateLPM	0	static
+stm32g4xx_hal_pcd_ex.c:290:13:HAL_PCDEx_LPM_Callback	0	static
+stm32g4xx_hal_pcd_ex.c:307:13:HAL_PCDEx_BCD_Callback	0	static
+stm32g4xx_hal_pcd_ex.c:158:6:HAL_PCDEx_BCD_VBUSDetect	16	static

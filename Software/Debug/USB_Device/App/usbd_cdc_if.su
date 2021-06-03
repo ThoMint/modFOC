@@ -1,0 +1,7 @@
+usbd_cdc_if.c:174:15:CDC_DeInit_FS	0	static
+usbd_cdc_if.c:188:15:CDC_Control_FS	0	static
+usbd_cdc_if.c:326:15:CDC_TransmitCplt_FS	0	static
+usbd_cdc_if.c:269:15:CDC_Receive_FS	24	static
+usbd_cdc_if.c:160:15:CDC_Init_FS	8	static
+usbd_cdc_if.c:299:9:CDC_Transmit_FS	8	static
+usbd_cdc_if.c:338:9:USB_retrieveCMD	16	static
