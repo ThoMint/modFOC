@@ -39,21 +39,24 @@ TMCL/TMCL.o: ../TMCL/TMCL.c ../TMCL/TMCL.h ../Core/Inc/main.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
  ../Core/Inc/gpio.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/API_Header.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Config.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Constants.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Types.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Macros.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Bits.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/CRC.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/RegisterAccess.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671_Register.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671_Constants.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Constants.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671_Fields.h \
- C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671_Constants.h \
- ../TMCL/TMCL-Defines.h ../TMCL/TMCL-Variables.h
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/API_Header.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Config.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Constants.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Types.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Macros.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Bits.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/CRC.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/RegisterAccess.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671_Register.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671_Constants.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Constants.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671_Fields.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671_Constants.h \
+ ../TMCL/TMCL-Defines.h ../TMCL/TMCL-Variables.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/ESC/ESC.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMCL/TMCL-Defines.h \
+ C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMCL/TMCL-Variables.h
 
 ../TMCL/TMCL.h:
 
@@ -145,34 +148,40 @@ TMCL/TMCL.o: ../TMCL/TMCL.c ../TMCL/TMCL.h ../Core/Inc/main.h \
 
 ../Core/Inc/gpio.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/API_Header.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/API_Header.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Config.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Config.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Constants.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Constants.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Types.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Types.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Macros.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Macros.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Bits.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Bits.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/CRC.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/CRC.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/RegisterAccess.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/RegisterAccess.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671_Register.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671_Register.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671_Constants.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671_Constants.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/helpers/Constants.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/helpers/Constants.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671_Fields.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671_Fields.h:
 
-C:/Users/Thomas/STM32CubeIDE/alternateWorkspace/modFOC-TMCL/TMC/ic/TMC4671/TMC4671_Constants.h:
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMC/ic/TMC4671/TMC4671_Constants.h:
 
 ../TMCL/TMCL-Defines.h:
 
 ../TMCL/TMCL-Variables.h:
+
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/ESC/ESC.h:
+
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMCL/TMCL-Defines.h:
+
+C:/Users/Thomas/Documents/GitHub/modFOC/Software/TMCL/TMCL-Variables.h:
