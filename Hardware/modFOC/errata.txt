@@ -21,4 +21,11 @@
 #7 No Buffered ADC Input for VM
 	ADC Inputs need to be buffered with amp
 
-#8 
+#8 No software reset for tmc
+	use last channel of chip select mux for generel reset or bigger mux for individual reset
+
+#9 Buttons unnecessary
+	remove buttons
+
+#10 unnecessary uart connector for tmcs
+	replace connector with small solder pads
