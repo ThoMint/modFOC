@@ -1,4 +1,0 @@
-Added Pin To Net: NetName=STM32-UART-CON-TX Pin=MCU1-52
-Added Pin To Net: NetName=STM32-UART-CON-RX Pin=MCU1-53
-Added Pin To Net: NetName=STM32-RC-CON-1 Pin=MCU1-54
-Added Pin To Net: NetName=STM32-RC-CON-2 Pin=MCU1-55

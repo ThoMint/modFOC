@@ -1,7 +1,0 @@
-Change Component Designator: OldDesignator=LED200 NewDesignator=LED_Amber
-Change Component Designator: OldDesignator=LED201 NewDesignator=LED_Blue
-Change Component Designator: OldDesignator=LED202 NewDesignator=LED_Green
-Added Pin To Net: NetName=+5 Pin=R203-2
-Change Net Name : Old Net Name=NetLED200_2 New Net Name=NetLED_Amber_2
-Change Net Name : Old Net Name=NetLED201_2 New Net Name=NetLED_Blue_2
-Change Net Name : Old Net Name=NetLED202_2 New Net Name=NetLED_Green_2

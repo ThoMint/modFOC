@@ -1,7 +1,0 @@
-Removed Pin From Net: NetName=NetCON101_4 Pin=IC102-1
-Removed Pin From Net: NetName=NetCON101_2 Pin=IC102-3
-Added Pin To Net: NetName=NetCON101_2 Pin=IC102-1
-Added Pin To Net: NetName=NetCON101_4 Pin=IC102-3
-Added Room: Name=modFOC-Motion_Controller
-Added Room: Name=modFOC-Powerstage
-Added Room: Name=modFOC-Sensing

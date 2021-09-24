@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=STM32-SW1-2 Pin=MCU1-57
+Added Pin To Net: NetName=STM32-SW1-2 Pin=R1-2

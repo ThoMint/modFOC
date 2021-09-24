@@ -1,6 +1,0 @@
-Record=DiagramHierarchy|SourceDocument=modFOC.MbsDoc|Kind=Multi-board Schematic Module|Designator=3|Source=..\modFOC-ESC\modFOC-ESC.PrjPcb
-Record=SubProject|SourceDocument=modFOC.MbsDoc|ProjectPath=..\modFOC-ESC\modFOC-ESC.PrjPcb
-Record=DiagramHierarchy|SourceDocument=modFOC.MbsDoc|Kind=Multi-board Schematic Module|Designator=2|Source=..\modFOC-ESC\modFOC-ESC.PrjPcb
-Record=SubProject|SourceDocument=modFOC.MbsDoc|ProjectPath=..\modFOC-ESC\modFOC-ESC.PrjPcb
-Record=DiagramHierarchy|SourceDocument=modFOC.MbsDoc|Kind=Multi-board Schematic Module|Designator=1|Source=..\modFOC-MCU\modFOC-MCU.PrjPcb
-Record=SubProject|SourceDocument=modFOC.MbsDoc|ProjectPath=..\modFOC-MCU\modFOC-MCU.PrjPcb

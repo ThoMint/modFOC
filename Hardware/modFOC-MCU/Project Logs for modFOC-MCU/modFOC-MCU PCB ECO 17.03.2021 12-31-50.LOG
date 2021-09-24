@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=STM32-SW1-2 Pin=R1-2
-Removed Pin From Net: NetName=STM32-BOOT Pin=R2-2
-Added Pin To Net: NetName=STM32-BOOT Pin=R1-2
-Added Pin To Net: NetName=STM32-SW1-2 Pin=R2-2

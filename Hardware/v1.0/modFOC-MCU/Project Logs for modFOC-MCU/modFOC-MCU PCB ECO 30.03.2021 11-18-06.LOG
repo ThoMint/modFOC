@@ -1,0 +1,2 @@
+Added Pin To Net: NetName=STM32-CAN-TRCV-RX Pin=MCU1-34
+Added Pin To Net: NetName=STM32-CAN-TRCV-TX Pin=MCU1-59

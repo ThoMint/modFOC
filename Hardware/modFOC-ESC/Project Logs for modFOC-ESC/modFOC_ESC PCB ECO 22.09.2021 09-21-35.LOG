@@ -1,8 +1,0 @@
-Removed Pin From Net: NetName=DVDD Pin=R302-1
-Change component parameters: Designator = "IC 100" ("IC 100"); Footprint = "QFN40P1050X650X90-77N"; UniqueID = "\VVJKUJNU" ("\VVJKUJNU")
-Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Trinamic"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "TMC4671-LA"; VariantName = "[No Variations]"
-Change component parameters: Designator = "XTL100" ("XTL100"); Footprint = "FOX924B25"; UniqueID = "\DYHNUWFI" ("\DYHNUWFI")
-Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "FOX"; VariantName = "[No Variations]"
-Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FOX924B-25"; VariantName = "[No Variations]"
-Added Pin To Net: NetName=3V3 Pin=R302-1

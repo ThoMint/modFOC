@@ -1,4 +1,0 @@
-Removed Member From Class: ClassName=modFOC-MCU Member=R6
-Added Pin To Net: NetName=STM32-LED1 Pin=MCU1-8
-Added Pin To Net: NetName=STM32-LED2 Pin=MCU1-9
-Added Pin To Net: NetName=STM32-LED3 Pin=MCU1-10

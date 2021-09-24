@@ -1,5 +1,0 @@
-Added Pin To Net: NetName=3V3 Pin=C200-2
-Added Pin To Net: NetName=3V3 Pin=IC200-8
-Added Room: Name=modFOC-Motion_Controller
-Added Room: Name=modFOC-Powerstage
-Added Room: Name=modFOC-Sensing

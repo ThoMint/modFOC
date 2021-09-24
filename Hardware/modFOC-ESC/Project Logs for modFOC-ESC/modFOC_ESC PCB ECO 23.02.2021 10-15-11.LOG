@@ -1,4 +1,0 @@
-Change Component Comment : Designator=VBat+ Old Comment=PowerPad New Comment=PW_PAD_SMOL
-Change Component Comment : Designator=VBat- Old Comment=PowerPad New Comment=PW_PAD_SMOL
-Added Pin To Net: NetName=VB+ Pin=C312-1
-Added Pin To Net: NetName=VB+ Pin=C316-2
