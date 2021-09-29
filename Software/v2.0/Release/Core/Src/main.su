@@ -1,0 +1,5 @@
+main.c:63:5:_write	8	static,ignoring_inline_asm
+main.c:169:6:SystemClock_Config	184	static,ignoring_inline_asm
+main.c:77:5:main	8	static
+main.c:224:9:tmc4671_readwriteByte	40	static
+main.c:245:6:Error_Handler	0	static,ignoring_inline_asm

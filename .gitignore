@@ -1,3 +1,4 @@
+# Altium History Files
 Hardware/v2.0/modFOC-ESC/modFOC-ESC/History
 Hardware/v2.0/AltLibs/History
 Hardware/v2.0/modFOC-MCU/History
@@ -8,3 +9,36 @@ Hardware/v1.0/AltLibs/History
 Hardware/v1.0/modFOC-MCU/History
 Hardware/v1.0/modFOC/History
 Hardware/v1.0/modFOC-Panel/History
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

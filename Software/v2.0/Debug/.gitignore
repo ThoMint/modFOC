@@ -1,0 +1,10 @@
+/Core/
+/Drivers/
+/Middlewares/
+/TMC/
+/TMCL/
+/USB_Device/
+/makefile
+/objects.list
+/objects.mk
+/sources.mk
