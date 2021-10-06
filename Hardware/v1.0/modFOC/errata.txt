@@ -1,14 +1,14 @@
 #1 Gate Driver IC DRV8323
 	-Linear voltage regulation and therefore running hot
 
-#2 Silk Screen Error
+#2 Silk Screen Error (fixed in v1.0)
 	-Channel select Jumper Silk Screen reversed
 
 #3 Extremely small shunt resistors
 	-Low current resolution resulting in poor foc at higher speeds and lower power
 	-too little filtering
 
-#4 Enable failure of Gate Driver IC
+#4 Enable failure of Gate Driver IC (fixed in v1.0)
 	-AND Gate powered from Gater Driver not powered when disabled
 
 #5 LEDS
@@ -24,8 +24,8 @@
 #8 No software reset for tmc
 	use last channel of chip select mux for generel reset or bigger mux for individual reset
 
-#9 Buttons unnecessary
+#9 Buttons unnecessary (fixed in v2.0)
 	remove buttons
 
-#10 unnecessary uart connector for tmcs
+#10 unnecessary uart connector for tmcs (fixed in v2.0)
 	replace connector with small solder pads

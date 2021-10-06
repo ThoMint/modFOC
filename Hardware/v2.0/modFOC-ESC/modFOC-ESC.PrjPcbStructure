@@ -1,1 +1,4 @@
-Record=TopLevelDocument|FileName=modFOC-Motion_Controller.SchDoc
+Record=TopLevelDocument|FileName=modFOC-Motion_Controller.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=modFOC-Motion_Controller.SchDoc|FileName=modFOC-Powerstage.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=modFOC-Motion_Controller.SchDoc|FileName=modFOC-Sensing.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=modFOC-Motion_Controller.SchDoc|FileName=modFOC_Powerdistribution.SchDoc|SheetNumber=4
