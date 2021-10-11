@@ -21,7 +21,7 @@
 #7 No Buffered ADC Input for VM
 	ADC Inputs need to be buffered with amp
 
-#8 No software reset for tmc
+#8 No software reset for tmc (fixed in v2.0)
 	use last channel of chip select mux for generel reset or bigger mux for individual reset
 
 #9 Buttons unnecessary (fixed in v2.0)
