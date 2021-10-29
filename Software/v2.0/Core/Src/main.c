@@ -111,8 +111,7 @@ int main(void)
 	tmc4671_disablePWM(DEFAULT_MC);
 
 	//Wait for sufficient supply voltage
-	while (getVM(DEFAULT_MC) < 65)
-		;
+	while (getVM(DEFAULT_MC) < 65);
 
 	//Calibrate the shunt amplifiers of the default motion controller
 	calibrateShuntAmplifier(DEFAULT_MC);
