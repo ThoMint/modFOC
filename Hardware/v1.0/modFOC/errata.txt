@@ -1,24 +1,25 @@
-#1 Gate Driver IC DRV8323
+#1 Gate Driver IC DRV8323 (fixed in v2.0)
 	-Linear voltage regulation and therefore running hot
+	(replaced with 4* UCC27282DRCR and a boost converter)
 
 #2 Silk Screen Error (fixed in v1.0)
 	-Channel select Jumper Silk Screen reversed
 
-#3 Extremely small shunt resistors
+#3 Extremely small shunt resistors (fixed in v2.0)
 	-Low current resolution resulting in poor foc at higher speeds and lower power
 	-too little filtering
 
 #4 Enable failure of Gate Driver IC (fixed in v1.0)
 	-AND Gate powered from Gater Driver not powered when disabled
 
-#5 LEDS
+#5 LEDS (fixed in v1.0)
 	-too bright
 	-high current consumption
 
-#6 Input Output Protection
+#6 Input Output Protection !!!!
 	Logic Levels only 3V3 and no Protection
 
-#7 No Buffered ADC Input for VM
+#7 No Buffered ADC Input for VM !!!!
 	ADC Inputs need to be buffered with amp
 
 #8 No software reset for tmc (fixed in v2.0)

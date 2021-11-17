@@ -1,4 +1,6 @@
-Record=TopLevelDocument|FileName=modFOC-Motion_Controller.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=modFOC-Motion_Controller.SchDoc|FileName=modFOC-Powerstage.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=modFOC-Motion_Controller.SchDoc|FileName=modFOC-Sensing.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=modFOC-Motion_Controller.SchDoc|FileName=modFOC_Powerdistribution.SchDoc|SheetNumber=4
+Record=TopLevelDocument|FileName=modFOC-ABNenc.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC-Inputs.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC-Motion_Controller.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC-Powerstage.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC-Sensing.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC_Powerdistribution.SchDoc|SheetNumber=5

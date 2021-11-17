@@ -58,9 +58,43 @@ GenerateClassCluster=0
 DocumentUniqueId=QEHTTRMZ
 
 [Document2]
-DocumentPath=modFOC-Sensing.SchDoc
+DocumentPath=modFOC-Inputs.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=200
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=4
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=FXGEMKAT
+
+[Document3]
+DocumentPath=modFOC-ABNenc.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=MCMNFPJO
+
+[Document4]
+DocumentPath=modFOC-Sensing.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=300
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
@@ -74,10 +108,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NTUMNOOP
 
-[Document3]
+[Document5]
 DocumentPath=modFOC-Powerstage.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=300
+AnnotateStartValue=400
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
@@ -91,10 +125,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UOWBETEO
 
-[Document4]
+[Document6]
 DocumentPath=modFOC_Powerdistribution.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=400
+AnnotateStartValue=500
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
@@ -108,7 +142,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QANLLVZD
 
-[Document5]
+[Document7]
 DocumentPath=modFOC_ESC.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -125,7 +159,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=PNNYQHGT
 
-[Document6]
+[Document8]
 DocumentPath=..\AltLibs\PcbLib1.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -142,7 +176,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KNRURUBY
 
-[Document7]
+[Document9]
 DocumentPath=..\AltLibs\RcMPPTLib.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -159,7 +193,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WQOWDARH
 
-[Document8]
+[Document10]
 DocumentPath=..\AltLibs\Schlib1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -176,7 +210,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VQEVOHPJ
 
-[Document9]
+[Document11]
 DocumentPath=..\AltLibs\RcMPPTLib.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -193,7 +227,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=OPJGAVLZ
 
-[Document10]
+[Document12]
 DocumentPath=modFOC-ESC.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1

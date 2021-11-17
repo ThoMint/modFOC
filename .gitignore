@@ -42,3 +42,4 @@ Hardware/v1.0/modFOC-Panel/History
 *.exe
 *.out
 *.app
+*.LOG
