@@ -19,7 +19,7 @@
 #6 Input Output Protection !!!!
 	Logic Levels only 3V3 and no Protection
 
-#7 No Buffered ADC Input for VM !!!!
+#7 No Buffered ADC Input for VM (fixed in v2.0)
 	ADC Inputs need to be buffered with amp
 
 #8 No software reset for tmc (fixed in v2.0)

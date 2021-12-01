@@ -1,6 +1,8 @@
-Record=TopLevelDocument|FileName=modFOC-ABNenc.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC-Inputs.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC-Motion_Controller.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC-Powerstage.SchDoc|SheetNumber=4
-Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC-Sensing.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=modFOC-ABNenc.SchDoc|FileName=modFOC_Powerdistribution.SchDoc|SheetNumber=5
+Record=TopLevelDocument|FileName=modFOC-Main.SchDoc|SheetNumber=0
+Record=SheetSymbol|SourceDocument=modFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC-Sensing.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=modFOC-Sensing.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=modFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC-ABNenc.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=modFOC-ABNenc.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=modFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC_Powerdistribution.SchDoc|SheetNumber=6|SymbolType=Normal|RawFileName=modFOC_Powerdistribution.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=modFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC-Inputs.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=modFOC-Inputs.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=modFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC-Motion_Controller.SchDoc|SheetNumber=1|SymbolType=Normal|RawFileName=modFOC-Motion_Controller.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=modFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC-GateDrivers.SchDoc|SheetNumber=5|SymbolType=Normal|RawFileName=modFOC-GateDrivers.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=modFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC-H_Bridges.SchDoc|SheetNumber=6|SymbolType=Normal|RawFileName=modFOC-H_Bridges.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
