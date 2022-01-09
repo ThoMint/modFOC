@@ -1,0 +1,2 @@
+Gate_Driver_Out=Source_UX1_H,Gate_UX1_H,Gate_UX1_L,Source_VX2_H,Gate_VX2_H,Gate_VX2_L,Source_WY1_H,Gate_WY1_H,Gate_WY1_L,Source_Y2_H,Gate_Y2_H,Gate_Y2_L
+PWM_Recieving_Harness=PWM_UX1_H,PWM_UX1_L,PWM_VX2_H,PWM_VX2_L,PWM_WY1_H,PWM_WY1_L,PWM_Y2_H,PWM_Y2_L
