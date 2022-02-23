@@ -1,3 +1,5 @@
-Record=TopLevelDocument|FileName=modFOC-IO.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=modFOC-IO.SchDoc|FileName=modFOC-MCU.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=modFOC-IO.SchDoc|FileName=modFOC-Power_Module.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=moFOC-Main.SchDoc|SheetNumber= 
+Record=SheetSymbol|SourceDocument=moFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC_IO.SchDoc|SheetNumber= |SymbolType=Normal|RawFileName=modFOC_IO.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=moFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=modFOC_Debug.SchDoc|SheetNumber= |SymbolType=Normal|RawFileName=modFOC_Debug.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=moFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=moFOC-MCU.SchDoc|SheetNumber= |SymbolType=Normal|RawFileName=moFOC-MCU.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=moFOC-Main.SchDoc|Designator=Designator|SchDesignator=Designator|FileName=moFOC_Supply.SchDoc|SheetNumber= |SymbolType=Normal|RawFileName=moFOC_Supply.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
