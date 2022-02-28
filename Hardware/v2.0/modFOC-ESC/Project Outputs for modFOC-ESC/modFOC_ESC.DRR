@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: modFOC_ESC.PcbDoc   06.04.2021  10:45:57
+NCDrill File Report For: modFOC_ESC.PcbDoc   26.02.2022  18:36:58
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -7,11 +7,11 @@ ASCII RoundHoles File : modFOC_ESC.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      12mil (0.3mm)                                             Round             270       PTH        0.00inch (0.00mm)
-T2      18mil (0.45mm)                                            Round             256       PTH        0.00inch (0.00mm)
-T3      20mil (0.5mm)                                             Round             17        PTH        0.00inch (0.00mm)
-T4      134mil (3.401mm)                                          Round             6         PTH        0.00inch (0.00mm)
+T1      12mil (0.3mm)                                             Round             328       PTH        43.85inch (1113.84mm)
+T2      18mil (0.45mm)                                            Round             398       PTH        44.49inch (1130.00mm)
+T3      39mil (1.001mm)                                           Round             4         PTH        0.28inch (7.24mm)
+T4      134mil (3.401mm)                                          Round             6         PTH        9.10inch (231.14mm)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              549
+Totals                                                                              736
 
 Total Processing Time (hh:mm:ss) : 00:00:00

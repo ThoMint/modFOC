@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: modFOC_ESC.GBR   06.04.2021  10:45:16
+Gerber File Extension Report For: modFOC_ESC.GBR   26.02.2022  18:35:35
 ------------------------------------------------------------------------------------------
 
 
@@ -20,7 +20,6 @@ Layer Extension     Layer Description
 .GM2                Board Shape                             
 .GM13               Mechanical 13                           
 .GM15               Mechanical 15                           
-.GKO                Keep-Out Layer                          
 .GPT                Top Pad Master                          
 .GPB                Bottom Pad Master                       
 ------------------------------------------------------------------------------------------
