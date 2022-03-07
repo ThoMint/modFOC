@@ -24,6 +24,7 @@ ReorderDocumentsOnCompile=1
 NameNetsHierarchically=0
 PowerPortNamesTakePriority=0
 AutoSheetNumbering=0
+AutoCrossReferences=0
 PushECOToAnnotationFile=1
 DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
@@ -34,29 +35,18 @@ OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
+CrossRefSheetStyle=1
+CrossRefLocationStyle=1
+CrossRefPorts=3
+CrossRefCrossSheets=1
+CrossRefSheetEntries=0
+CrossRefFollowFromMainSettings=1
 
 [Preferences]
 PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=modFOC-MCU.PcbDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=DUMXGHXI
-
-[Document2]
 DocumentPath=..\AltLibs\RcMPPTLib.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -73,7 +63,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WQOWDARH
 
-[Document3]
+[Document2]
 DocumentPath=..\AltLibs\RcMPPTLib.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -90,7 +80,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=OPJGAVLZ
 
-[Document4]
+[Document3]
 DocumentPath=modFOC-MCU.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -107,7 +97,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document5]
+[Document4]
 DocumentPath=..\AltLibs\PcbLib1.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -124,7 +114,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document6]
+[Document5]
 DocumentPath=..\AltLibs\Schlib1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -141,42 +131,59 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document7]
-DocumentPath=moFOC-Main.SchDoc
+[Document6]
+DocumentPath=modFOC-ESC-Interface.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
+AnnotateStartValue=500
+AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=5
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=VTQCKKWG
+DocumentUniqueId=UTLSVNSG
+
+[Document7]
+DocumentPath=modFOC-Buck-Supply.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=100
+AnnotationIndexControlEnabled=1
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=YMEUPFII
 
 [Document8]
-DocumentPath=moFOC-MCU.SchDoc
+DocumentPath=modFOC-Debug.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
+AnnotateStartValue=200
+AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=2
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=GATWGDXI
+DocumentUniqueId=ITEISDOH
 
 [Document9]
-DocumentPath=moFOC_Supply.SchDoc
+DocumentPath=modFOC-Debug.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -190,27 +197,27 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=EQXMVKGV
+DocumentUniqueId=
 
 [Document10]
-DocumentPath=modFOC_Debug.SchDoc
+DocumentPath=modFOC-IO.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
+AnnotateStartValue=300
+AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=3
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=NPWFGUDM
+DocumentUniqueId=AFXCMVBD
 
 [Document11]
-DocumentPath=Sheet2.Harness
+DocumentPath=modFOC-IO.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -227,41 +234,24 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document12]
-DocumentPath=Sheet3.Harness
+DocumentPath=modFOC-MCU.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
+AnnotateStartValue=400
+AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=4
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=RBMEOAHV
 
 [Document13]
-DocumentPath=modFOC_IO.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=NZDUTETI
-
-[Document14]
-DocumentPath=modFOC_IO.Harness
+DocumentPath=modFOC-MCU.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -277,101 +267,39 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for modFOC-MCU\Design Rule Check - modFOC-MCU.html
+[Document14]
+DocumentPath=modFOC-MCU.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
 DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=DDBBLYDD
 
-[GeneratedDocument2]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.DRR
+[Document15]
+DocumentPath=modFOC-Top.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=1
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=0
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
 DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.G1
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.G2
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GM2
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GM13
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GM15
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GPB
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GPT
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument19]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.REP
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Project Outputs for modFOC-MCU\modFOC-MCU.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Project Outputs for modFOC-MCU\Move Component(s) Origin To Grid - modFOC-MCU.html
-DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=VQOYFHPT
 
 [Configuration1]
 Name=Sources
@@ -492,7 +420,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=EPSON2725E2 (ET-4750 Series)
+TargetPrinter=Xerox7835
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
@@ -705,6 +633,18 @@ OutputName6=Report Single Pin Nets
 OutputDocumentPath6=
 OutputVariantName6=[No Variations]
 OutputDefault6=0
+OutputType7=BOM_ReportCompare
+OutputName7=BOM Compare
+OutputDocumentPath7=
+OutputVariantName7=[No Variations]
+OutputDefault7=0
+PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType8=Export Comments
+OutputName8=Export Comments
+OutputDocumentPath8=
+OutputVariantName8=[No Variations]
+OutputDefault8=0
+PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 
 [OutputGroup7]
 Name=Other Outputs
