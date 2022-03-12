@@ -6,15 +6,10 @@ int32_t getVM(uint8_t motor)
 	return ((rawVMADC * (VM_ADC_REF / VM_ADC_RES)) / (VM_DIV_FACTOR)) * 10;
 }
 
-void calibrateShuntAmplifier(uint8_t motor)
+void activatePowerStage(uint8_t motor)
 {
 	HAL_Delay(1);
-	tmc4671_writeInt(motor, TMC4671_GPIO_dsADCI_CONFIG, 0x00000009);
-	HAL_Delay(1);
-	tmc4671_writeInt(motor, TMC4671_GPIO_dsADCI_CONFIG, 0x00010009);
-	HAL_Delay(1);
-	tmc4671_writeInt(motor, TMC4671_GPIO_dsADCI_CONFIG, 0x00000009);
-	HAL_Delay(1);
+	tmc4671_writeInt(motor, TMC4671_GPIO_dsADCI_CONFIG, 0xF1010009);
 }
 
 void initMotionController(uint8_t motor)

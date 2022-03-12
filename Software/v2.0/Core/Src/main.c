@@ -114,7 +114,7 @@ int main(void)
 	while (getVM(DEFAULT_MC) < 65);
 
 	//Calibrate the shunt amplifiers of the default motion controller
-	calibrateShuntAmplifier(DEFAULT_MC);
+	activatePowerStage(DEFAULT_MC);
 
 	//Init the default motion controller
 	if (RUN_MODE == RM_ESC)
@@ -225,13 +225,13 @@ uint8_t tmc4671_readwriteByte(uint8_t motor, uint8_t data, uint8_t lastTransfer)
 {
 	uint8_t buffer;
 
-	HAL_GPIO_WritePin(CS0_GPIO_Port, (CS2_Pin * ((motor >> 2) & 0x01)) | (CS1_Pin * ((motor >> 1) & 0x01)) | (CS0_Pin * ((motor >> 0) & 0x01)), GPIO_PIN_SET);
+	HAL_GPIO_WritePin(CS0_GPIO_Port, (CS2_Pin * ((motor >> 2) & 0x01)) | (CS1_Pin * ((motor >> 1) & 0x01)) | (CS0_Pin * ((motor >> 0) & 0x01)), GPIO_PIN_RESET);
 
 	HAL_SPI_TransmitReceive(&hspi2, &data, &buffer, 1, 100);
 
 	if (lastTransfer)
 	{
-		HAL_GPIO_WritePin(CS0_GPIO_Port, (CS2_Pin * ((motor >> 2) & 0x01)) | (CS1_Pin * ((motor >> 1) & 0x01)) | (CS0_Pin * ((motor >> 0) & 0x01)), GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(CS0_GPIO_Port, (CS2_Pin * ((motor >> 2) & 0x01)) | (CS1_Pin * ((motor >> 1) & 0x01)) | (CS0_Pin * ((motor >> 0) & 0x01)), GPIO_PIN_SET);
 	}
 
 	return buffer;

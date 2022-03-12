@@ -57,8 +57,8 @@
 #define REPLY_DELAYED 					128
 #define REPLY_ACTIVE_COMM 				129
 
-#define VM_DIV_FACTOR					(3.0/203.0)	//VM Voltage Divider
-#define VM_ADC_REF						4.6			//VM ADC Reference
+#define VM_DIV_FACTOR					(27.0/497.0)	//VM Voltage Divider
+#define VM_ADC_REF						4.6						//VM ADC Reference
 #define VM_ADC_RES						65536.0		//VM ADC Resolution 16Bit
 #define VM_ADC_OFFSET		  			34360.0 	//TMC4671-LA RAW ADC Offset
 

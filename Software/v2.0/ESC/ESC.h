@@ -14,7 +14,7 @@
 #include "TMCL-Variables.h"
 
 int32_t getVM(uint8_t motor);
-void calibrateShuntAmplifier(uint8_t motor);
+void activatePowerStage(uint8_t motor);
 void initMotionController(uint8_t motor);
 
 #endif
