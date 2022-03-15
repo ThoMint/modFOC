@@ -1,0 +1,183 @@
+TMCL-IDE 3.0 Release Notes
+
+2014-11-07 3.0.0.0 Version is online
+
+2014-12-18 3.0.1.0 Use Qt 4.8.6
+                   Add log files for TMCL history and internal debug messages
+                   Bugfixes in firmware update
+                   428 param calculator
+                   RegisterBrowser: bugfixes, import/export tool, views, included register description, reset + read&clear buttons, keyboard control
+                   TMC5130-Eval cleaned up and enhanced user functions
+
+2015-01-23 3.0.1.1 Bugfix start timer trace values
+                   TMCL Creator (Assembler/Disassembler): corrected WAIT REFW to WAIT REFSW
+                   TMCM-6110: corrected the value range of some axis parameters
+                   RegisterBorwser settings export limited to write values. Enhanced TMC5130 register description.
+                   Advanced velocity mode TMC5130
+
+2015-03-24 3.0.2.0 - Bugfix firmware update
+                   - Marking device entries in tree view
+                   - Tree views horizontal position fixed
+                   - Copy contents of single subwindow to clipboard with <altgr + P>(<ctr + alt + P>)
+                   - added dcStep wizard
+                   - for all Evaluation Boards:
+                                   - added 'Current settings' tool
+                                   - added speedometer for 'Velocity mode' with optional measured speed
+
+                   - TMC5130-Eval:
+                                   - reworked axis parameters
+                                   - reworked register description XMLs
+                                   - reworked 'Import/Export' tool of 'Register browser'
+                                   - corrected units for velocity and acceleration from pps to ppT
+                                   - replaced 'Parameter calculator' with 'Motion calculator' - this regards chip clock
+                                   - added 'Flags view' tool to display chip flags
+                   - added TMC2660-Eval
+                   - added TMC2130-Eval
+
+2015-05-29 3.0.3.0 - Bugfix firmware update at Window 8
+                   - Enable fimeware with new vendor id on older modules
+                   - Advanced velocity mode for Squirrel based modules
+                   - Better range checking for MVP COORD command
+                   - Added missing parameters for some stepper modules
+                   - Enable Peak CAN-Interface
+                   - Coloured window frames for axle specific tools
+                   - Added TMC5041-Eval
+                   - Reworked assignment axis parameters & tools for evaluation board plugins
+                   - minor bugfixes
+
+2015-07-10 3.0.4.0 - Remove obsolete modules
+                   - Firmware update optimization, e.g. drag & drop file name, insert hyperlink or edit the line
+                   - Busy message while loading Register browser xml files.
+                   - TMCL/PC host added, also with a short introduction / help text
+                   - Some corrections for TMCL parameters with some modules
+                   - Added stealthChop wizard for TMC[5130..]
+                   - Added Landungsbrücke: interfae board for eval system (like Startrampe)
+                   - Added TMC2100-Eval
+                   - Added TMC5072-Eval
+                   - Added TMC4331-Eval
+                   - Fixed Motioncalculator for TMC[5130,5072,5041...]
+
+2015-07-15 3.0.5.0 - Fixed parameter checking bug for STGP/RSGP in TMCL Assembler
+                   - removed needless message under Windows 8 or higher
+                   - Added TMC5062-Eval
+                   - Enhanced TMC5041,TMC5072,TMC5130 Register XMLs
+                   - Added TMC5072 Settings and Diagnostics tool
+
+2015-09-07 3.0.6.2 - New positon tool for TMC5041, TMC5062, TMC5130, TMC5072
+                   - Improved editing for some spinboxes
+                   - Fixed bug in the TMCL/PC interpreter
+
+2015-10-29 3.0.7.0  - New tool for xy-plotting. Some export ways included
+                    - Bug fixed for USB driver installer
+                    - New wizard to help adjusting microstep table (TMC[5130, 5041, 5072])
+
+2015-12-07 3.0.10.0 - Improved graphs with min/max marker
+                    - Motion calculator with online dump (TMC[2041, 5041, 5062, 5072, 5130])
+                      (be shure to have latest Evalboard firmeware)
+                    - TMCL-Creator/PC host: Font resize with Ctrl++ / Ctrl+-
+                    - Fixed assembler commands
+                    - Improved TMCC160-Eval
+                    - Reduced space requirements using DLLs
+
+2016-02-12 3.0.11.0 - TMC5130/TMC2130: introduced 'Tstep' as velocity unit
+                    - Current setting tool: show real I RMS value
+                    - Improved settings wizard stealthChopper for TMC5072/TMC5041
+                    - Introduced tool Parameter display for most modules
+                    - Register browser with new way of value input
+
+2016-03-07 3.0.12.0 - Bugfix in tool Parameter display
+                    - Detach subwindow for free moving on the desktop
+                      (see menu of subwindows titlebar)
+                    - Fixed parameter set in some modules
+
+2016-04-14 3.0.13.0 - Add modules TMCM13121 TMCM3212 TMCM3213 TMCM3312 TMCM3313
+                      TMCM6210 TMCM6211 TMCM6212 TMCM6213 TMCM1613
+                    - Block USB installer when a device contains first tmc vendor id
+                      but an alien product id.
+
+2016-06-06 3.0.14.0 - No USB driver installation for WIN10
+                    - Complete some parameters in modules
+                    - remove unused code and plugins
+                    - Add module TMCM1070
+
+2016-09-30 3.0.15.0 - Add module TMCM1270
+                    - Using Qt 5.6.1
+                    - Link to Trinamic 'YouTube' channel (if available)
+                    - Improved parameter display
+
+2016-11-04 3.0.16.0 - Bugfixes due to using new Qt libs
+
+2017-03-10 3.0.17.0 - Bugfix for WAIT commands in TMCL/PC
+                    - Direct Mode: Address field can be changed when using RS232/RS485/RS422/UART
+                    - new Wizard launcher
+                    - new Register browser
+                    - Bugfix firmware via USB
+                    - Add TMC2208 Eval
+                    - new Tool ChopperSettings
+
+2017-04-21 3.0.18.0 - Reactivated "Check for new TMCL-IDE version"
+                    - Initialization the geomtry of subwindows
+                    - Add TMCM3214
+                    - Add TMC5160 and TMC 2224 Eval
+                    - Bugfixing firmware update
+                    - Optimized for using Landungbruecke or Startrampe since fw V3.0
+                    - Can load register browsers old formated ini file
+
+2017-10-13 3.0.20.0 - Add TMCM-1315, TMCM-1370, TMCM-3230 and TMCM-3351
+                    - Add TMCM-1111 and TMC8460-EVAL
+                    - Add TMC2041, TMC4661A Eval
+                    - Register browser with classic export menu
+                    - Show register values in info graphs
+                    - Info grahps allow long term logging
+
+2018-03-28 3.0.21.0 - Add TMC-4330
+                    - StepDir for TMC-5160
+                    - Lot of minor bugfixes
+                    - Enable printing TMCL-Creator/PC-Host
+                    - Optimized for Qt 5.10.0
+                    - Add some USB-CAN adapters from Kvasar and ESD
+
+2018-09-07 3.0.22.0 - Add TMC-5161
+                    - Add TMC-8460, TMC-8461 and TMC-8462 with access control tool
+                    - Add USB-2-RTMI interface and TMC4671-EVAL
+                    - Enclosed TMCL-IDE pdf manual
+
+2019-01-24 3.0.23.0 - Add TMCM-1683, TMC2590-EVAL
+
+2019-04-17 3.0.24.0 - Add TMC2160-EVAL, Add TMC2209-EVAL
+                    - Add TMCM-0010-OPC
+                    - new tool Biquad-Tuning
+                    - improved tool GlobalParameter
+
+2019-10-21 3.0.25.0 - Add TMC2300-EVAL
+                    - Add TRISC
+                    - Some minor bugfixes
+
+2020-05-29 3.1.0.0  - Add TMC7300-EVAL
+                    - Add TMC6300-EVAL
+                    - Add TMC6100-EVAL
+                    - Add TMC2226-Eval
+                    - TMCM-1636 ready
+                    - Add TOSV
+                    - Add TMCM-1617
+                    - Add USB CAN-Adapter Ixxat
+                    - Tool updates for CoolStep & StallGuard; Current-Settings; TMC846x-EVAL
+                    - Some minor bugfixes
+
+2020-11-25 3.2.0.0  - Add TMCM-1243
+                    - Add TMCM-1000
+                    - Add TMCM-1273
+                    - Add TMCM-0930
+                    - Using Qt 5.12.10
+                    - A lot of bugfixes and improvements
+
+2021-03-26 3.3.0.0  - Add TMCM-1461
+                    - Add TMCM-1617 GRIP-REF
+                    - A lot of bugfixes and improvements
+
+2021-06-29 3.4.0.0  - Add TMC-6140-EVAL
+                    - Using Qt 5.12.11
+                    - A lot of bugfixes and improvements
+
+2021-10-18 3.5.0.0  - TMCM-1617 with PI-Tuning tool
+                    - A lot of bugfixes and improvements
