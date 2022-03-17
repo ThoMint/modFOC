@@ -15,7 +15,7 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=Job1.OutJob
+Name=modFOC-MCU.OutJob
 Description=
 TargetOutputMedium=PDF
 VariantName=[No Variations]
@@ -61,18 +61,18 @@ Configuration2_Name1=OutputConfigurationParameter1
 Configuration2_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ShowOpenEnds=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0|DocumentPath=All SCH Documents
 
 [PublishSettings]
-OutputFilePath2=Project Outputs for Free Documents\.PDF
+OutputFilePath2=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\v2.0\modFOC-MCU\Project Outputs for modFOC-MCU\PDF\Job1.PDF
 ReleaseManaged2=1
-OutputBasePath2=Project Outputs for Free Documents
-OutputPathMedia2=
+OutputBasePath2=Project Outputs for modFOC-MCU
+OutputPathMedia2=[Media Type]
 OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
 OutputPathOutputerPrefix2=
 OutputPathOutputerValue2=
-OutputFileName2=Job1.PDF
+OutputFileName2=modFOC-MCU.PDF
 OutputFileNameMulti2=
-UseOutputNameForMulti2=1
-OutputFileNameSpecial2=
+UseOutputNameForMulti2=0
+OutputFileNameSpecial2==ProjectName
 OpenOutput2=1
 PromptOverwrite2=1
 PublishMethod2=0
@@ -90,7 +90,7 @@ PDFACompliance2=Disabled
 PDFVersion2=Default
 OutputFilePath3=
 ReleaseManaged3=1
-OutputBasePath3=
+OutputBasePath3=Project Outputs for modFOC-MCU
 OutputPathMedia3=
 OutputPathMediaValue3=
 OutputPathOutputer3=[Output Type]
@@ -103,7 +103,7 @@ OutputFileNameSpecial3=
 OpenOutput3=1
 OutputFilePath4=
 ReleaseManaged4=1
-OutputBasePath4=
+OutputBasePath4=Project Outputs for modFOC-MCU
 OutputPathMedia4=
 OutputPathMediaValue4=
 OutputPathOutputer4=[Output Type]
@@ -140,7 +140,7 @@ WmvVideoCodecName4=Windows Media Video V7
 WmvQuality4=80
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=Project Outputs for Free Documents\.PDF
+RelativeOutputPath2=C:\Users\Thomas\Documents\GitHub\modFOC\Hardware\v2.0\modFOC-MCU\Project Outputs for modFOC-MCU\PDF\Job1.PDF
 OpenOutputs2=1
 RelativeOutputPath3=
 OpenOutputs3=1
