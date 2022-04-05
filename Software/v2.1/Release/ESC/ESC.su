@@ -1,0 +1,3 @@
+ESC.c:3:9:getVM	16	static
+ESC.c:9:6:activatePowerStage	8	static
+ESC.c:15:6:initMotionController	8	static
